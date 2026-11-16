@@ -1,0 +1,64 @@
+{
+  "slug": "almet-moto-almetyevsk",
+  "checked_at": "2026-11-16T16:47:28.004Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/almetevsk/search/Альмет%20Мото",
+      "checked_at": "2026-11-16T19:18:00.000Z",
+      "excerpt": "Альмет Мото, Альметьевск, ул. Бигаш, 123а. Тел. +7 (987) 279-99-16."
+    }
+  ],
+  "facts": {
+    "name": "Альмет Мото",
+    "brand_display": "Альмет <span>Мото</span>",
+    "city": "Альметьевск",
+    "district": "Западный р-н",
+    "address": "ул. Бигаш, 123а",
+    "phone": "+7 (987) 279-99-16",
+    "phone_raw": "+79872799916",
+    "whatsapp": "79872799916",
+    "hours": "Пн-Пт 09:00-18:00, Сб-Вс 10:00-16:00",
+    "rating": 4.8,
+    "brands": "Regulmoto, Kayo, Motoland, BSE",
+    "focus": "Квадроциклы, питбайки, эндуро, снегоходы, сервис",
+    "price_range_note": "Питбайки от 85 000 ₽, Эндуро от 146 000 ₽, Квадро от 230 000 ₽",
+    "verified_source": "2GIS Альметьевск",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мотосалон и склад техники<br> в Альметьевске"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл Regulmoto ZR 250",
+      "spec": "250 см³, карбюратор Nibbi, электростартер",
+      "price": "от 146 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Kayo Basic 125",
+      "spec": "125 см³, надежный мотор YX, колеса 17/14",
+      "price": "от 85 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland Allroad 200",
+      "spec": "200 см³, автоматическая трансмиссия, багажники",
+      "price": "от 230 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

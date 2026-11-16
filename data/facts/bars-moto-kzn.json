@@ -14,6 +14,12 @@
       "url": "https://yandex.ru/maps/?text=%D0%91%D0%B0%D1%80%D1%81-%D0%BC%D0%BE%D1%82%D0%BE%20%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C%20%D1%83%D0%BB.%20%D0%90%D0%BB%D0%B0%D1%84%D1%83%D0%B7%D0%BE%D0%B2%D0%B0%2C%203%D0%91",
       "checked_at": "2026-11-11T16:22:29.517Z",
       "excerpt": "Карточка организации на Яндекс Картах (Казань)."
+    },
+    {
+      "id": "phone-check-2026-11-16",
+      "url": "https://bars-moto.clients.site/",
+      "checked_at": "2026-11-16",
+      "excerpt": "+7 (843) 203-96-93. Телефон карточки бизнеса на Алафузова, 3Б."
     }
   ],
   "facts": {
@@ -22,8 +28,8 @@
     "city": "Казань",
     "district": "Кировский р-н",
     "address": "ул. Алафузова, 3Б",
-    "phone": "+7 (843) 555-22-10",
-    "phone_raw": "+78435552210",
+    "phone": "+7 (843) 203-96-93",
+    "phone_raw": "+78432039693",
     "whatsapp": "79875552210",
     "hours": "Пн-Сб 09:00-19:00",
     "rating": 4.8,
@@ -66,5 +72,14 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "phone_check": {
+    "status": "verified",
+    "checked_at": "2026-11-16",
+    "source_ids": [
+      "phone-check-2026-11-16"
+    ],
+    "note": "Телефон карточки бизнеса на Алафузова, 3Б.",
+    "previous_phone": "+7 (843) 555-22-10"
+  }
 }

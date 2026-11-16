@@ -1,0 +1,64 @@
+{
+  "slug": "motovelo-rybinsk",
+  "checked_at": "2026-11-16T16:47:28.005Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/rybinsk/search/Мото-Вело",
+      "checked_at": "2026-11-16T19:27:00.000Z",
+      "excerpt": "Мото-Вело, Рыбинск, ул. Плеханова, 20. Рейтинг 4.3 ★. Тел. +7 (910) 813-41-70."
+    }
+  ],
+  "facts": {
+    "name": "Мото-Вело",
+    "brand_display": "Мото-<span>Вело</span>",
+    "city": "Рыбинск",
+    "district": "Центральный р-н",
+    "address": "ул. Плеханова, 20",
+    "phone": "+7 (910) 813-41-70",
+    "phone_raw": "+79108134170",
+    "whatsapp": "79108134170",
+    "hours": "Пн-Сб 09:00-18:00, Вс 09:00-16:00",
+    "rating": 4.3,
+    "brands": "Regulmoto, Progasi, Avantis, Motoland",
+    "focus": "Эндуро, питбайки, скутеры, запчасти, сервис",
+    "price_range_note": "Питбайки от 84 000 ₽, Эндуро от 142 000 ₽, Квадро от 225 000 ₽",
+    "verified_source": "2GIS Рыбинск",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мототехника, питбайки и запчасти<br> в Рыбинске"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл Progasi Super Max 250",
+      "spec": "250 см³, сиденье с противоскользящим покрытием, фара",
+      "price": "от 142 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Regulmoto Five 125",
+      "spec": "125 см³, надежная стальная рама, кикстартер",
+      "price": "от 84 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Avantis Hunter 200",
+      "spec": "200 см³, вариатор с реверсом, усиленная рама",
+      "price": "от 225 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

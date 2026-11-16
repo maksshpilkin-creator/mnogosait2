@@ -8,6 +8,18 @@
       "url": "https://yandex.ru/maps/org/mototekhnika/1148193821/",
       "checked_at": "2026-11-14T07:45:00.000Z",
       "excerpt": "Мототехника, Сергиев Посад, Новоугличское шоссе, 73 к3. Рейтинг 4.6 ★."
+    },
+    {
+      "id": "phone-check-2026-11-16",
+      "url": "https://sergiev-posad.spravker.ru/mototsikly/mototekhnika.htm",
+      "checked_at": "2026-11-16",
+      "excerpt": "В карточке Мототехники телефон отсутствует. Контакт отдельного магазина «Рыболов-Охотник» по тому же номеру дома не переносили."
+    },
+    {
+      "id": "phone-check-2026-11-16-additional",
+      "url": "https://fishohota.ru/catalog/mototekhnika/",
+      "checked_at": "2026-11-16",
+      "excerpt": "В карточке Мототехники телефон отсутствует. Контакт отдельного магазина «Рыболов-Охотник» по тому же номеру дома не переносили."
     }
   ],
   "facts": {
@@ -60,5 +72,15 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "phone_check": {
+    "status": "missing",
+    "checked_at": "2026-11-16",
+    "source_ids": [
+      "phone-check-2026-11-16",
+      "phone-check-2026-11-16-additional"
+    ],
+    "note": "В карточке Мототехники телефон отсутствует. Контакт отдельного магазина «Рыболов-Охотник» по тому же номеру дома не переносили.",
+    "previous_phone": "+7 (926) 550-12-34"
+  }
 }

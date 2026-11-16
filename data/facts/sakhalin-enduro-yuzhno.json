@@ -1,0 +1,64 @@
+{
+  "slug": "sakhalin-enduro-yuzhno",
+  "checked_at": "2026-11-16T16:47:28.008Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/yuzhnosakhalinsk/search/Сахалин%20Эндуро%20Парк",
+      "checked_at": "2026-11-16T19:40:30.000Z",
+      "excerpt": "Сахалин Эндуро Парк, Южно-Сахалинск, Школьный переулок, 95. Рейтинг 4.8 ★. Тел. +7 (902) 575-27-32."
+    }
+  ],
+  "facts": {
+    "name": "Сахалин Эндуро Парк",
+    "brand_display": "Сахалин Эндуро <span>Парк</span>",
+    "city": "Южно-Сахалинск",
+    "district": "Большая Елань",
+    "address": "Школьный переулок, 95",
+    "phone": "+7 (902) 575-27-32",
+    "phone_raw": "+79025752732",
+    "whatsapp": "79025752732",
+    "hours": "Пн-Вс 10:00-19:00",
+    "rating": 4.8,
+    "brands": "Regulmoto, Kayo, GR, Motoland",
+    "focus": "Эндуро, питбайки, запчасти, сервис, прокат",
+    "price_range_note": "Питбайки от 92 000 ₽, Эндуро от 165 000 ₽, Квадро от 275 000 ₽",
+    "verified_source": "2GIS Южно-Сахалинск",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Эндуро база, сервис и прокат<br> в Южно-Сахалинске"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл GR7 F250A Enduro",
+      "spec": "250 см³, 21 л.с., алюминиевые обода, фара, электростартер",
+      "price": "от 185 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Kayo Basic TT125",
+      "spec": "125 см³, 4-тактный, колеса 17/14",
+      "price": "от 92 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland Wild Track 200",
+      "spec": "200 см³, вариатор F-N-R, защита рук, фаркоп",
+      "price": "от 275 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

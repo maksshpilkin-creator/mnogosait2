@@ -8,6 +8,12 @@
       "url": "https://yandex.ru/maps/org/tagenduro/1249201948/",
       "checked_at": "2026-11-14T07:45:00.000Z",
       "excerpt": "Tagenduro, Таганрог, ул. Лесная Биржа, 6К. Рейтинг 4.9 ★. Эндуро сервис, продажа мототехники."
+    },
+    {
+      "id": "phone-check-2026-11-16",
+      "url": "https://yandex.com/maps/org/tagenduro/166033710418/",
+      "checked_at": "2026-11-16",
+      "excerpt": "+7 (928) 132-23-11. Карточка подтверждает номер для Лесной Биржи, 6К."
     }
   ],
   "facts": {
@@ -60,5 +66,13 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "phone_check": {
+    "status": "verified",
+    "checked_at": "2026-11-16",
+    "source_ids": [
+      "phone-check-2026-11-16"
+    ],
+    "note": "Карточка подтверждает номер для Лесной Биржи, 6К."
+  }
 }

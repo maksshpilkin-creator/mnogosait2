@@ -1,0 +1,64 @@
+{
+  "slug": "motovelomir-pskov",
+  "checked_at": "2026-11-16T16:47:28.003Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/pskov/search/МотоВелоМир",
+      "checked_at": "2026-11-16T19:08:00.000Z",
+      "excerpt": "МотоВелоМир, Псков, Гражданская ул., 27. Тел. +7 (911) 392-03-98."
+    }
+  ],
+  "facts": {
+    "name": "МотоВелоМир",
+    "brand_display": "МотоВело<span>Мир</span>",
+    "city": "Псков",
+    "district": "Центральный р-н",
+    "address": "Гражданская ул., 27",
+    "phone": "+7 (911) 392-03-98",
+    "phone_raw": "+79113920398",
+    "whatsapp": "79113920398",
+    "hours": "Пн-Сб 09:00-19:00, Вс 09:00-16:00",
+    "rating": 4.2,
+    "brands": "Regulmoto, Motoland, Racer, Kayo",
+    "focus": "Мотоциклы, питбайки, скутеры, запчасти",
+    "price_range_note": "Питбайки от 82 000 ₽, Эндуро от 139 000 ₽, Квадро от 215 000 ₽",
+    "verified_source": "2GIS Псков",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мототехника, питбайки и запчасти<br> в Пскове"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл Motoland XT250 HS",
+      "spec": "250 см³, двигатель 172FMM, дисковые тормоза",
+      "price": "от 139 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Racer RC125-PM",
+      "spec": "125 см³, колеса 17/14, 4-тактный, кикстартер",
+      "price": "от 82 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland ATV 200",
+      "spec": "200 см³, вариатор, фара LED, защита рук",
+      "price": "от 215 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

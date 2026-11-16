@@ -8,6 +8,12 @@
       "url": "https://yandex.ru/maps/org/moto_reyser/1294820192/",
       "checked_at": "2026-11-14T07:45:00.000Z",
       "excerpt": "Мото Рейсер, Одинцово, Озёрная ул., 115. Рейтинг 4.8 ★."
+    },
+    {
+      "id": "phone-check-2026-11-16",
+      "url": "https://moto-racer.ru/oplata/",
+      "checked_at": "2026-11-16",
+      "excerpt": "+7 (905) 577-73-35. Контакт Moto Racer в Одинцове."
     }
   ],
   "facts": {
@@ -16,8 +22,8 @@
     "city": "Одинцово",
     "district": "Западный р-н",
     "address": "Озёрная ул., 115",
-    "phone": "+7 (495) 780-45-45",
-    "phone_raw": "+74957804545",
+    "phone": "+7 (905) 577-73-35",
+    "phone_raw": "+79055777335",
     "whatsapp": "79257804545",
     "hours": "Пн-Вс 10:00-20:00",
     "rating": 4.8,
@@ -60,5 +66,14 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "phone_check": {
+    "status": "verified",
+    "checked_at": "2026-11-16",
+    "source_ids": [
+      "phone-check-2026-11-16"
+    ],
+    "note": "Контакт Moto Racer в Одинцове.",
+    "previous_phone": "+7 (495) 780-45-45"
+  }
 }

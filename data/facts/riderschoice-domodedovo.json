@@ -1,0 +1,64 @@
+{
+  "slug": "riderschoice-domodedovo",
+  "checked_at": "2026-11-16T16:47:28.008Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/domodedovo/search/Райдерс%20Чойс",
+      "checked_at": "2026-11-16T19:37:10.000Z",
+      "excerpt": "Райдерс Чойс, Домодедово, КП Ильинское, 19. Рейтинг 4.8 ★. Тел. +7 (993) 282-21-65."
+    }
+  ],
+  "facts": {
+    "name": "Райдерс Чойс",
+    "brand_display": "Райдерс <span>Чойс</span>",
+    "city": "Домодедово",
+    "district": "д. Ильинское",
+    "address": "КП Ильинское, 19",
+    "phone": "+7 (993) 282-21-65",
+    "phone_raw": "+79932822165",
+    "whatsapp": "79932822165",
+    "hours": "Пн-Вс 10:00-20:00",
+    "rating": 4.8,
+    "brands": "Kayo, BSE, Regulmoto, Motoland",
+    "focus": "Мототехника, питбайки, эндуро, экипировка, сервис",
+    "price_range_note": "Питбайки от 88 000 ₽, Эндуро от 154 000 ₽, Квадро от 249 000 ₽",
+    "verified_source": "2GIS Домодедово",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мотосалон и экипировочный центр<br> в Домодедово"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Эндуро Kayo T2 250 Enduro",
+      "spec": "250 см³, воздушное охлаждение, дисковые тормоза, фара",
+      "price": "от 154 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Kayo Evolution 125",
+      "spec": "125 см³, алюминиевый маятник, электростартер",
+      "price": "от 88 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Kayo Bull 200",
+      "spec": "200 см³, полуавтомат, защита рук, фаркоп",
+      "price": "от 249 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

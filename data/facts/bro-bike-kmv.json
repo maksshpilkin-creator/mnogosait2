@@ -1,0 +1,64 @@
+{
+  "slug": "bro-bike-kmv",
+  "checked_at": "2026-11-16T16:47:28.006Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/pyatigorsk/firm/70000001049219483",
+      "checked_at": "2026-11-16T19:31:00.000Z",
+      "excerpt": "Bro Bike, Пятигорск, Кисловодское шоссе, 36/10. Рейтинг 5.0 ★. Тел. +7 (996) 416-05-23."
+    }
+  ],
+  "facts": {
+    "name": "Bro Bike",
+    "brand_display": "Bro <span>Bike</span>",
+    "city": "Пятигорск",
+    "district": "Промзона",
+    "address": "Кисловодское шоссе, 36/10",
+    "phone": "+7 (996) 416-05-23",
+    "phone_raw": "+79964160523",
+    "whatsapp": "79964160523",
+    "hours": "Вт-Вс 09:00-19:00",
+    "rating": 5,
+    "brands": "Regulmoto, Kayo, Motoland, GR",
+    "focus": "Мототехника, экипировка, расходники, сервис",
+    "price_range_note": "Питбайки от 87 000 ₽, Эндуро от 152 000 ₽, Квадро от 235 000 ₽",
+    "verified_source": "2GIS Пятигорск",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мотосалон и экипировочный центр<br> на КМВ"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл GR7 F250A Enduro",
+      "spec": "250 см³, 21 л.с., алюминиевые обода, фара, электростартер",
+      "price": "от 179 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Kayo Basic TT125",
+      "spec": "125 см³, 4-тактный, колеса 17/14",
+      "price": "от 87 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland Wild Track 200",
+      "spec": "200 см³, вариатор F-N-R, защита рук, фаркоп",
+      "price": "от 235 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "ya-moto-balashikha",
+  "checked_at": "2026-11-16T16:47:28.008Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/balashikha/search/Я%20Мото",
+      "checked_at": "2026-11-16T19:38:15.000Z",
+      "excerpt": "Я Мото, Балашиха, шоссе Энтузиастов, вл1а ст3. Рейтинг 4.8 ★. Тел. +7 (495) 640-58-58."
+    }
+  ],
+  "facts": {
+    "name": "Я Мото",
+    "brand_display": "Я <span>Мото</span>",
+    "city": "Балашиха",
+    "district": "Западная промзона",
+    "address": "шоссе Энтузиастов, вл1а ст3",
+    "phone": "+7 (495) 640-58-58",
+    "phone_raw": "+74956405858",
+    "whatsapp": "74956405858",
+    "hours": "Пн-Вс 09:00-21:00",
+    "rating": 4.8,
+    "brands": "Kayo, Regulmoto, Motoland, BSE",
+    "focus": "Мототехника, питбайки, эндуро, экипировка, сервис",
+    "price_range_note": "Питбайки от 89 000 ₽, Эндуро от 156 000 ₽, Квадро от 255 000 ₽",
+    "verified_source": "2GIS Балашиха",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мотосалон и склад техники<br> в Балашихе"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл Regulmoto Sport 003",
+      "spec": "250 см³, 21 л.с., регулируемая подвеска, фара",
+      "price": "от 156 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Kayo Basic TT125",
+      "spec": "125 см³, 4-тактный, колеса 17/14",
+      "price": "от 89 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland Wild Track 200",
+      "spec": "200 см³, вариатор, масляный радиатор, фаркоп",
+      "price": "от 255 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

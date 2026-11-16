@@ -1,0 +1,64 @@
+{
+  "slug": "virazh-novocherkassk",
+  "checked_at": "2026-11-16T16:47:28.005Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/novocherkassk/search/Вираж",
+      "checked_at": "2026-11-16T19:28:00.000Z",
+      "excerpt": "Вираж, Новочеркасск, пр. Ермака, 79А. Рейтинг 4.6 ★. Тел. +7 (951) 509-74-95."
+    }
+  ],
+  "facts": {
+    "name": "Вираж",
+    "brand_display": "Ви<span>раж</span>",
+    "city": "Новочеркасск",
+    "district": "Центральный р-н",
+    "address": "пр. Ермака, 79А",
+    "phone": "+7 (951) 509-74-95",
+    "phone_raw": "+79515097495",
+    "whatsapp": "79515097495",
+    "hours": "Пн-Сб 09:00-18:00, Вс 09:00-16:00",
+    "rating": 4.6,
+    "brands": "Motoland, Regulmoto, Kayo, Racer",
+    "focus": "Мототехника, питбайки, эндуро, экипировка, запчасти",
+    "price_range_note": "Питбайки от 83 000 ₽, Эндуро от 140 000 ₽, Квадро от 220 000 ₽",
+    "verified_source": "2GIS Новочеркасск",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мотосалон и склад мототехники<br> в Новочеркасске"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Эндуро Motoland XT250 ST",
+      "spec": "250 см³, дисковые гидравлические тормоза, колеса 21/18",
+      "price": "от 140 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Motoland Apex 125",
+      "spec": "125 см³, 4-тактный двигатель, колеса 17/14",
+      "price": "от 83 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland Allroad 200",
+      "spec": "200 см³, электростартер, передний/задний багажники",
+      "price": "от 220 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

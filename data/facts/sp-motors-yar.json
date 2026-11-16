@@ -14,6 +14,12 @@
       "url": "https://yandex.ru/maps/?text=SP%20Motors%20%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%BB%D1%8C%20%D0%A2%D1%83%D1%82%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5%20%D1%88%D0%BE%D1%81%D1%81%D0%B5%2C%202%D0%B2",
       "checked_at": "2026-11-11T16:22:29.524Z",
       "excerpt": "Карточка организации на Яндекс Картах (Ярославль)."
+    },
+    {
+      "id": "phone-check-2026-11-16",
+      "url": "https://spmotors.su/contacts",
+      "checked_at": "2026-11-16",
+      "excerpt": "+7 (4852) 66-20-60. Официальный контакт филиала на Тутаевском шоссе, 2В."
     }
   ],
   "facts": {
@@ -22,8 +28,8 @@
     "city": "Ярославль",
     "district": "Дзержинский р-н",
     "address": "Тутаевское шоссе, 2в",
-    "phone": "+7 (965) 726-20-60",
-    "phone_raw": "+79657262060",
+    "phone": "+7 (4852) 66-20-60",
+    "phone_raw": "+74852662060",
     "whatsapp": "79657262060",
     "hours": "Ежедневно 10:00-19:00",
     "rating": 5,
@@ -66,5 +72,14 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "phone_check": {
+    "status": "verified",
+    "checked_at": "2026-11-16",
+    "source_ids": [
+      "phone-check-2026-11-16"
+    ],
+    "note": "Официальный контакт филиала на Тутаевском шоссе, 2В.",
+    "previous_phone": "+7 (965) 726-20-60"
+  }
 }

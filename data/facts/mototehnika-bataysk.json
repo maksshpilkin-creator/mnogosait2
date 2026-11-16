@@ -1,0 +1,64 @@
+{
+  "slug": "mototehnika-bataysk",
+  "checked_at": "2026-11-16T16:47:28.005Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/bataysk/search/Мототехника",
+      "checked_at": "2026-11-16T19:29:00.000Z",
+      "excerpt": "Мототехника, Батайск, ул. Половинко, 125. Рейтинг 4.4 ★. Тел. +7 (928) 966-34-48."
+    }
+  ],
+  "facts": {
+    "name": "Мототехника",
+    "brand_display": "Мото<span>техника</span>",
+    "city": "Батайск",
+    "district": "Западный р-н",
+    "address": "ул. Половинко, 125",
+    "phone": "+7 (928) 966-34-48",
+    "phone_raw": "+79289663448",
+    "whatsapp": "79289663448",
+    "hours": "Пн-Вс 10:00-18:00",
+    "rating": 4.4,
+    "brands": "Motoland, Racer, Regulmoto",
+    "focus": "Мототехника, питбайки, скутеры, запчасти",
+    "price_range_note": "Питбайки от 82 000 ₽, Эндуро от 138 000 ₽, Квадро от 218 000 ₽",
+    "verified_source": "2GIS Батайск",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мотосалон и магазин запчастей<br> в Батайске"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл Racer Enduro RC250GY",
+      "spec": "250 см³, ПТС, дорожная резина/эндуро, багажник",
+      "price": "от 138 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Motoland CRF 125",
+      "spec": "125 см³, кикстартер, колеса 17/14",
+      "price": "от 82 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland 200 Wild",
+      "spec": "200 см³, вариатор, фара LED, спинка пассажира",
+      "price": "от 218 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

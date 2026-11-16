@@ -14,6 +14,12 @@
       "url": "https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%82%D0%BE%D0%BF%D0%B0%D1%80%D0%BA%20%D0%A2%D1%83%D0%BB%D0%B0%20%D0%9D%D0%BE%D0%B2%D0%BE%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5%20%D1%88%D0%BE%D1%81%D1%81%D0%B5%2C%2058",
       "checked_at": "2026-11-11T16:22:29.526Z",
       "excerpt": "Карточка организации на Яндекс Картах (Тула)."
+    },
+    {
+      "id": "phone-check-2026-11-16",
+      "url": "https://motoparkcentr.ru/",
+      "checked_at": "2026-11-16",
+      "excerpt": "+7 (4872) 57-30-58. Сайт публикует номер для Новомосковского шоссе, 58."
     }
   ],
   "facts": {
@@ -22,8 +28,8 @@
     "city": "Тула",
     "district": "Центральный р-н",
     "address": "Новомосковское шоссе, 58",
-    "phone": "+7 (910) 940-00-58",
-    "phone_raw": "+79109400058",
+    "phone": "+7 (4872) 57-30-58",
+    "phone_raw": "+74872573058",
     "whatsapp": "79109400058",
     "hours": "Ежедневно 09:00-21:00",
     "rating": 4.9,
@@ -66,5 +72,14 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "phone_check": {
+    "status": "verified",
+    "checked_at": "2026-11-16",
+    "source_ids": [
+      "phone-check-2026-11-16"
+    ],
+    "note": "Сайт публикует номер для Новомосковского шоссе, 58.",
+    "previous_phone": "+7 (910) 940-00-58"
+  }
 }

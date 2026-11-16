@@ -1,0 +1,64 @@
+{
+  "slug": "poni-motors-noginsk",
+  "checked_at": "2026-11-16T16:47:28.007Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/noginsk/search/Пони%20Моторс",
+      "checked_at": "2026-11-16T19:36:40.000Z",
+      "excerpt": "Пони Моторс, Ногинск, Горьковское шоссе, 51-й км. Рейтинг 4.6 ★. Тел. +7 (926) 335-52-62."
+    }
+  ],
+  "facts": {
+    "name": "Пони Моторс",
+    "brand_display": "Пони <span>Моторс</span>",
+    "city": "Ногинск",
+    "district": "Горьковское шоссе",
+    "address": "Горьковское шоссе, 51-й км, ТД Подмосковье",
+    "phone": "+7 (926) 335-52-62",
+    "phone_raw": "+79263355262",
+    "whatsapp": "79263355262",
+    "hours": "Пн-Вс 09:00-19:00",
+    "rating": 4.6,
+    "brands": "Kayo, Motoland, Regulmoto, BSE",
+    "focus": "Мототехника, питбайки, эндуро, сервис",
+    "price_range_note": "Питбайки от 86 000 ₽, Эндуро от 148 000 ₽, Квадро от 235 000 ₽",
+    "verified_source": "2GIS Ногинск",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мотосалон и сервисный центр<br> в Ногинске"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл Regulmoto Sport 003",
+      "spec": "250 см³, 21 л.с., регулируемая подвеска",
+      "price": "от 148 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Kayo Basic TT125",
+      "spec": "125 см³, колеса 17/14, защита картера",
+      "price": "от 86 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland Allroad 200",
+      "spec": "200 см³, вариатор, лебедка, багажники",
+      "price": "от 235 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

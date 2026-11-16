@@ -7,6 +7,7 @@ const factsDir = path.join(root, 'data', 'facts');
 const salesFile = path.join(root, 'sales', 'CALL_STATION.html');
 const distStationDir = path.join(root, 'dist', 'station');
 const distStationFile = path.join(distStationDir, 'index.html');
+const distStationAlias = path.join(root, 'dist', 'station.html');
 
 if (!fs.existsSync(distStationDir)) {
   fs.mkdirSync(distStationDir, { recursive: true });
@@ -14,6 +15,15 @@ if (!fs.existsSync(distStationDir)) {
 
 const factFiles = fs.readdirSync(factsDir).filter(f => f.endsWith('.json'));
 const leads = factFiles.map(f => JSON.parse(fs.readFileSync(path.join(factsDir, f), 'utf8')));
+
+function callablePhone(lead) {
+  if (lead.phone_check && lead.phone_check.status !== 'verified') return '';
+
+  const { phone, phone_raw: raw } = lead.facts;
+  if (typeof phone !== 'string' || !/^\+7\d{10}$/.test(raw)) return '';
+  if (phone.replace(/\D/g, '') !== raw.slice(1)) return '';
+  return phone;
+}
 
 // Timezone offset relative to MSK (UTC+3)
 const cityOffsets = {
@@ -28,7 +38,9 @@ const cityOffsets = {
   'Смоленск': 0, 'Иваново': 0, 'Владимир': 0, 'Ковров': 0, 'Муром': 0, 'Кострома': 0,
   'Вологда': 0, 'Череповец': 0, 'Петрозаводск': 0, 'Архангельск': 0, 'Мурманск': 0,
   'Сыктывкар': 0, 'Йошкар-Ола': 0, 'Чебоксары': 0, 'Саранск': 0, 'Тамбов': 0,
-  'Орёл': 0, 'Курск': 0, 'Великий Новгород': 0,
+  'Орёл': 0, 'Курск': 0, 'Великий Новгород': 0, 'Псков': 0, 'Альметьевск': 0,
+  'Обнинск': 0, 'Рыбинск': 0, 'Новочеркасск': 0, 'Батайск': 0, 'Волжский': 0,
+  'Раменское': 0, 'Домодедово': 0, 'Балашиха': 0, 'Махачкала': 0, 'Елец': 0,
   // MSK-1 (UTC+2)
   'Калининград': -1,
   // MSK+1 (UTC+4)
@@ -37,7 +49,7 @@ const cityOffsets = {
   // MSK+2 (UTC+5)
   'Екатеринбург': 2, 'Челябинск': 2, 'Миасс': 2, 'Магнитогорск': 2, 'Каменск-Уральский': 2,
   'Тюмень': 2, 'Пермь': 2, 'Уфа': 2, 'Стерлитамак': 2, 'Салават': 2, 'Нефтекамск': 2,
-  'Оренбург': 2, 'Курган': 2, 'Набережные Челны': 2,
+  'Оренбург': 2, 'Курган': 2, 'Набережные Челны': 2, 'Сургут': 2, 'Нижний Тагил': 2,
   // MSK+3 (UTC+6)
   'Омск': 3,
   // MSK+4 (UTC+7)
@@ -45,8 +57,12 @@ const cityOffsets = {
   'Барнаул': 4, 'Бийск': 4, 'Абакан': 4,
   // MSK+5 (UTC+8)
   'Иркутск': 5, 'Братск': 5, 'Улан-Удэ': 5,
+  // MSK+6 (UTC+9)
+  'Чита': 6, 'Благовещенск': 6,
   // MSK+7 (UTC+10)
-  'Хабаровск': 7, 'Владивосток': 7
+  'Хабаровск': 7, 'Владивосток': 7, 'Уссурийск': 7,
+  // MSK+8 (UTC+11)
+  'Южно-Сахалинск': 8
 };
 
 // Sort leads: who is closer to MSK (UTC+3) is higher up (0 first, then +1/-1, +2, +3, +4, +5, +7)
@@ -66,6 +82,7 @@ const hasSiteCount = leads.filter(l => l.facts.has_website).length;
 const cardsHtml = leads.map((lead, idx) => {
   const num = String(idx + 1).padStart(2, '0');
   const f = lead.facts;
+  const phone = callablePhone(lead);
   const offset = cityOffsets[f.city] ?? 0;
   const offsetLabel = offset === 0 ? 'МСК' : (offset > 0 ? `+${offset} от МСК` : `${offset} от МСК`);
   const absOffset = Math.abs(offset);
@@ -88,7 +105,7 @@ const cardsHtml = leads.map((lead, idx) => {
     : `<div class="mt-1.5 flex items-center gap-2 text-[11px] font-mono"><span class="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-bold">🟢 Сайта нет (горячий лид)</span></div>`;
 
   return `
-    <div class="lead-card bg-slate-900/90 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between transition-all duration-200 hover:border-orange-500/50 shadow-md" id="card-${lead.slug}" data-slug="${lead.slug}" data-status="new" data-has-website="${hasSite ? 'yes' : 'no'}" data-search="${f.name.toLowerCase()} ${f.city.toLowerCase()} ${f.address.toLowerCase()} ${f.phone.toLowerCase()}">
+    <div class="lead-card bg-slate-900/90 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between transition-all duration-200 hover:border-orange-500/50 shadow-md" id="card-${lead.slug}" data-slug="${lead.slug}" data-status="new" data-has-website="${hasSite ? 'yes' : 'no'}" data-search="${f.name.toLowerCase()} ${f.city.toLowerCase()} ${f.address.toLowerCase()} ${phone}">
       <div>
         <div class="flex items-center justify-between text-xs font-mono mb-2">
           <div class="flex items-center gap-2">
@@ -118,23 +135,25 @@ const cardsHtml = leads.map((lead, idx) => {
           <div class="text-slate-400 truncate">Модели: <span class="text-slate-200 font-sans">${modelsSample}</span></div>
         </div>
 
-        <!-- Phone Number Row: Explicit Readable text + Copy + Call -->
+        ${phone ? `<!-- Phone Number Row: Explicit Readable text + Copy + Call -->
         <div class="mt-3 p-2.5 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-between gap-2">
           <div class="min-w-0 flex-1">
             <span class="text-[9px] text-slate-500 font-mono block uppercase leading-none mb-1">Номер телефона:</span>
             <a href="tel:${f.phone_raw}" class="text-emerald-400 hover:text-emerald-300 font-mono font-extrabold text-sm select-all tracking-tight block truncate" title="Нажмите для вызова или зажмите для копирования">
-              📞 ${f.phone}
+              📞 ${phone}
             </a>
           </div>
           <div class="flex items-center gap-1.5 shrink-0">
-            <button type="button" onclick="copyNumber('${f.phone}')" class="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 active:scale-95 text-slate-200 hover:text-white rounded-lg text-xs font-mono border border-slate-700 transition shadow-sm" title="Скопировать номер">
+            <button type="button" onclick="copyNumber('${phone}')" class="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 active:scale-95 text-slate-200 hover:text-white rounded-lg text-xs font-mono border border-slate-700 transition shadow-sm" title="Скопировать номер">
               📋 Скопировать
             </button>
             <a href="tel:${f.phone_raw}" class="px-2.5 py-1.5 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white rounded-lg text-xs font-mono font-bold transition shadow-sm" title="Набрать номер">
               Вызов
             </a>
           </div>
-        </div>
+        </div>` : `<div class="mt-3 p-2.5 bg-slate-950 rounded-xl border border-slate-800 text-sm font-semibold text-amber-300">
+          Телефон требует уточнения
+        </div>`}
 
         <!-- Demo Site & Telegram Message Buttons -->
         <div class="mt-2 grid grid-cols-2 gap-2 text-xs font-bold font-mono">
@@ -346,7 +365,7 @@ const fullHtml = `<!DOCTYPE html>
       name: l.facts.name,
       city: l.facts.city,
       address: l.facts.address,
-      phone: l.facts.phone,
+      phone: callablePhone(l),
       hasWebsite: Boolean(l.facts.has_website),
       existingWebsite: l.facts.existing_website || '',
       catalog: l.catalog.slice(0, 2).map(c => c.name + ' (' + c.price + ')').join(', ')
@@ -579,6 +598,7 @@ const fullHtml = `<!DOCTYPE html>
 
 fs.writeFileSync(salesFile, fullHtml, 'utf8');
 fs.writeFileSync(distStationFile, fullHtml, 'utf8');
+fs.writeFileSync(distStationAlias, fullHtml, 'utf8');
 
 console.log(`CALL_STATION.html успешно собран для ${leads.length} мотосалонов (${noSiteCount} без сайта, ${hasSiteCount} с сайтом):`);
 console.log(`- Локальный: ${salesFile}`);

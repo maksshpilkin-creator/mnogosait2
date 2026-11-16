@@ -1,0 +1,64 @@
+{
+  "slug": "bayk-post-volzhsky",
+  "checked_at": "2026-11-16T16:47:28.006Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/volzhsky/search/Байк-Пост",
+      "checked_at": "2026-11-16T19:35:00.000Z",
+      "excerpt": "Байк-Пост, Волжский, пр. им. Ленина, 92Ж. Рейтинг 4.5 ★. Тел. +7 (8443) 50-03-00."
+    }
+  ],
+  "facts": {
+    "name": "Байк-Пост",
+    "brand_display": "Байк-<span>Пост</span>",
+    "city": "Волжский",
+    "district": "Центральный р-н",
+    "address": "пр. им. Ленина, 92Ж",
+    "phone": "+7 (8443) 50-03-00",
+    "phone_raw": "+78443500300",
+    "whatsapp": "78443500300",
+    "hours": "Пн-Вс 09:00-19:00",
+    "rating": 4.5,
+    "brands": "Kayo, Progasi, Regulmoto, Motoland",
+    "focus": "Питбайки, эндуро, экипировка, сервис",
+    "price_range_note": "Питбайки от 86 000 ₽, Эндуро от 149 000 ₽, Квадро от 239 000 ₽",
+    "verified_source": "2GIS Волжский",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мотосалон и сервисный центр<br> в Волжском"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Эндуро Progasi Palma 250",
+      "spec": "250 см³, спортивный карбюратор, фрезерованные траверсы",
+      "price": "от 149 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Kayo Basic 125",
+      "spec": "125 см³, 4-тактный двигатель, колеса 17/14",
+      "price": "от 86 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland Allroad 200",
+      "spec": "200 см³, электростартер, передний/задний багажники",
+      "price": "от 239 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

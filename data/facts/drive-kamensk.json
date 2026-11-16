@@ -8,6 +8,18 @@
       "url": "https://yandex.ru/maps/org/drive/1284920198/",
       "checked_at": "2026-11-14T07:45:00.000Z",
       "excerpt": "Drive, Каменск-Уральский, ул. Октябрьская, 21. Рейтинг 4.8 ★."
+    },
+    {
+      "id": "phone-check-2026-11-16",
+      "url": "https://regulmoto.ru/dealer/?PAGEN_1=4",
+      "checked_at": "2026-11-16",
+      "excerpt": "На Октябрьской, 21 указан «Аккуммаркет». Мотоцентр Drive публикует +7 (912) 211-13-00 для Озёрной, 6."
+    },
+    {
+      "id": "phone-check-2026-11-16-additional",
+      "url": "https://xn----8sbggd1aqjhayctd1d.xn--p1ai/",
+      "checked_at": "2026-11-16",
+      "excerpt": "На Октябрьской, 21 указан «Аккуммаркет». Мотоцентр Drive публикует +7 (912) 211-13-00 для Озёрной, 6."
     }
   ],
   "facts": {
@@ -60,5 +72,15 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "phone_check": {
+    "status": "conflicting",
+    "checked_at": "2026-11-16",
+    "source_ids": [
+      "phone-check-2026-11-16",
+      "phone-check-2026-11-16-additional"
+    ],
+    "note": "На Октябрьской, 21 указан «Аккуммаркет». Мотоцентр Drive публикует +7 (912) 211-13-00 для Озёрной, 6.",
+    "previous_phone": "+7 (922) 110-33-44"
+  }
 }

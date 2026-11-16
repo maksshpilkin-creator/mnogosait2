@@ -14,6 +14,18 @@
       "url": "https://yandex.ru/maps/?text=Motodom%20(%D0%9C%D0%BE%D1%82%D0%BE%D0%B4%D0%BE%D0%BC)%20%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3%20%D1%83%D0%BB.%20%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%2C%201%20(1%20%D1%8D%D1%82%D0%B0%D0%B6)",
       "checked_at": "2026-11-11T16:22:29.514Z",
       "excerpt": "Карточка организации на Яндекс Картах (Екатеринбург)."
+    },
+    {
+      "id": "phone-check-2026-11-16",
+      "url": "https://rting.ru/ekaterinburg/co/motodom/4147932",
+      "checked_at": "2026-11-16",
+      "excerpt": "+7 (966) 222-99-91. Карточка на Академической, 1 подтверждает исходный номер и ссылается на домен компании."
+    },
+    {
+      "id": "phone-check-2026-11-16-additional",
+      "url": "https://motodom.pro/kontakty",
+      "checked_at": "2026-11-16",
+      "excerpt": "Карточка на Академической, 1 подтверждает исходный номер и ссылается на домен компании."
     }
   ],
   "facts": {
@@ -66,5 +78,14 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "phone_check": {
+    "status": "verified",
+    "checked_at": "2026-11-16",
+    "source_ids": [
+      "phone-check-2026-11-16",
+      "phone-check-2026-11-16-additional"
+    ],
+    "note": "Карточка на Академической, 1 подтверждает исходный номер и ссылается на домен компании."
+  }
 }

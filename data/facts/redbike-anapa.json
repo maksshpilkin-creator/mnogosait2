@@ -8,6 +8,18 @@
       "url": "https://2gis.ru/anapa/firm/70000001021481966",
       "checked_at": "2026-11-14T07:45:00.000Z",
       "excerpt": "Redbike, Анапа, ул. Чехова, 77/1. Рейтинг 4.9 ★."
+    },
+    {
+      "id": "phone-check-2026-11-16",
+      "url": "https://red-bike.ru/",
+      "checked_at": "2026-11-16",
+      "excerpt": "Сайт сети публикует +7 (989) 764-43-55 для Темрюка. Справочники Анапы расходятся по номеру и адресу 77/77/1."
+    },
+    {
+      "id": "phone-check-2026-11-16-additional",
+      "url": "https://anapa.spravka.city/company/redbike",
+      "checked_at": "2026-11-16",
+      "excerpt": "Сайт сети публикует +7 (989) 764-43-55 для Темрюка. Справочники Анапы расходятся по номеру и адресу 77/77/1."
     }
   ],
   "facts": {
@@ -60,5 +72,15 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "phone_check": {
+    "status": "conflicting",
+    "checked_at": "2026-11-16",
+    "source_ids": [
+      "phone-check-2026-11-16",
+      "phone-check-2026-11-16-additional"
+    ],
+    "note": "Сайт сети публикует +7 (989) 764-43-55 для Темрюка. Справочники Анапы расходятся по номеру и адресу 77/77/1.",
+    "previous_phone": "+7 (993) 771-43-55"
+  }
 }

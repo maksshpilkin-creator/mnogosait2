@@ -1,0 +1,64 @@
+{
+  "slug": "extreme-blagoveshchensk",
+  "checked_at": "2026-11-16T16:47:28.004Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/blagoveshchensk/firm/70000001048291088",
+      "checked_at": "2026-11-16T19:14:00.000Z",
+      "excerpt": "Экстрим, Благовещенск, Промышленная ул., 10а. Рейтинг 4.9 ★. Тел. +7 (962) 284-81-55."
+    }
+  ],
+  "facts": {
+    "name": "Экстрим",
+    "brand_display": "Экс<span>трим</span>",
+    "city": "Благовещенск",
+    "district": "Промышленный р-н",
+    "address": "Промышленная ул., 10а",
+    "phone": "+7 (962) 284-81-55",
+    "phone_raw": "+79622848155",
+    "whatsapp": "79622848155",
+    "hours": "Пн-Пт 09:00-18:00, Сб 09:00-15:00",
+    "rating": 4.9,
+    "brands": "CFMOTO, Kayo, Regulmoto, BSE",
+    "focus": "Квадроциклы, эндуро, питбайки, лодочные моторы, экипировка",
+    "price_range_note": "Питбайки от 89 000 ₽, Эндуро от 158 000 ₽, Квадро от 265 000 ₽",
+    "verified_source": "2GIS Благовещенск",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Центр внедорожной мототехники<br> в Благовещенске"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Эндуро Regulmoto Sport 003 Pro",
+      "spec": "300 см³, двигатель NB300, вилка перевернутого типа",
+      "price": "от 158 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк BSE MX 125",
+      "spec": "125 см³, 4-тактный, усиленная рама",
+      "price": "от 89 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл CFMOTO CFORCE 400L",
+      "spec": "400 см³, полный привод 4х4, вариатор, лебедка",
+      "price": "от 599 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

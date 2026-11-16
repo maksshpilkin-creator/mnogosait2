@@ -8,6 +8,18 @@
       "url": "https://2gis.ru/abakan/firm/70000001021482155",
       "checked_at": "2026-11-14T07:45:00.000Z",
       "excerpt": "Мотомаркет19, Абакан, ул. Богдана Хмельницкого, 6А. Рейтинг 5.0 ★."
+    },
+    {
+      "id": "phone-check-2026-11-16",
+      "url": "https://gladiatormotors.ru/spisok-dillerov-map/",
+      "checked_at": "2026-11-16",
+      "excerpt": "+7 (902) 010-00-80. Производитель указывает номер для Богдана Хмельницкого, 6А."
+    },
+    {
+      "id": "phone-check-2026-11-16-additional",
+      "url": "https://regulmoto.ru/dealer/?PAGEN_1=7",
+      "checked_at": "2026-11-16",
+      "excerpt": "Производитель указывает номер для Богдана Хмельницкого, 6А."
     }
   ],
   "facts": {
@@ -16,8 +28,8 @@
     "city": "Абакан",
     "district": "Центральный р-н",
     "address": "ул. Богдана Хмельницкого, 6А",
-    "phone": "+7 (923) 390-19-19",
-    "phone_raw": "+79233901919",
+    "phone": "+7 (902) 010-00-80",
+    "phone_raw": "+79020100080",
     "whatsapp": "79233901919",
     "hours": "Пн-Сб 09:00-19:00, Вс 10:00-18:00",
     "rating": 5,
@@ -60,5 +72,15 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "phone_check": {
+    "status": "verified",
+    "checked_at": "2026-11-16",
+    "source_ids": [
+      "phone-check-2026-11-16",
+      "phone-check-2026-11-16-additional"
+    ],
+    "note": "Производитель указывает номер для Богдана Хмельницкого, 6А.",
+    "previous_phone": "+7 (923) 390-19-19"
+  }
 }

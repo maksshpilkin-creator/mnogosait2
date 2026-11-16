@@ -1,0 +1,64 @@
+{
+  "slug": "cross05-makhachkala",
+  "checked_at": "2026-11-16T16:47:28.009Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/makhachkala/search/Кросс05",
+      "checked_at": "2026-11-16T19:41:25.000Z",
+      "excerpt": "Cross05, Махачкала, ул. Хаджи Булача, 97/1. Рейтинг 4.4 ★. Тел. +7 (965) 546-05-05."
+    }
+  ],
+  "facts": {
+    "name": "Cross05",
+    "brand_display": "Cross<span>05</span>",
+    "city": "Махачкала",
+    "district": "Ленинский р-н",
+    "address": "ул. Хаджи Булача, 97/1",
+    "phone": "+7 (965) 546-05-05",
+    "phone_raw": "+79655460505",
+    "whatsapp": "79655460505",
+    "hours": "Пн-Вс 09:00-19:00",
+    "rating": 4.4,
+    "brands": "Regulmoto, Kayo, Motoland, BSE",
+    "focus": "Внедорожные мотоциклы, эндуро, питбайки, экипировка",
+    "price_range_note": "Питбайки от 85 000 ₽, Эндуро от 146 000 ₽, Квадро от 235 000 ₽",
+    "verified_source": "2GIS Махачкала",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Внедорожные мотоциклы и экипировка<br> в Махачкале"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл Regulmoto ZR 250",
+      "spec": "250 см³, дисковые тормоза, спортивный выхлоп",
+      "price": "от 146 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк BSE MX 125",
+      "spec": "125 см³, 4-тактный мотор, дисковые тормоза",
+      "price": "от 85 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland Wild Track 200",
+      "spec": "200 см³, вариатор, масляный радиатор",
+      "price": "от 235 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

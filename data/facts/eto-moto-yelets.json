@@ -1,0 +1,64 @@
+{
+  "slug": "eto-moto-yelets",
+  "checked_at": "2026-11-16T16:47:28.009Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/yelets/search/ЭТО%20МОТО",
+      "checked_at": "2026-11-16T19:42:20.000Z",
+      "excerpt": "ЭТО МОТО, Елец, Московское шоссе, 20. Рейтинг 4.8 ★. Тел. +7 (999) 789-29-24."
+    }
+  ],
+  "facts": {
+    "name": "ЭТО МОТО",
+    "brand_display": "ЭТО <span>МОТО</span>",
+    "city": "Елец",
+    "district": "Западный р-н",
+    "address": "Московское шоссе, 20",
+    "phone": "+7 (999) 789-29-24",
+    "phone_raw": "+79997892924",
+    "whatsapp": "79997892924",
+    "hours": "Пн-Сб 09:00-18:00, Вс 09:00-16:00",
+    "rating": 4.8,
+    "brands": "KEWS, Hengjian, Regulmoto, Kayo",
+    "focus": "Эндуро, питбайки, запчасти, сервис",
+    "price_range_note": "Питбайки от 84 000 ₽, Эндуро от 144 000 ₽, Квадро от 225 000 ₽",
+    "verified_source": "2GIS Елец",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Эндуро-мототехника и запчасти<br> в Ельце"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл KEWS K16 NB300",
+      "spec": "300 см³, двигатель NB300, подвеска с регулировками",
+      "price": "от 195 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Kayo Basic TT125",
+      "spec": "125 см³, 4-тактный, колеса 17/14",
+      "price": "от 84 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland Allroad 200",
+      "spec": "200 см³, вариатор, передний/задний багажники",
+      "price": "от 225 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

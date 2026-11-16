@@ -1,0 +1,64 @@
+{
+  "slug": "promoto-chita",
+  "checked_at": "2026-11-16T16:47:28.003Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/chita/firm/70000001048291444",
+      "checked_at": "2026-11-16T19:11:00.000Z",
+      "excerpt": "Pro Moto, Чита, Объездное шоссе, 24а, стр. 2. Рейтинг 4.9 ★. Тел. +7 (914) 364-58-71."
+    }
+  ],
+  "facts": {
+    "name": "Pro Moto",
+    "brand_display": "Pro <span>Moto</span>",
+    "city": "Чита",
+    "district": "Железнодорожный р-н",
+    "address": "Объездное шоссе, 24а, стр. 2",
+    "phone": "+7 (914) 364-58-71",
+    "phone_raw": "+79143645871",
+    "whatsapp": "79143645871",
+    "hours": "Пн-Вс 09:00-19:00",
+    "rating": 4.9,
+    "brands": "Regulmoto, Kayo, Motoland, BSE",
+    "focus": "Мотоциклы, питбайки, эндуро, экипировка, сервис",
+    "price_range_note": "Питбайки от 88 000 ₽, Эндуро от 152 000 ₽, Квадро от 240 000 ₽",
+    "verified_source": "2GIS Чита",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Эндуро, питбайки и экипировка<br> в Чите"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл Regulmoto Athlete 250",
+      "spec": "250 см³, подвеска с регулировками, алюминиевый обод",
+      "price": "от 152 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Kayo Basic TT125",
+      "spec": "125 см³, 4-тактный, колеса 17/14",
+      "price": "от 88 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland Wild Track 200",
+      "spec": "200 см³, электростартер, литые диски",
+      "price": "от 240 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

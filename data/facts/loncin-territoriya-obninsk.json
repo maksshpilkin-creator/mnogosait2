@@ -1,0 +1,64 @@
+{
+  "slug": "loncin-territoriya-obninsk",
+  "checked_at": "2026-11-16T16:47:28.004Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/obninsk/search/Территория%20Мото",
+      "checked_at": "2026-11-16T19:26:00.000Z",
+      "excerpt": "Территория Мото, Обнинск, Киевское шоссе, 25. Рейтинг 4.4 ★. Тел. +7 (915) 898-61-81."
+    }
+  ],
+  "facts": {
+    "name": "Территория Мото",
+    "brand_display": "Территория <span>Мото</span>",
+    "city": "Обнинск",
+    "district": "Южный р-н",
+    "address": "Киевское шоссе, 25",
+    "phone": "+7 (915) 898-61-81",
+    "phone_raw": "+79158986181",
+    "whatsapp": "79158986181",
+    "hours": "Пн-Вс 09:00-20:00",
+    "rating": 4.4,
+    "brands": "Loncin, Voge, Regulmoto, Kayo",
+    "focus": "Мотоциклы, эндуро, квадроциклы, экипировка, сервис",
+    "price_range_note": "Питбайки от 86 000 ₽, Эндуро от 155 000 ₽, Квадро от 245 000 ₽",
+    "verified_source": "2GIS Обнинск",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мотосалон и дилер техники<br> в Обнинске"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл Voge 300 Rally",
+      "spec": "300 см³, 29 л.с., водяное охлаждение, ABS, ветровое стекло",
+      "price": "от 345 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Regulmoto Seven 125",
+      "spec": "125 см³, 4-тактный, электростартер, колеса 17/14",
+      "price": "от 86 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Loncin Xwolf 300",
+      "spec": "300 см³, инжектор, вариатор, LED оптика, лебедка",
+      "price": "от 395 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

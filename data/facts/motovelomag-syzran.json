@@ -8,6 +8,12 @@
       "url": "https://yandex.ru/maps/org/motovelomagazin/1194829102/",
       "checked_at": "2026-11-14T07:45:00.000Z",
       "excerpt": "МотоВелоМагазин, Сызрань, пр. 50 лет Октября, 22. Рейтинг 4.6 ★."
+    },
+    {
+      "id": "phone-check-2026-11-16",
+      "url": "https://www.motovelomag.ru/syzran-motovelomagazin.html",
+      "checked_at": "2026-11-16",
+      "excerpt": "+7 (8464) 35-46-15. Номер филиала на проспекте 50 лет Октября, 22."
     }
   ],
   "facts": {
@@ -16,8 +22,8 @@
     "city": "Сызрань",
     "district": "Юго-Западный р-н",
     "address": "пр. 50 лет Октября, 22",
-    "phone": "+7 (927) 210-44-55",
-    "phone_raw": "+79272104455",
+    "phone": "+7 (8464) 35-46-15",
+    "phone_raw": "+78464354615",
     "whatsapp": "79272104455",
     "hours": "Пн-Сб 09:00-18:00, Вс 09:00-16:00",
     "rating": 4.6,
@@ -60,5 +66,14 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "phone_check": {
+    "status": "verified",
+    "checked_at": "2026-11-16",
+    "source_ids": [
+      "phone-check-2026-11-16"
+    ],
+    "note": "Номер филиала на проспекте 50 лет Октября, 22.",
+    "previous_phone": "+7 (927) 210-44-55"
+  }
 }

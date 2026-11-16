@@ -1,0 +1,64 @@
+{
+  "slug": "aktiv-motorsport-ramenskoe",
+  "checked_at": "2026-11-16T16:47:28.006Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/ramenskoe/search/Актив%20Мотор%20Спорт",
+      "checked_at": "2026-11-16T19:35:50.000Z",
+      "excerpt": "Актив Мотор Спорт, Раменское, ул. Михалевича, 39к43. Рейтинг 4.5 ★. Тел. +7 (915) 059-23-66."
+    }
+  ],
+  "facts": {
+    "name": "Актив Мотор Спорт",
+    "brand_display": "Актив Мотор <span>Спорт</span>",
+    "city": "Раменское",
+    "district": "Восточный р-н",
+    "address": "ул. Михалевича, 39к43",
+    "phone": "+7 (915) 059-23-66",
+    "phone_raw": "+79150592366",
+    "whatsapp": "79150592366",
+    "hours": "Пн-Пт 10:00-19:00, Сб-Вс 10:00-18:00",
+    "rating": 4.5,
+    "brands": "BSE, Kayo, Motoland, Regulmoto",
+    "focus": "Питбайки, эндуро, экипировка, запчасти",
+    "price_range_note": "Питбайки от 85 000 ₽, Эндуро от 145 000 ₽, Квадро от 228 000 ₽",
+    "verified_source": "2GIS Раменское",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мотомагазин и запчасти для питбайков<br> в Раменском"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл BSE Z3 250",
+      "spec": "250 см³, усиленная рама, защита двигателя, фара",
+      "price": "от 145 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк BSE MX 125",
+      "spec": "125 см³, 4-тактный, колеса 17/14",
+      "price": "от 85 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland Wild Track 200",
+      "spec": "200 см³, вариатор, масляный радиатор",
+      "price": "от 228 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

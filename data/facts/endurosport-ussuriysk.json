@@ -1,0 +1,64 @@
+{
+  "slug": "endurosport-ussuriysk",
+  "checked_at": "2026-11-16T16:47:28.009Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/ussuriysk/search/EnduroSport",
+      "checked_at": "2026-11-16T19:41:00.000Z",
+      "excerpt": "EnduroSport, Уссурийск, Краснознамённая улица, 178Б. Рейтинг 4.8 ★. Тел. +7 (951) 017-80-08."
+    }
+  ],
+  "facts": {
+    "name": "EnduroSport",
+    "brand_display": "Enduro<span>Sport</span>",
+    "city": "Уссурийск",
+    "district": "Центральный р-н",
+    "address": "Краснознамённая улица, 178Б, пав. 14",
+    "phone": "+7 (951) 017-80-08",
+    "phone_raw": "+79510178008",
+    "whatsapp": "79510178008",
+    "hours": "Пн-Вс 09:00-18:00",
+    "rating": 4.8,
+    "brands": "Regulmoto, Kayo, GR, Motoland",
+    "focus": "Эндуро, питбайки, экипировка, запчасти, сервис",
+    "price_range_note": "Питбайки от 88 000 ₽, Эндуро от 155 000 ₽, Квадро от 245 000 ₽",
+    "verified_source": "2GIS Уссурийск",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мотосалон и склад запчастей<br> в Уссурийске"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Эндуро Regulmoto Sport 003 Pro",
+      "spec": "300 см³, двигатель NB300, регулируемая вилка",
+      "price": "от 155 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Kayo Basic 125",
+      "spec": "125 см³, 4-тактный, колеса 17/14",
+      "price": "от 88 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland Allroad 200",
+      "spec": "200 см³, вариатор, лебедка, багажники",
+      "price": "от 245 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

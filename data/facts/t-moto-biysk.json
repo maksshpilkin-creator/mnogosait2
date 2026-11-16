@@ -8,6 +8,18 @@
       "url": "https://2gis.ru/biysk/firm/70000001021482144",
       "checked_at": "2026-11-14T07:45:00.000Z",
       "excerpt": "Т-мото, Бийск, Шубенский пер., 77/1. Рейтинг 4.8 ★."
+    },
+    {
+      "id": "phone-check-2026-11-16",
+      "url": "https://brl.auto2.info/biysk/mototehnika/",
+      "checked_at": "2026-11-16",
+      "excerpt": "На Шубенском, 77/1 указан «Сокол-Алтай». «Т-Мото» с номером +7 (905) 080-40-49 найден по другим адресам."
+    },
+    {
+      "id": "phone-check-2026-11-16-additional",
+      "url": "https://urbanplaces.su/ru_altajskij-kraj/bijsk-gorodskoj-okrug-bijsk/card-2173201-t-moto",
+      "checked_at": "2026-11-16",
+      "excerpt": "На Шубенском, 77/1 указан «Сокол-Алтай». «Т-Мото» с номером +7 (905) 080-40-49 найден по другим адресам."
     }
   ],
   "facts": {
@@ -60,5 +72,15 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "phone_check": {
+    "status": "conflicting",
+    "checked_at": "2026-11-16",
+    "source_ids": [
+      "phone-check-2026-11-16",
+      "phone-check-2026-11-16-additional"
+    ],
+    "note": "На Шубенском, 77/1 указан «Сокол-Алтай». «Т-Мото» с номером +7 (905) 080-40-49 найден по другим адресам.",
+    "previous_phone": "+7 (905) 980-11-22"
+  }
 }
