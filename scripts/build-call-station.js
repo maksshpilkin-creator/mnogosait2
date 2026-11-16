@@ -118,20 +118,31 @@ const cardsHtml = leads.map((lead, idx) => {
           <div class="text-slate-400 truncate">Модели: <span class="text-slate-200 font-sans">${modelsSample}</span></div>
         </div>
 
-        <!-- Phone & Demo Action Buttons -->
-        <div class="mt-3 grid grid-cols-2 gap-2 text-xs font-bold font-mono">
-          <a href="tel:${f.phone_raw}" class="py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white flex items-center justify-center gap-1.5 transition shadow">
-            <span>📞 Позвонить</span>
-          </a>
-          <a href="${demoUrl}" target="_blank" rel="noopener" class="py-2.5 px-3 rounded-xl bg-orange-600 hover:bg-orange-500 active:scale-95 text-white flex items-center justify-center gap-1.5 transition shadow">
-            <span>🌐 Демо-сайт</span>
-          </a>
+        <!-- Phone Number Row: Explicit Readable text + Copy + Call -->
+        <div class="mt-3 p-2.5 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-between gap-2">
+          <div class="min-w-0 flex-1">
+            <span class="text-[9px] text-slate-500 font-mono block uppercase leading-none mb-1">Номер телефона:</span>
+            <a href="tel:${f.phone_raw}" class="text-emerald-400 hover:text-emerald-300 font-mono font-extrabold text-sm select-all tracking-tight block truncate" title="Нажмите для вызова или зажмите для копирования">
+              📞 ${f.phone}
+            </a>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button type="button" onclick="copyNumber('${f.phone}')" class="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 active:scale-95 text-slate-200 hover:text-white rounded-lg text-xs font-mono border border-slate-700 transition shadow-sm" title="Скопировать номер">
+              📋 Скопировать
+            </button>
+            <a href="tel:${f.phone_raw}" class="px-2.5 py-1.5 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white rounded-lg text-xs font-mono font-bold transition shadow-sm" title="Набрать номер">
+              Вызов
+            </a>
+          </div>
         </div>
 
-        <!-- Telegram / SMS Quick Copy Button -->
-        <div class="mt-2">
-          <button type="button" class="w-full py-2 px-2.5 rounded-xl bg-sky-600/20 hover:bg-sky-600/30 active:scale-95 text-sky-300 hover:text-white border border-sky-500/30 text-xs font-mono font-medium flex items-center justify-center gap-1.5 transition" onclick="copyTelegramMessage('${lead.slug}')">
-            <span>📋 Скопировать текст для Telegram / SMS</span>
+        <!-- Demo Site & Telegram Message Buttons -->
+        <div class="mt-2 grid grid-cols-2 gap-2 text-xs font-bold font-mono">
+          <a href="${demoUrl}" target="_blank" rel="noopener" class="py-2 px-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 active:scale-95 text-white flex items-center justify-center gap-1.5 transition shadow">
+            <span>🌐 Демо-сайт</span>
+          </a>
+          <button type="button" class="py-2 px-2.5 rounded-xl bg-sky-600/20 hover:bg-sky-600/30 active:scale-95 text-sky-300 hover:text-white border border-sky-500/30 text-xs font-mono font-medium flex items-center justify-center gap-1.5 transition" onclick="copyTelegramMessage('${lead.slug}')">
+            <span>💬 Текст для ТГ</span>
           </button>
         </div>
 
@@ -398,6 +409,14 @@ const fullHtml = `<!DOCTYPE html>
       setTimeout(() => {
         t.classList.add('opacity-0', 'pointer-events-none', 'translate-y-[-10px]');
       }, 2500);
+    }
+
+    function copyNumber(phone) {
+      navigator.clipboard.writeText(phone).then(() => {
+        showToast('✓ Номер ' + phone + ' скопирован!');
+      }).catch(() => {
+        prompt('Скопируйте номер:', phone);
+      });
     }
 
     function copyTelegramMessage(slug) {
