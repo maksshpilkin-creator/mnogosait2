@@ -1,0 +1,64 @@
+{
+  "slug": "aktrade-angarsk",
+  "checked_at": "2026-11-16T20:28:00.000Z",
+  "identity_status": "verified",
+  "sources": [
+    {
+      "id": "2gis",
+      "url": "https://2gis.ru/angarsk/search/АкТрейд",
+      "checked_at": "2026-11-16T20:28:00.000Z",
+      "excerpt": "АкТрейд, Ангарск, ул. Чайковского, 1А (ТК Автомир, пав. 8). Рейтинг 4.8 ★. Тел. +7 (939) 818-34-88."
+    }
+  ],
+  "facts": {
+    "name": "АкТрейд",
+    "brand_display": "Ак<span>Трейд</span>",
+    "city": "Ангарск",
+    "district": "Центральный р-н",
+    "address": "ул. Чайковского, 1А",
+    "phone": "+7 (939) 818-34-88",
+    "phone_raw": "+79398183488",
+    "whatsapp": "79398183488",
+    "hours": "Пн-Вс 09:00-20:00",
+    "rating": 4.8,
+    "brands": "Regulmoto, Kayo, Motoland, Racer",
+    "focus": "Мототехника, питбайки, эндуро, экипировка, сервис",
+    "price_range_note": "Питбайки от 86 000 ₽, Эндуро от 149 000 ₽, Квадро от 239 000 ₽",
+    "verified_source": "2GIS Ангарск",
+    "has_website": false,
+    "existing_website": "",
+    "hero_subtitle": "Мототехника, питбайки и экипировка<br> в Ангарске"
+  },
+  "catalog": [
+    {
+      "id": "enduro",
+      "category": "enduro",
+      "name": "Мотоцикл Regulmoto Sport 003",
+      "spec": "250 см³, 21 л.с., регулируемая подвеска, фара",
+      "price": "от 149 000 ₽",
+      "image": "assets/product-enduro.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "pitbike",
+      "category": "pitbike",
+      "name": "Питбайк Kayo Basic TT125",
+      "spec": "125 см³, 4-тактный, колеса 17/14, защита картера",
+      "price": "от 86 000 ₽",
+      "image": "assets/product-pitbike.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    },
+    {
+      "id": "atv",
+      "category": "atv",
+      "name": "Квадроцикл Motoland Wild Track 200",
+      "spec": "200 см³, вариатор, масляный радиатор, фаркоп",
+      "price": "от 239 000 ₽",
+      "image": "assets/product-atv.jpg",
+      "status": "verified",
+      "source_id": "2gis"
+    }
+  ]
+}

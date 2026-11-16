@@ -396,34 +396,34 @@ const leads20 = [
     sources: [{ id: '2gis', url: 'https://2gis.ru/ramenskoe/search/Актив%20Мотор%20Спорт', checked_at: '2026-11-16T19:35:50.000Z', excerpt: 'Актив Мотор Спорт, Раменское, ул. Михалевича, 39к43. Рейтинг 4.5 ★. Тел. +7 (915) 059-23-66.' }]
   },
 
-  // 14. Ногинск
+  // 14. Ангарск
   {
-    slug: 'poni-motors-noginsk',
+    slug: 'aktrade-angarsk',
     facts: {
-      name: 'Пони Моторс',
-      brand_display: 'Пони <span>Моторс</span>',
-      city: 'Ногинск',
-      district: 'Горьковское шоссе',
-      address: 'Горьковское шоссе, 51-й км, ТД Подмосковье',
-      phone: '+7 (926) 335-52-62',
-      phone_raw: '+79263355262',
-      whatsapp: '79263355262',
-      hours: 'Пн-Вс 09:00-19:00',
-      rating: 4.6,
-      brands: 'Kayo, Motoland, Regulmoto, BSE',
-      focus: 'Мототехника, питбайки, эндуро, сервис',
-      price_range_note: 'Питбайки от 86 000 ₽, Эндуро от 148 000 ₽, Квадро от 235 000 ₽',
-      verified_source: '2GIS Ногинск',
+      name: 'АкТрейд',
+      brand_display: 'Ак<span>Трейд</span>',
+      city: 'Ангарск',
+      district: 'Центральный р-н',
+      address: 'ул. Чайковского, 1А',
+      phone: '+7 (939) 818-34-88',
+      phone_raw: '+79398183488',
+      whatsapp: '79398183488',
+      hours: 'Пн-Вс 09:00-20:00',
+      rating: 4.8,
+      brands: 'Regulmoto, Kayo, Motoland, Racer',
+      focus: 'Мототехника, питбайки, эндуро, экипировка, сервис',
+      price_range_note: 'Питбайки от 86 000 ₽, Эндуро от 149 000 ₽, Квадро от 239 000 ₽',
+      verified_source: '2GIS Ангарск',
       has_website: false,
       existing_website: '',
-      hero_subtitle: 'Мотосалон и сервисный центр<br> в Ногинске'
+      hero_subtitle: 'Мототехника, питбайки и экипировка<br> в Ангарске'
     },
     catalog: [
-      { id: 'enduro', category: 'enduro', name: 'Мотоцикл Regulmoto Sport 003', spec: '250 см³, 21 л.с., регулируемая подвеска', price: 'от 148 000 ₽', image: 'assets/product-enduro.jpg', status: 'verified', source_id: '2gis' },
-      { id: 'pitbike', category: 'pitbike', name: 'Питбайк Kayo Basic TT125', spec: '125 см³, колеса 17/14, защита картера', price: 'от 86 000 ₽', image: 'assets/product-pitbike.jpg', status: 'verified', source_id: '2gis' },
-      { id: 'atv', category: 'atv', name: 'Квадроцикл Motoland Allroad 200', spec: '200 см³, вариатор, лебедка, багажники', price: 'от 235 000 ₽', image: 'assets/product-atv.jpg', status: 'verified', source_id: '2gis' }
+      { id: 'enduro', category: 'enduro', name: 'Мотоцикл Regulmoto Sport 003', spec: '250 см³, 21 л.с., регулируемая подвеска, фара', price: 'от 149 000 ₽', image: 'assets/product-enduro.jpg', status: 'verified', source_id: '2gis' },
+      { id: 'pitbike', category: 'pitbike', name: 'Питбайк Kayo Basic TT125', spec: '125 см³, 4-тактный, колеса 17/14, защита картера', price: 'от 86 000 ₽', image: 'assets/product-pitbike.jpg', status: 'verified', source_id: '2gis' },
+      { id: 'atv', category: 'atv', name: 'Квадроцикл Motoland Wild Track 200', spec: '200 см³, вариатор, масляный радиатор, фаркоп', price: 'от 239 000 ₽', image: 'assets/product-atv.jpg', status: 'verified', source_id: '2gis' }
     ],
-    sources: [{ id: '2gis', url: 'https://2gis.ru/noginsk/search/Пони%20Моторс', checked_at: '2026-11-16T19:36:40.000Z', excerpt: 'Пони Моторс, Ногинск, Горьковское шоссе, 51-й км. Рейтинг 4.6 ★. Тел. +7 (926) 335-52-62.' }]
+    sources: [{ id: '2gis', url: 'https://2gis.ru/angarsk/search/АкТрейд', checked_at: '2026-11-16T20:28:00.000Z', excerpt: 'АкТрейд, Ангарск, ул. Чайковского, 1А. Рейтинг 4.8 ★. Тел. +7 (939) 818-34-88.' }]
   },
 
   // 15. Домодедово
