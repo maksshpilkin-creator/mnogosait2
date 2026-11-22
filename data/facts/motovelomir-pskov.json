@@ -8,6 +8,24 @@
       "url": "https://2gis.ru/pskov/search/МотоВелоМир",
       "checked_at": "2026-11-16T19:08:00.000Z",
       "excerpt": "МотоВелоМир, Псков, Гражданская ул., 27. Тел. +7 (911) 392-03-98."
+    },
+    {
+      "id": "yandex-maps-card",
+      "url": "https://yandex.ru/maps/org/motovelomir/1191472133/",
+      "checked_at": "2026-11-21T19:57:00+03:00",
+      "excerpt": "МотоВелоМир, Псков, Гражданская ул., 27. Сайт в карточке отсутствует. Прямой Telegram администрации: https://t.me/motovelomir"
+    },
+    {
+      "id": "two-gis-card",
+      "url": "https://2gis.ru/pskov/firm/12666903233136654",
+      "checked_at": "2026-11-21T19:57:00+03:00",
+      "excerpt": "МотоВелоМир, Псков, Гражданская ул., 27. Карточка подтверждена, ссылка на сайт отсутствует."
+    },
+    {
+      "id": "google-maps-search",
+      "url": "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D0%92%D0%B5%D0%BB%D0%BE%D0%9C%D0%B8%D1%80+%D0%9F%D1%81%D0%BA%D0%BE%D0%B2+%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F+27/",
+      "checked_at": "2026-11-21T19:57:00+03:00",
+      "excerpt": "МотоВелоМир Псков: в Google Maps отдельная подтверждённая карточка филиала по ул. Гражданская, 27 не найдена."
     }
   ],
   "facts": {
@@ -60,5 +78,58 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "lead_search_checks": {
+    "maps": {
+      "yandex_maps": {
+        "status": "verified",
+        "url": "https://yandex.ru/maps/org/motovelomir/1191472133/",
+        "checked_at": "2026-11-21T19:57:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "МотоВелоМир: совпали название, город Псков и адрес ул. Гражданская, 27.",
+        "source_id": "yandex-maps-card",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "В карточке Яндекс Карт сайт не опубликован."
+        }
+      },
+      "two_gis": {
+        "status": "verified",
+        "url": "https://2gis.ru/pskov/firm/12666903233136654",
+        "checked_at": "2026-11-21T19:57:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "МотоВелоМир: совпали название, город Псков и адрес ул. Гражданская, 27.",
+        "source_id": "two-gis-card",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "В карточке 2ГИС сайт не опубликован; отсутствие сайта подтверждено карточками."
+        }
+      },
+      "google_maps": {
+        "status": "missing",
+        "url": "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D0%92%D0%B5%D0%BB%D0%BE%D0%9C%D0%B8%D1%80+%D0%9F%D1%81%D0%BA%D0%BE%D0%B2+%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F+27/",
+        "checked_at": "2026-11-21T19:57:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "МотоВелоМир: подходящая карточка не найдена после поиска в Google Maps.",
+        "source_id": "google-maps-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в Google Maps; отсутствие сайта не установлено."
+        }
+      }
+    },
+    "telegram": {
+      "status": "verified",
+      "url": "https://t.me/motovelomir",
+      "kind": "direct_chat",
+      "role": "administrator",
+      "role_evidence": "В подтверждённой карточке Яндекс Карт филиала (Псков, Гражданская ул., 27) опубликован прямой официальный контакт Telegram @motovelomir для связи с администрацией магазина.",
+      "platform": "yandex_maps",
+      "source_id": "yandex-maps-card",
+      "checked_at": "2026-11-21T19:57:00+03:00"
+    }
+  }
 }

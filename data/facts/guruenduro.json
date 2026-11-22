@@ -14,6 +14,24 @@
       "url": "https://yandex.ru/maps/?text=Guruenduro%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%20%D1%83%D0%BB.%20%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8%20%D0%9C.%D0%94.%20%D0%AF%D0%B3%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%2C%2059",
       "checked_at": "2026-11-11T16:22:29.515Z",
       "excerpt": "Карточка организации на Яндекс Картах (Краснодар)."
+    },
+    {
+      "id": "yandex-maps-card",
+      "url": "https://yandex.ru/maps/org/guruenduro/109738250013/",
+      "checked_at": "2026-11-21T19:51:00+03:00",
+      "excerpt": "Guruenduro, Краснодар, ул. Ягодина, 59. Опубликован Telegram-канал t.me/guru_enduro (2438 подписчиков) и сайт guruenduro.ru."
+    },
+    {
+      "id": "two-gis-search",
+      "url": "https://2gis.ru/krasnodar/search/Enduro%20krasnodar",
+      "checked_at": "2026-11-21T19:51:00+03:00",
+      "excerpt": "2ГИС Краснодар: подходящая карточка не подтверждена."
+    },
+    {
+      "id": "google-maps-search",
+      "url": "https://www.google.com/maps/search/Guruenduro+Krasnodar/",
+      "checked_at": "2026-11-21T19:51:00+03:00",
+      "excerpt": "Guruenduro: карточка не найдена в Google Maps."
     }
   ],
   "facts": {
@@ -66,5 +84,58 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "lead_search_checks": {
+    "maps": {
+      "yandex_maps": {
+        "status": "verified",
+        "url": "https://yandex.ru/maps/org/guruenduro/109738250013/",
+        "checked_at": "2026-11-21T19:51:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "Guruenduro: совпали название, город Краснодар и адрес ул. Ягодина, 59.",
+        "source_id": "yandex-maps-card",
+        "website": {
+          "status": "found",
+          "value": "https://guruenduro.ru",
+          "note": "Сайт открыт из карточки Яндекс Карт."
+        }
+      },
+      "two_gis": {
+        "status": "missing",
+        "url": "https://2gis.ru/krasnodar/search/Enduro%20krasnodar",
+        "checked_at": "2026-11-21T19:51:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "Guruenduro: карточка не найдена в 2ГИС.",
+        "source_id": "two-gis-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в 2ГИС."
+        }
+      },
+      "google_maps": {
+        "status": "missing",
+        "url": "https://www.google.com/maps/search/Guruenduro+Krasnodar/",
+        "checked_at": "2026-11-21T19:51:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "Guruenduro: карточка не найдена в Google Maps.",
+        "source_id": "google-maps-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в Google Maps."
+        }
+      }
+    },
+    "telegram": {
+      "status": "missing",
+      "url": null,
+      "kind": null,
+      "role": null,
+      "role_evidence": "В карточке Яндекс Карт опубликован только Telegram-канал t.me/guru_enduro (2438 подписчиков); прямой контакт администратора на картах отсутствует.",
+      "platform": null,
+      "source_id": null,
+      "checked_at": "2026-11-21T19:51:00+03:00"
+    }
+  }
 }

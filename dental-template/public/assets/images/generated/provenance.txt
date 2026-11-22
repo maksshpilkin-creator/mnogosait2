@@ -1,0 +1,53 @@
+Generated assets for fictional dental demo «ЭМАЛЬ».
+
+hero-backdrop-v2.png
+Edited: 2026-11-22 using built-in image_gen, from hero-backdrop.png; v1 preserved.
+Targeted change: central implant and its shadow reduced to approximately 72-75% of v1 and centered around x50%, y51%. One refinement moved the implant slightly upward to keep it approximately within y36%-66% of the canvas. Blue gradient and outlined «улыбка» preserved visually; exact pixel identity outside edit is not guaranteed by generative editing.
+Original edit output: C:/Users/makss/.codex/generated_images/01a20201-d878-7282-9551-b28f7a3dcbc1/exec-4beb686b-c7cf-4cc7-9dca-4984c277d9e2.png
+Dimensions: 1774x887.
+Visual inspection: smaller central implant, clear top and bottom areas for HTML headings, no added UI or text.
+Main edit prompt:
+Use case: precise-object-edit.
+Input image 1: edit target, existing hero background asset, 1774x887. Perform ONE constrained edit only.
+Keep the entire existing image's blue background, navy-to-sky-blue vertical gradient, smooth texture, thin outlined lowercase Russian word «улыбка», its exact placement, size and shapes, lighting atmosphere, canvas framing, and all other pixels as unchanged as possible.
+Change ONLY the central dark metallic dental implant AND its cast shadow. Scale this exact same implant down uniformly to 72% of its current width and height; do not redraw it as a different object or alter its proportions, material, mechanical details, blue reflections or upright angle. Re-center the smaller implant at x50%, y51% of the canvas. The whole implant must fit entirely between y36% and y66% of the canvas (top around y36%, tip around y66%), leaving the top 30% and bottom 30% completely free of the object for actual HTML headlines. Shrink and reposition its shadow consistently; reconstruct the vacated pixels using the existing unchanged blue gradient and outlined text.
+Do not change, move, resize or add any text. Do not change the gradient or background composition. No headlines, labels, UI, numbers, controls, borders, watermark, extra objects or transparent background. Preserve 2:1 aspect ratio and original dimensions when possible.
+Refinement prompt:
+Use case: precise-object-edit. Make a tiny positional adjustment ONLY to the central metallic implant and its shadow in the attached 1774x887 image. Keep background, blue gradient, outlined word «улыбка», all other features and their positions entirely unchanged.
+The implant currently extends from approximately y334 to y606. Move it UP by about 18 pixels and reduce it by only 3%, so its new bounds are approximately y320 to y585. Its horizontal center must stay x887. Therefore the implant's entire height stays within 36% to 66% of the image, with its center at y452 (51% of canvas). Move/reduce its shadow in exactly the same way. Keep this exact implant's shape/material/blue reflections unchanged.
+Reconstruct vacated background perfectly. Do not alter the text, background or colors. Do not add any other elements. Preserve the full 1774x887 2:1 canvas.
+
+braces-satin.png
+Generated: 2026-11-22 using built-in image_gen.
+Reference: dental-template/design-reference/emal-full-page-v1.png (About braces model).
+Original: C:/Users/makss/.codex/generated_images/01a20201-d878-7282-9551-b28f7a3dcbc1/exec-3c2c90f1-dccb-41da-ab5a-acfe6619e4a2.png
+Dimensions: 1448x1086.
+Visual inspection via view_image: one ceramic dental arch with metallic braces on silver-white satin; complete object, left negative space, no human mouth, skull, colored gums, text, UI or labels.
+Prompt:
+Use case: product-mockup. Asset type: standalone still-life dental photograph for upper-right area of the About section in the provided fictional «ЭМАЛЬ» dental website mockup. Input image 1 is a visual style reference only; do not make a web page.
+Generate one wide 4:3 landscape photograph, target 1440x1080. A single realistic ceramic dental arch/model of clean ivory-white teeth with neat small metallic orthodontic brackets and a fine archwire on the outer facing surfaces. It is a dental teaching/display model, not a human mouth, not a skull. Elegant U-shaped curve, viewed from above at a gentle oblique angle, front row of teeth closest to the camera, both sides of the arch subtly receding. Precisely formed separate ceramic teeth, restrained realistic metal brackets, no red or bright pink gums. The arch occupies the central-right area of the image, centered approximately x64%, y53%, occupying about 55% of canvas width. Leave substantial softly lit white/silver negative space on the left and around the object for seamless composition in the website. Background: soft silver-white satin with large smooth flowing folds, cool neutral studio light and subtle shadows, matching the reference's About braces object and its calm monochrome luxury dental art direction.
+No text, letters, numbers, tags, graphic overlays, captions, UI, borders, logos, watermarks, hands, face, mouth, skull or additional objects. No bright colored accents. Full arch remains inside the image boundaries. Photorealistic polished editorial product photograph, high resolution.
+
+mirror-satin.png
+Generated: 2026-11-22 using built-in image_gen.
+Reference: dental-template/design-reference/emal-full-page-v1.png (silver satin still life).
+Original: C:/Users/makss/.codex/generated_images/01a20201-d878-7282-9551-b28f7a3dcbc1/exec-2792f081-db0b-4148-8fb5-11c3807b00bb.png
+Dimensions: 1448x1086.
+Visual inspection: one complete chrome dental mirror on silver satin; no text, labels, UI or borders. Focal mirror head is x47%, y15%.
+Prompt:
+Use case: product-mockup. Asset type: clean standalone dental still-life photograph for the About and Services image areas of the supplied fictional dental clinic website reference. The input image is a style reference; do not reproduce a website.
+Create one high-quality wide 4:3 landscape photograph, target 1440x1080. A single polished chrome dental examination mirror, slender long textured handle rising from the lower part of the frame, tiny round-to-oval mirror head close to the image center and slightly above the midpoint. Keep the complete mirror head and the full metal handle visible inside the canvas with comfortable margin, including the lower handle end. Position the main instrument around x48%, not at an edge, so the composition tolerates moderate object-fit: cover cropping. Mirror head tilted gently, reflecting only soft silver light. The backdrop is draped smooth lustrous silver satin with large flowing soft folds, matching the calm monochrome dental-mirror photograph shown in the website reference. Cool neutral whites, silver, grey and elegant metallic highlights, soft diffused studio lighting, realistic reflections and fabric detail, editorial luxury product photography.
+Only the dental mirror and satin fabric. No text of any kind, no lettering, no labels, no numbers, no logo, no watermark, no UI, no borders, no typography from the source screenshots. No hands, no patient, no additional instruments. No transparent background.
+Not photographs or verified materials of a real clinic.
+
+hero-backdrop.png
+Generated: 2026-11-22 using built-in image_gen.
+Reference: dental-template/design-reference/emal-full-page-v1.png (top blue hero only).
+Original: C:/Users/makss/.codex/generated_images/01a20201-d878-7282-9551-b28f7a3dcbc1/exec-e9c07599-b8e8-4603-8b58-3cbec4f1e8d2.png
+Dimensions: 1774x887.
+Visual inspection: one central dark metallic implant, blue gradient, thin outlined «улыбка» only; no UI text, controls or borders.
+Prompt:
+Use case: product-mockup. Asset type: standalone full-width desktop hero background raster asset for the fictional Russian dental clinic design in the reference image. Input image 1 is a visual reference ONLY for the first blue hero, NOT an edit target and NOT a request for a full web page.
+Generate one wide 1440x760 or similar 2:1 landscape image, perfectly flat edge-to-edge. Recreate only the blue artistic backdrop from the top hero: very dark midnight navy at the top, smooth electric cobalt blue across the middle, vivid lighter sky blue along the bottom. One photorealistic precision-machined dark titanium dental implant upright exactly centered around x50%, y51%, occupying approximately 18% of image width and 45% image height, moody blue metallic reflections and subtle cast shadow. Behind the implant a very large, very thin single-line outlined Russian word «улыбка», lowercase, subtle translucent pale blue, stretching across almost the whole width and centered vertically. This word is the ONLY text permitted.
+Keep the top 23% and bottom 21% of the canvas visually calm blue negative space, reserved for actual editable HTML headlines that will be placed later. Match the blue gradient, implant material and elegant technical art direction visible in the reference.
+No interface, no header, no headline, no UI labels, no HUD, no tiny text, no numbers, no badges, no CTA, no ring button, no logos, no cursor, no play controls, no screen frame, no white margin, no watermark, no other objects. Do not show any website sections beyond this single blue backdrop. High quality smooth rendering.

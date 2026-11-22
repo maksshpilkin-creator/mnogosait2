@@ -1,0 +1,21 @@
+{
+  "name": "dental-template-emal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "extract:assets": "python scripts/extract_assets.py",
+    "test:sections": "node tests/test-sections.js",
+    "test:responsive": "node tests/test-responsive.js",
+    "test:interactive": "node tests/test-interactive.js",
+    "verify:isolation": "node tests/verify-isolation.js",
+    "test:all": "npm run test:sections && npm run test:responsive && npm run test:interactive && npm run verify:isolation"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^23.0.0",
+    "vite": "^6.0.0"
+  }
+}

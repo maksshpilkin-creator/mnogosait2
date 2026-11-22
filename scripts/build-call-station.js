@@ -94,6 +94,8 @@ function resolveTelegramInfo(lead, owner) {
   const personalTgNote = String(o.personal_tg_note || '').trim();
   const hiddenMobile = isMobileRaw(o.hidden_personal_phone) ? String(o.hidden_personal_phone).trim() : '';
   const salonDirect = normalizeTgHandle(o.salon_tg_direct);
+  // A salon username is a routing hint, not proof that a particular administrator owns it.
+  const hasDirectSalonTelegram = Boolean(salonDirect.url && /^@[A-Za-z0-9_]+$/.test(salonDirect.label) && !/bot$/i.test(salonDirect.label));
   const salonChannel = normalizeTgHandle(o.salon_tg);
   const salonChannelFull = String(o.salon_tg || '').trim();
 
@@ -107,48 +109,68 @@ function resolveTelegramInfo(lead, owner) {
     }
   }
 
+  const tier = String(o.contact_tier || '').trim();
+
   let primaryUrl = '';
   let primaryLabel = '';
   let primaryCopy = '';
   let tierBadge = '';
   let tierTone = 'slate';
   let tierGroup = 'none'; // 'direct' | 'mobile' | 'channel' | 'none'
+  let contactRole = 'admin'; // 'owner' | 'admin' | 'landline'
 
   if (personalTg.url) {
     primaryUrl = personalTg.url;
     primaryLabel = personalTg.label;
     primaryCopy = personalTg.copy;
-    tierBadge = 'Личный ТГ (проверить профиль)';
+    tierBadge = '👑 Личный ТГ владельца';
     tierTone = 'emerald';
     tierGroup = 'direct';
+    contactRole = 'owner';
   } else if (hiddenMobile) {
     primaryUrl = 'https://t.me/' + hiddenMobile;
     primaryLabel = formatMobilePretty(hiddenMobile);
     primaryCopy = hiddenMobile;
-    tierBadge = 'Личный моб. из базы (ТГ)';
+    tierBadge = '👑 Личный моб. владельца (ТГ)';
     tierTone = 'teal';
     tierGroup = 'direct';
+    contactRole = 'owner';
+  } else if (tier === '4_MOBILE_IMPORT_WITH_OWNER_NAME' && salonMobile) {
+    primaryUrl = 'https://t.me/' + salonMobile;
+    primaryLabel = formatMobilePretty(salonMobile);
+    primaryCopy = salonMobile;
+    tierBadge = '👑 ТГ владельца (имя из ФНС)';
+    tierTone = 'emerald';
+    tierGroup = 'direct';
+    contactRole = 'owner';
   } else if (salonDirect.url) {
     primaryUrl = salonDirect.url;
     primaryLabel = salonDirect.label;
     primaryCopy = salonDirect.copy;
-    tierBadge = 'Прямой ТГ салона';
+    tierBadge = '👨‍💼 Прямой ТГ админа/салона';
     tierTone = 'sky';
     tierGroup = 'direct';
+    contactRole = 'admin';
   } else if (salonMobile) {
     primaryUrl = 'https://t.me/' + salonMobile;
     primaryLabel = formatMobilePretty(salonMobile);
     primaryCopy = salonMobile;
-    tierBadge = 'Мобильный салона (ТГ)';
+    tierBadge = '👨‍💼 Моб. админа / салона (ТГ)';
     tierTone = 'amber';
     tierGroup = 'mobile';
+    contactRole = 'admin';
   } else if (salonChannel.url) {
     primaryUrl = salonChannel.url;
     primaryLabel = salonChannel.label;
     primaryCopy = salonChannel.copy;
-    tierBadge = 'Канал ТГ салона';
+    tierBadge = '📢 Канал ТГ салона';
     tierTone = 'indigo';
     tierGroup = 'channel';
+    contactRole = 'admin';
+  } else {
+    tierBadge = 'Только городской';
+    tierTone = 'slate';
+    contactRole = 'landline';
   }
 
   // Secondary links so Maxim sees salon TG / mobile even when personal contact is primary.
@@ -176,6 +198,8 @@ function resolveTelegramInfo(lead, owner) {
     tierBadge,
     tierTone,
     tierGroup,
+    contactRole,
+    hasDirectSalonTelegram,
     personalTgNote,
     secondaryLinks,
     fnsOwner,
@@ -235,11 +259,26 @@ leads.sort((a, b) => {
   return a.facts.city.localeCompare(b.facts.city, 'ru');
 });
 
-const enrichedLeads = leads.map(lead => ({
+const resolvedLeads = leads.map(lead => ({
   lead,
   tg: resolveTelegramInfo(lead, ownersBySlug[lead.slug])
 }));
+// Group 1: Leads where we ALREADY have the owner's Telegram (contactRole === 'owner') -> TOP!
+// Group 2: Leads where we only have business admins' Telegram (contactRole === 'admin') -> BELOW!
+// Group 3: Leads with only landline (contactRole === 'landline') -> BOTTOM!
+const ownerLeads = resolvedLeads.filter(item => item.tg.contactRole === 'owner');
+const adminLeads = resolvedLeads.filter(item => item.tg.contactRole === 'admin');
+const landlineLeads = resolvedLeads.filter(item => item.tg.contactRole === 'landline');
 
+const enrichedLeads = [
+  ...ownerLeads,
+  ...adminLeads,
+  ...landlineLeads
+];
+
+const ownerCount = ownerLeads.length;
+const adminCount = adminLeads.length;
+const landlineCount = landlineLeads.length;
 const noSiteCount = enrichedLeads.filter(x => !x.lead.facts.has_website).length;
 const hasSiteCount = enrichedLeads.filter(x => x.lead.facts.has_website).length;
 const directTgCount = enrichedLeads.filter(x => x.tg.tierGroup === 'direct').length;
@@ -247,7 +286,7 @@ const anyTgCount = enrichedLeads.filter(x => x.tg.tierGroup !== 'none').length;
 
 // Embedded as source in the generated page so newlines are not double-escaped.
 function getDraftTemplateKey(lead, kind, variant) {
-  if (kind === 'admin') return ['admin', 'adminObserved', 'adminNoSite'].includes(variant) ? variant : 'admin';
+  if (kind === 'admin') return 'admin';
   if (kind === 'owner') return lead.hasWebsite ? 'ownerHasSite' : 'ownerNoSite';
   if (kind === 'review' || kind === 'call') return kind;
   throw new Error('Неизвестный тип черновика');
@@ -272,8 +311,8 @@ const toneClasses = {
   slate: 'bg-slate-800 text-slate-400 border-slate-700'
 };
 
-const cardsHtml = enrichedLeads.map(({ lead, tg }, idx) => {
-  const num = String(idx + 1).padStart(2, '0');
+function renderLeadCard(lead, tg, idx) {
+  const num = String(idx).padStart(2, '0');
   const f = lead.facts;
   const offset = cityOffsets[f.city] ?? 0;
   const offsetLabel = offset === 0 ? 'МСК' : (offset > 0 ? `+${offset} от МСК` : `${offset} от МСК`);
@@ -360,16 +399,40 @@ const cardsHtml = enrichedLeads.map(({ lead, tg }, idx) => {
   }
 
   const searchBlob = [
-    f.name, f.city, f.address, tg.verifiedPhone, tg.primaryLabel, tg.fnsOwner, f.existing_website || '', tg.extraWebsite || ''
+    f.name, f.city, f.address, tg.verifiedPhone, tg.primaryLabel, tg.fnsOwner, tg.tierBadge, f.existing_website || '', tg.extraWebsite || ''
   ].join(' ').toLowerCase();
 
+  const isOwner = (tg.contactRole === 'owner');
+  const isLandline = (tg.contactRole === 'landline');
+  const cardBorderClass = isOwner
+    ? 'border-emerald-500/40 hover:border-emerald-400/80 shadow-emerald-950/20'
+    : isLandline
+    ? 'border-slate-800/80 hover:border-slate-700 opacity-90'
+    : 'border-slate-800 hover:border-orange-500/50 shadow-md';
+
+  const roleBadgeHtml = isOwner
+    ? `<span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-extrabold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">👑 ВЛАДЕЛЕЦ</span>`
+    : isLandline
+    ? `<span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-medium bg-slate-800 text-slate-400 border border-slate-700">☎️ ГОРОДСКОЙ</span>`
+    : `<span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-sky-500/15 text-sky-300 border border-sky-500/30">👨‍💼 АДМИН</span>`;
+
+  const btn1Class = isOwner
+    ? 'bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700'
+    : isLandline
+    ? 'bg-slate-800 hover:bg-slate-700 text-slate-400 border border-slate-700'
+    : 'bg-orange-600 hover:bg-orange-500 text-white shadow';
+  const btn2Class = isOwner
+    ? 'bg-emerald-600 hover:bg-emerald-500 text-white shadow border border-emerald-500/40 font-extrabold'
+    : 'bg-sky-600/20 hover:bg-sky-600/30 text-sky-300 border border-sky-500/30';
+
   return `
-    <div class="lead-card bg-slate-900/90 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between transition-all duration-200 hover:border-orange-500/50 shadow-md" id="card-${escHtml(lead.slug)}" data-slug="${escHtml(lead.slug)}" data-status="new" data-has-website="${hasSite ? 'yes' : 'no'}" data-tg-group="${escHtml(tg.tierGroup)}" data-search="${escHtml(searchBlob)}">
+    <div class="lead-card bg-slate-900/90 border ${cardBorderClass} rounded-2xl p-4 flex flex-col justify-between transition-all duration-200" id="card-${escHtml(lead.slug)}" data-slug="${escHtml(lead.slug)}" data-status="new" data-has-website="${hasSite ? 'yes' : 'no'}" data-tg-group="${escHtml(tg.tierGroup)}" data-contact-role="${escHtml(tg.contactRole)}" data-search="${escHtml(searchBlob)}">
       <div>
         <div class="flex items-center justify-between text-xs font-mono mb-2">
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-1.5 flex-wrap">
             <span class="text-orange-400 font-bold">#${num} · ${escHtml(f.city)}</span>
             <span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold border ${offsetColor}">${offsetLabel}</span>
+            ${roleBadgeHtml}
           </div>
           <span class="text-amber-400 font-bold">★ ${escHtml(f.rating)}</span>
         </div>
@@ -401,8 +464,8 @@ const cardsHtml = enrichedLeads.map(({ lead, tg }, idx) => {
 
         <!-- Editable outreach drafts; nothing is sent from this station. -->
         <div class="mt-2 grid grid-cols-2 gap-2 text-xs font-bold font-mono">
-          <button type="button" class="py-2 px-2 rounded-xl bg-orange-600 hover:bg-orange-500 active:scale-95 text-white transition shadow" onclick="openMessageDraft('${escHtml(lead.slug)}', 'admin')">1. Админу (ТГ)</button>
-          <button type="button" class="py-2 px-2 rounded-xl bg-sky-600/20 hover:bg-sky-600/30 active:scale-95 text-sky-300 border border-sky-500/30 transition" onclick="openMessageDraft('${escHtml(lead.slug)}', 'owner')">2. Владельцу (вопрос)</button>
+          <button type="button" class="py-2 px-2 rounded-xl ${btn1Class} active:scale-95 transition" onclick="openMessageDraft('${escHtml(lead.slug)}', 'admin')">1. Админу (ТГ)</button>
+          <button type="button" class="py-2 px-2 rounded-xl ${btn2Class} active:scale-95 transition" onclick="openMessageDraft('${escHtml(lead.slug)}', 'owner')">2. Владельцу (вопрос)</button>
           <button type="button" class="py-2 px-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition" onclick="openMessageDraft('${escHtml(lead.slug)}', 'review')">3. К готовому видео</button>
           <button type="button" class="py-2 px-2 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 transition" onclick="openMessageDraft('${escHtml(lead.slug)}', 'call')">4. Созвон при интересе</button>
         </div>
@@ -436,7 +499,68 @@ const cardsHtml = enrichedLeads.map(({ lead, tg }, idx) => {
       </div>
     </div>
   `;
-}).join('\n');
+}
+
+let cardNum = 0;
+const cardsHtmlList = [];
+
+// Section 1: Owners (TOP!)
+cardsHtmlList.push(`
+  <div class="col-span-full section-divider p-3.5 sm:p-4 rounded-2xl bg-emerald-950/80 border border-emerald-500/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 shadow-lg" data-divider-role="owner">
+    <div class="flex items-center gap-2.5">
+      <span class="text-2xl">👑</span>
+      <div>
+        <h2 class="text-base sm:text-lg font-extrabold text-white">1. Салоны с Telegram владельца / руководителя (${ownerCount} салонов)</h2>
+        <p class="text-xs text-emerald-300/90 font-mono mt-0.5">Личный подтверждённый контакт или мобильный с именем владельца по ФНС · Пишем сразу владельцу (Шаг 2)</p>
+      </div>
+    </div>
+    <span class="px-2.5 py-1 rounded-xl bg-emerald-500/20 text-emerald-300 font-mono text-xs font-bold border border-emerald-500/30 shrink-0">Карточки #01 – #${String(ownerCount).padStart(2, '0')}</span>
+  </div>
+`);
+ownerLeads.forEach(item => {
+  cardNum++;
+  cardsHtmlList.push(renderLeadCard(item.lead, item.tg, cardNum));
+});
+
+// Section 2: Admins (BELOW!)
+cardsHtmlList.push(`
+  <div class="col-span-full section-divider mt-6 p-3.5 sm:p-4 rounded-2xl bg-sky-950/80 border border-sky-500/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 shadow-lg" data-divider-role="admin">
+    <div class="flex items-center gap-2.5">
+      <span class="text-2xl">👨‍💼</span>
+      <div>
+        <h2 class="text-base sm:text-lg font-extrabold text-white">2. Салоны с Telegram администратора бизнеса (${adminCount} салонов)</h2>
+        <p class="text-xs text-sky-300/90 font-mono mt-0.5">Прямой аккаунт или мобильный салона · Сначала просим контакт владельца (Шаг 1)</p>
+      </div>
+    </div>
+    <span class="px-2.5 py-1 rounded-xl bg-sky-500/20 text-sky-300 font-mono text-xs font-bold border border-sky-500/30 shrink-0">Карточки #${String(ownerCount + 1).padStart(2, '0')} – #${String(ownerCount + adminCount).padStart(2, '0')}</span>
+  </div>
+`);
+adminLeads.forEach(item => {
+  cardNum++;
+  cardsHtmlList.push(renderLeadCard(item.lead, item.tg, cardNum));
+});
+
+// Section 3: Landlines (if any)
+if (landlineCount > 0) {
+  cardsHtmlList.push(`
+    <div class="col-span-full section-divider mt-6 p-3.5 sm:p-4 rounded-2xl bg-slate-900 border border-slate-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2" data-divider-role="landline">
+      <div class="flex items-center gap-2.5">
+        <span class="text-2xl">☎️</span>
+        <div>
+          <h2 class="text-base sm:text-lg font-bold text-slate-300">3. Салоны только с городским телефоном (${landlineCount} салонов)</h2>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">Telegram не найден · Требуется уточнение мобильного номера</p>
+        </div>
+      </div>
+      <span class="px-2.5 py-1 rounded-xl bg-slate-800 text-slate-400 font-mono text-xs border border-slate-700 shrink-0">Карточки #${String(ownerCount + adminCount + 1).padStart(2, '0')} – #${String(leads.length).padStart(2, '0')}</span>
+    </div>
+  `);
+  landlineLeads.forEach(item => {
+    cardNum++;
+    cardsHtmlList.push(renderLeadCard(item.lead, item.tg, cardNum));
+  });
+}
+
+const cardsHtml = cardsHtmlList.join('\n');
 
 const fullHtml = `<!DOCTYPE html>
 <html lang="ru">
@@ -464,7 +588,6 @@ const fullHtml = `<!DOCTYPE html>
     #message-dialog::backdrop { background: rgba(0, 0, 0, .7); }
     #message-text { width: 100%; box-sizing: border-box; min-height: 240px; resize: vertical; padding: 12px; background: #020617; border: 1px solid #334155; border-radius: 10px; font: inherit; line-height: 1.6; }
     #message-note { white-space: pre-line; }
-    #message-variant { width: 100%; box-sizing: border-box; padding: 10px; margin-bottom: 12px; color: #E2E8F0; background: #020617; border: 1px solid #334155; border-radius: 10px; font-size: 14px; }
     .stack-markdown { min-width: 0; overflow-wrap: anywhere; font-size: 15px; line-height: 1.65; color: #cbd5e1; }
     .stack-markdown details { margin-top: 12px; border: 1px solid #334155; border-radius: 10px; padding: 12px; }
     .stack-markdown summary { cursor: pointer; font-weight: 700; color: #e2e8f0; }
@@ -505,6 +628,16 @@ const fullHtml = `<!DOCTYPE html>
       <div>
         <span class="text-slate-400 block text-[9px]">БАЗА:</span>
         <span class="text-sm sm:text-base font-bold text-white">${leads.length}</span>
+      </div>
+      <div class="h-6 w-px bg-slate-800"></div>
+      <div>
+        <span class="text-emerald-400 block text-[9px]">👑 ВЛАДЕЛЬЦЫ:</span>
+        <span class="text-sm sm:text-base font-bold text-emerald-300">${ownerCount}</span>
+      </div>
+      <div class="h-6 w-px bg-slate-800"></div>
+      <div>
+        <span class="text-sky-400 block text-[9px]">👨‍💼 АДМИНЫ:</span>
+        <span class="text-sm sm:text-base font-bold text-sky-300">${adminCount}</span>
       </div>
       <div class="h-6 w-px bg-slate-800"></div>
       <div>
@@ -562,6 +695,8 @@ const fullHtml = `<!DOCTYPE html>
     <!-- Filters -->
     <div class="flex flex-wrap items-center gap-1.5 font-mono text-xs overflow-x-auto pb-1" id="filter-buttons">
       <button type="button" onclick="setFilter('all', this)" class="filter-btn active px-2.5 py-1 rounded-lg bg-white/10 text-white font-bold">Все (${leads.length})</button>
+      <button type="button" onclick="setFilter('owner_tg', this)" class="filter-btn px-2.5 py-1 rounded-lg text-emerald-300 hover:text-white border border-emerald-500/40">👑 Владельцы (${ownerCount})</button>
+      <button type="button" onclick="setFilter('admin_tg', this)" class="filter-btn px-2.5 py-1 rounded-lg text-sky-300 hover:text-white border border-sky-500/35">👨‍💼 Админы (${adminCount})</button>
       <button type="button" onclick="setFilter('tg_direct', this)" class="filter-btn px-2.5 py-1 rounded-lg text-sky-300 hover:text-white border border-sky-500/35">✈️ Прямой ТГ (${directTgCount})</button>
       <button type="button" onclick="setFilter('tg_any', this)" class="filter-btn px-2.5 py-1 rounded-lg text-teal-300 hover:text-white border border-teal-500/30">📱 Есть ТГ/моб. (${anyTgCount})</button>
       <button type="button" onclick="setFilter('has_site', this)" class="filter-btn px-2.5 py-1 rounded-lg text-sky-300 hover:text-white border border-sky-500/30">Сайт указан (${hasSiteCount})</button>
@@ -602,14 +737,6 @@ const fullHtml = `<!DOCTYPE html>
       <button type="submit" class="px-3 py-2 bg-slate-800 rounded-lg" aria-label="Закрыть черновик">Закрыть</button>
     </form>
     <p id="message-note" class="text-xs text-amber-300 mb-3 leading-relaxed"></p>
-    <div id="message-variant-control" class="hidden">
-      <label for="message-variant" class="block text-sm text-slate-300 mb-2">Вариант сообщения администратору</label>
-      <select id="message-variant" onchange="changeDraftVariant(this.value)">
-        <option value="admin">Основное сообщение</option>
-        <option value="adminObserved">С наблюдением · только после проверки сайта</option>
-        <option value="adminNoSite">Если сайт не найден</option>
-      </select>
-    </div>
     <label for="message-text" class="block text-xs text-slate-400 mb-2">Текст можно изменить перед копированием</label>
     <textarea id="message-text" spellcheck="true"></textarea>
     <div class="mt-3 flex flex-wrap items-center gap-2">
@@ -724,12 +851,6 @@ const fullHtml = `<!DOCTYPE html>
       }
     }
 
-    let activeDraft = null;
-
-    function changeDraftVariant(variant) {
-      if (activeDraft) openMessageDraft(activeDraft.slug, activeDraft.kind, variant);
-    }
-
     function openMessageDraft(slug, kind, variant) {
       const lead = leadsData.find(l => l.slug === slug);
       if (!lead) return;
@@ -740,9 +861,6 @@ const fullHtml = `<!DOCTYPE html>
         call: '4. Созвон при интересе'
       };
       const key = getDraftTemplateKey(lead, kind, variant);
-      activeDraft = { slug, kind };
-      document.getElementById('message-variant-control').classList.toggle('hidden', kind !== 'admin');
-      document.getElementById('message-variant').value = kind === 'admin' ? key : 'admin';
       document.getElementById('video-draft-guide').classList.toggle('hidden', kind !== 'review');
       document.getElementById('call-draft-guide').classList.toggle('hidden', kind !== 'call');
       document.getElementById('message-title').textContent = labels[kind] + ' — ' + lead.name;
@@ -826,6 +944,10 @@ const fullHtml = `<!DOCTYPE html>
         let matchStatus = true;
         if (currentFilter === 'all') {
           matchStatus = true;
+        } else if (currentFilter === 'owner_tg') {
+          matchStatus = (card.dataset.contactRole === 'owner');
+        } else if (currentFilter === 'admin_tg') {
+          matchStatus = (card.dataset.contactRole === 'admin');
         } else if (currentFilter === 'tg_direct') {
           matchStatus = (card.dataset.tgGroup === 'direct');
         } else if (currentFilter === 'tg_any') {
@@ -848,6 +970,22 @@ const fullHtml = `<!DOCTYPE html>
           card.classList.remove('hidden');
         } else {
           card.classList.add('hidden');
+        }
+      });
+
+      document.querySelectorAll('.section-divider').forEach(div => {
+        const divRole = div.dataset.dividerRole;
+        if (currentFilter === 'all' && searchVal.length === 0) {
+          div.classList.remove('hidden');
+        } else if (divRole && (currentFilter === 'owner_tg' && divRole === 'owner' || currentFilter === 'admin_tg' && divRole === 'admin')) {
+          div.classList.remove('hidden');
+        } else {
+          const hasVisible = Array.from(document.querySelectorAll('.lead-card[data-contact-role="' + divRole + '"]')).some(c => !c.classList.contains('hidden'));
+          if (hasVisible) {
+            div.classList.remove('hidden');
+          } else {
+            div.classList.add('hidden');
+          }
         }
       });
     }

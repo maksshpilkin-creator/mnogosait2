@@ -1,0 +1,1086 @@
+[
+  {
+    "slug": "extreme-sport-penza",
+    "name": "ЭКСТРИМ Sport",
+    "city": "Пенза",
+    "has_website_flag": true,
+    "website_status": "found",
+    "website": "http://экстрим58.рф",
+    "website_candidates": [
+      "http://экстрим58.рф"
+    ],
+    "contact_tier": "3_SALON_TG_DIRECT",
+    "best_tg_entry": "https://t.me/Exsport58",
+    "personal_tg": "",
+    "salon_tg_direct": "@Exsport58",
+    "telegram_role": "administrator",
+    "telegram_map_url": "https://2gis.ru/penza/firm/70000001066028415",
+    "telegram_checked_at": "2026-11-21T19:49:00+03:00",
+    "search_policy_version": "2026-11-20",
+    "checked_at": "2026-11-21T20:11:09.674Z",
+    "evidence": [
+      "https://yandex.ru/maps/org/ekstrim_sport/1262648115/",
+      "https://2gis.ru/penza/firm/70000001066028415",
+      "https://www.google.com/maps/search/%D0%AD%D0%BA%D1%81%D1%82%D1%80%D0%B8%D0%BC+Sport+%D0%9F%D0%B5%D0%BD%D0%B7%D0%B0+%D1%83%D0%BB.+%D0%9B%D0%B0%D0%B4%D0%BE%D0%B6%D1%81%D0%BA%D0%B0%D1%8F+38%2F2/"
+    ],
+    "qualification_record": {
+      "identity_status": "verified",
+      "facts": {
+        "name": "ЭКСТРИМ Sport",
+        "city": "Пенза",
+        "address": "ул. Ладожская, 38/2"
+      },
+      "sources": [
+        {
+          "id": "2gis",
+          "url": "https://2gis.ru/search/%D0%AD%D0%9A%D0%A1%D0%A2%D0%A0%D0%98%D0%9C%20Sport%20%D0%9F%D0%B5%D0%BD%D0%B7%D0%B0",
+          "checked_at": "2026-11-11T16:22:29.530Z",
+          "excerpt": "ЭКСТРИМ Sport, Пенза, Октябрьский р-н, ул. Ладожская, 38/2. Рейтинг: 4.8 ★. Цены по источнику: Питбайки от 94 000 ₽, Эндуро от 156 000 ₽, Квадро от 490 000 ₽."
+        },
+        {
+          "id": "yandex",
+          "url": "https://yandex.ru/maps/?text=%D0%AD%D0%9A%D0%A1%D0%A2%D0%A0%D0%98%D0%9C%20Sport%20%D0%9F%D0%B5%D0%BD%D0%B7%D0%B0%20%D1%83%D0%BB.%20%D0%9B%D0%B0%D0%B4%D0%BE%D0%B6%D1%81%D0%BA%D0%B0%D1%8F%2C%2038%2F2",
+          "checked_at": "2026-11-11T16:22:29.530Z",
+          "excerpt": "Карточка организации на Яндекс Картах (Пенза)."
+        },
+        {
+          "id": "phone-check-2026-11-16",
+          "url": "https://loncin.pro/diler",
+          "checked_at": "2026-11-16",
+          "excerpt": "+7 (967) 445-03-04. Производитель прямо связывает контакт с Экстрим Sport на Ладожской, 38/2."
+        },
+        {
+          "id": "phone-check-2026-11-16-additional",
+          "url": "https://экстрим58.рф/about_us",
+          "checked_at": "2026-11-16",
+          "excerpt": "Производитель прямо связывает контакт с Экстрим Sport на Ладожской, 38/2."
+        },
+        {
+          "id": "two-gis-card",
+          "url": "https://2gis.ru/penza/firm/70000001066028415",
+          "checked_at": "2026-11-21T19:49:00+03:00",
+          "excerpt": "ЭКСТРИМ Sport, Пенза, ул. Ладожская, 38/2. Сайт http://экстрим58.рф. Официальный Telegram администратора: https://t.me/Exsport58"
+        },
+        {
+          "id": "yandex-maps-card",
+          "url": "https://yandex.ru/maps/org/ekstrim_sport/1262648115/",
+          "checked_at": "2026-11-21T19:49:00+03:00",
+          "excerpt": "Экстрим Sport, Пенза, Ладожская ул., 38/2. Рейтинг 4.8. Сайт: http://экстрим58.рф"
+        },
+        {
+          "id": "google-maps-search",
+          "url": "https://www.google.com/maps/search/%D0%AD%D0%BA%D1%81%D1%82%D1%80%D0%B8%D0%BC+Sport+%D0%9F%D0%B5%D0%BD%D0%B7%D0%B0+%D1%83%D0%BB.+%D0%9B%D0%B0%D0%B4%D0%BE%D0%B6%D1%81%D0%BA%D0%B0%D1%8F+38%2F2/",
+          "checked_at": "2026-11-21T19:49:00+03:00",
+          "excerpt": "ЭКСТРИМ Sport Пенза: в Google Maps отдельная подтверждённая карточка филиала по ул. Ладожская, 38/2 не найдена."
+        }
+      ],
+      "lead_search_checks": {
+        "maps": {
+          "yandex_maps": {
+            "status": "verified",
+            "url": "https://yandex.ru/maps/org/ekstrim_sport/1262648115/",
+            "checked_at": "2026-11-21T19:49:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "ЭКСТРИМ Sport: совпали название, город Пенза и адрес ул. Ладожская, 38/2.",
+            "source_id": "yandex-maps-card",
+            "website": {
+              "status": "found",
+              "value": "http://экстрим58.рф",
+              "note": "Открыта ссылка сайта из карточки Яндекс Карт."
+            }
+          },
+          "two_gis": {
+            "status": "verified",
+            "url": "https://2gis.ru/penza/firm/70000001066028415",
+            "checked_at": "2026-11-21T19:49:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "ЭКСТРИМ Sport: совпали название, город Пенза и адрес ул. Ладожская, 38/2.",
+            "source_id": "two-gis-card",
+            "website": {
+              "status": "found",
+              "value": "http://экстрим58.рф",
+              "note": "Открыта ссылка сайта из карточки 2ГИС."
+            }
+          },
+          "google_maps": {
+            "status": "missing",
+            "url": "https://www.google.com/maps/search/%D0%AD%D0%BA%D1%81%D1%82%D1%80%D0%B8%D0%BC+Sport+%D0%9F%D0%B5%D0%BD%D0%B7%D0%B0+%D1%83%D0%BB.+%D0%9B%D0%B0%D0%B4%D0%BE%D0%B6%D1%81%D0%BA%D0%B0%D1%8F+38%2F2/",
+            "checked_at": "2026-11-21T19:49:00+03:00",
+            "identity_status": "not_found",
+            "identity_evidence": "ЭКСТРИМ Sport: подходящая карточка не найдена после поиска в Google Maps.",
+            "source_id": "google-maps-search",
+            "website": {
+              "status": "not_found_in_checked_sources",
+              "value": null,
+              "note": "Карточка не найдена в Google Maps; отсутствие сайта не установлено."
+            }
+          }
+        },
+        "telegram": {
+          "status": "verified",
+          "url": "https://t.me/Exsport58",
+          "kind": "direct_chat",
+          "role": "administrator",
+          "role_evidence": "В карточке 2ГИС филиала опубликован официальный рабочий контакт Telegram @Exsport58 для связи с администратором салона.",
+          "platform": "two_gis",
+          "source_id": "two-gis-card",
+          "checked_at": "2026-11-21T19:49:00+03:00"
+        }
+      }
+    }
+  },
+  {
+    "slug": "moto-active-spb",
+    "name": "Мото-Актив",
+    "city": "Санкт-Петербург",
+    "has_website_flag": true,
+    "website_status": "found",
+    "website": "https://moto-active.ru",
+    "website_candidates": [
+      "https://moto-active.ru"
+    ],
+    "contact_tier": "3_SALON_TG_DIRECT",
+    "best_tg_entry": "https://t.me/motoactiv",
+    "personal_tg": "",
+    "salon_tg_direct": "@motoactiv",
+    "telegram_role": "administrator",
+    "telegram_map_url": "https://yandex.ru/maps/org/moto_aktiv/1675321691/",
+    "telegram_checked_at": "2026-11-21T19:53:00+03:00",
+    "search_policy_version": "2026-11-20",
+    "checked_at": "2026-11-21T20:11:09.686Z",
+    "evidence": [
+      "https://yandex.ru/maps/org/moto_aktiv/1675321691/",
+      "https://2gis.ru/spb/firm/70000001033472224",
+      "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE-%D0%90%D0%BA%D1%82%D0%B8%D0%B2+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3+%D1%83%D0%BB.+%D0%A1%D0%B8%D0%BC%D0%BE%D0%BD%D0%BE%D0%B2%D0%B0+11/"
+    ],
+    "qualification_record": {
+      "identity_status": "verified",
+      "facts": {
+        "name": "Мото-Актив",
+        "city": "Санкт-Петербург",
+        "address": "ул. Симонова, 11"
+      },
+      "sources": [
+        {
+          "id": "2gis",
+          "url": "https://2gis.ru/search/%D0%9C%D0%BE%D1%82%D0%BE-%D0%90%D0%BA%D1%82%D0%B8%D0%B2%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3",
+          "checked_at": "2026-11-11T16:22:29.530Z",
+          "excerpt": "Мото-Актив, Санкт-Петербург, Выборгский р-н, ул. Симонова, 11. Рейтинг: 4.8 ★. Цены по источнику: Питбайки от 99 000 ₽, Эндуро от 189 000 ₽, ТО от 2 200 ₽."
+        },
+        {
+          "id": "yandex",
+          "url": "https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%82%D0%BE-%D0%90%D0%BA%D1%82%D0%B8%D0%B2%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%20%D1%83%D0%BB.%20%D0%A1%D0%B8%D0%BC%D0%BE%D0%BD%D0%BE%D0%B2%D0%B0%2C%2011",
+          "checked_at": "2026-11-11T16:22:29.530Z",
+          "excerpt": "Карточка организации на Яндекс Картах (Санкт-Петербург)."
+        },
+        {
+          "id": "yandex-maps-card",
+          "url": "https://yandex.ru/maps/org/moto_aktiv/1675321691/",
+          "checked_at": "2026-11-21T19:53:00+03:00",
+          "excerpt": "Мото-Актив, Санкт-Петербург, Выборгский р-н, ул. Симонова, 11. Рейтинг 4.8. Сайт: https://moto-active.ru. Telegram: https://t.me/motoactiv"
+        },
+        {
+          "id": "two-gis-card",
+          "url": "https://2gis.ru/spb/firm/70000001033472224",
+          "checked_at": "2026-11-21T19:53:00+03:00",
+          "excerpt": "Мото-Актив, Санкт-Петербург, ул. Симонова, 11. Сайт: https://moto-active.ru."
+        },
+        {
+          "id": "google-maps-search",
+          "url": "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE-%D0%90%D0%BA%D1%82%D0%B8%D0%B2+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3+%D1%83%D0%BB.+%D0%A1%D0%B8%D0%BC%D0%BE%D0%BD%D0%BE%D0%B2%D0%B0+11/",
+          "checked_at": "2026-11-21T19:53:00+03:00",
+          "excerpt": "Мото-Актив СПб: в Google Maps отдельная подтверждённая карточка филиала по ул. Симонова, 11 не найдена."
+        }
+      ],
+      "lead_search_checks": {
+        "maps": {
+          "yandex_maps": {
+            "status": "verified",
+            "url": "https://yandex.ru/maps/org/moto_aktiv/1675321691/",
+            "checked_at": "2026-11-21T19:53:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "Мото-Актив: совпали название, город Санкт-Петербург и адрес ул. Симонова, 11.",
+            "source_id": "yandex-maps-card",
+            "website": {
+              "status": "found",
+              "value": "https://moto-active.ru",
+              "note": "Открыта ссылка сайта из карточки Яндекс Карт."
+            }
+          },
+          "two_gis": {
+            "status": "verified",
+            "url": "https://2gis.ru/spb/firm/70000001033472224",
+            "checked_at": "2026-11-21T19:53:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "Мото-Актив: совпали название, город Санкт-Петербург и адрес ул. Симонова, 11.",
+            "source_id": "two-gis-card",
+            "website": {
+              "status": "found",
+              "value": "https://moto-active.ru",
+              "note": "Открыта ссылка сайта из карточки 2ГИС."
+            }
+          },
+          "google_maps": {
+            "status": "missing",
+            "url": "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE-%D0%90%D0%BA%D1%82%D0%B8%D0%B2+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3+%D1%83%D0%BB.+%D0%A1%D0%B8%D0%BC%D0%BE%D0%BD%D0%BE%D0%B2%D0%B0+11/",
+            "checked_at": "2026-11-21T19:53:00+03:00",
+            "identity_status": "not_found",
+            "identity_evidence": "Мото-Актив: подходящая карточка не найдена после поиска в Google Maps.",
+            "source_id": "google-maps-search",
+            "website": {
+              "status": "not_found_in_checked_sources",
+              "value": null,
+              "note": "Карточка не найдена в Google Maps; отсутствие сайта не установлено."
+            }
+          }
+        },
+        "telegram": {
+          "status": "verified",
+          "url": "https://t.me/motoactiv",
+          "kind": "direct_chat",
+          "role": "administrator",
+          "role_evidence": "В карточке Яндекс Карт филиала (ул. Симонова, 11) опубликован официальный прямой Telegram @motoactiv: «Мотосалон, экипировка, запчасти, мото-сервис. Ждём вас на Симонова 11».",
+          "platform": "yandex_maps",
+          "source_id": "yandex-maps-card",
+          "checked_at": "2026-11-21T19:53:00+03:00"
+        }
+      }
+    }
+  },
+  {
+    "slug": "motodom-ekb",
+    "name": "Motodom (Мотодом)",
+    "city": "Екатеринбург",
+    "has_website_flag": true,
+    "website_status": "found",
+    "website": "https://motodom.pro",
+    "website_candidates": [
+      "https://motodom.pro"
+    ],
+    "contact_tier": "3_SALON_TG_DIRECT",
+    "best_tg_entry": "https://t.me/motodomekb",
+    "personal_tg": "",
+    "salon_tg_direct": "@motodomekb",
+    "telegram_role": "administrator",
+    "telegram_map_url": "https://yandex.ru/maps/org/motodom/152845136782/",
+    "telegram_checked_at": "2026-11-21T19:59:00+03:00",
+    "search_policy_version": "2026-11-20",
+    "checked_at": "2026-11-21T20:11:09.693Z",
+    "evidence": [
+      "https://yandex.ru/maps/org/motodom/152845136782/",
+      "https://2gis.ru/ekaterinburg/firm/70000001069510605",
+      "https://www.google.com/maps/search/Motodom+%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3+%D1%83%D0%BB.+%D0%93%D0%B0%D0%B3%D0%B0%D1%80%D0%B8%D0%BD%D0%B0+5/"
+    ],
+    "qualification_record": {
+      "identity_status": "verified",
+      "facts": {
+        "name": "Motodom (Мотодом)",
+        "city": "Екатеринбург",
+        "address": "ул. Академическая, 1 (1 этаж)"
+      },
+      "sources": [
+        {
+          "id": "2gis",
+          "url": "https://2gis.ru/search/Motodom%20(%D0%9C%D0%BE%D1%82%D0%BE%D0%B4%D0%BE%D0%BC)%20%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3",
+          "checked_at": "2026-11-11T16:22:29.514Z",
+          "excerpt": "Motodom (Мотодом), Екатеринбург, Кировский р-н, ул. Академическая, 1 (1 этаж). Рейтинг: 5.0 ★. Цены по источнику: Питбайки от 95 000 ₽, ТО от 1 500 ₽, Эндуро от 165 000 ₽."
+        },
+        {
+          "id": "yandex",
+          "url": "https://yandex.ru/maps/?text=Motodom%20(%D0%9C%D0%BE%D1%82%D0%BE%D0%B4%D0%BE%D0%BC)%20%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3%20%D1%83%D0%BB.%20%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%2C%201%20(1%20%D1%8D%D1%82%D0%B0%D0%B6)",
+          "checked_at": "2026-11-11T16:22:29.514Z",
+          "excerpt": "Карточка организации на Яндекс Картах (Екатеринбург)."
+        },
+        {
+          "id": "phone-check-2026-11-16",
+          "url": "https://rting.ru/ekaterinburg/co/motodom/4147932",
+          "checked_at": "2026-11-16",
+          "excerpt": "+7 (966) 222-99-91. Карточка на Академической, 1 подтверждает исходный номер и ссылается на домен компании."
+        },
+        {
+          "id": "phone-check-2026-11-16-additional",
+          "url": "https://motodom.pro/kontakty",
+          "checked_at": "2026-11-16",
+          "excerpt": "Карточка на Академической, 1 подтверждает исходный номер и ссылается на домен компании."
+        },
+        {
+          "id": "yandex-maps-card",
+          "url": "https://yandex.ru/maps/org/motodom/152845136782/",
+          "checked_at": "2026-11-21T19:59:00+03:00",
+          "excerpt": "Мотодом, Екатеринбург, ул. Гагарина, 5 / ул. Академическая, 1. Сайт: https://motodom.pro. Прямой Telegram администратора: https://t.me/motodomekb"
+        },
+        {
+          "id": "two-gis-card",
+          "url": "https://2gis.ru/ekaterinburg/firm/70000001069510605",
+          "checked_at": "2026-11-21T19:59:00+03:00",
+          "excerpt": "Мотодом, Екатеринбург, ул. Гагарина, 5. Карточка подтверждена. Сайт: https://motodom.pro."
+        },
+        {
+          "id": "google-maps-search",
+          "url": "https://www.google.com/maps/search/Motodom+%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3+%D1%83%D0%BB.+%D0%93%D0%B0%D0%B3%D0%B0%D1%80%D0%B8%D0%BD%D0%B0+5/",
+          "checked_at": "2026-11-21T19:59:00+03:00",
+          "excerpt": "Motodom Екатеринбург: в Google Maps отдельная подтверждённая карточка филиала по ул. Гагарина, 5 не найдена."
+        }
+      ],
+      "lead_search_checks": {
+        "maps": {
+          "yandex_maps": {
+            "status": "verified",
+            "url": "https://yandex.ru/maps/org/motodom/152845136782/",
+            "checked_at": "2026-11-21T19:59:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "Мотодом: совпали название, город Екатеринбург и адрес филиала ул. Гагарина, 5 / Академическая, 1.",
+            "source_id": "yandex-maps-card",
+            "website": {
+              "status": "found",
+              "value": "https://motodom.pro",
+              "note": "Открыта ссылка сайта из карточки Яндекс Карт."
+            }
+          },
+          "two_gis": {
+            "status": "verified",
+            "url": "https://2gis.ru/ekaterinburg/firm/70000001069510605",
+            "checked_at": "2026-11-21T19:59:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "Мотодом: совпали название, город Екатеринбург и адрес филиала ул. Гагарина, 5 / Академическая, 1.",
+            "source_id": "two-gis-card",
+            "website": {
+              "status": "found",
+              "value": "https://motodom.pro",
+              "note": "Открыта ссылка сайта из карточки 2ГИС."
+            }
+          },
+          "google_maps": {
+            "status": "missing",
+            "url": "https://www.google.com/maps/search/Motodom+%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3+%D1%83%D0%BB.+%D0%93%D0%B0%D0%B3%D0%B0%D1%80%D0%B8%D0%BD%D0%B0+5/",
+            "checked_at": "2026-11-21T19:59:00+03:00",
+            "identity_status": "not_found",
+            "identity_evidence": "Мотодом: подходящая карточка не найдена после поиска в Google Maps.",
+            "source_id": "google-maps-search",
+            "website": {
+              "status": "not_found_in_checked_sources",
+              "value": null,
+              "note": "Карточка не найдена в Google Maps; отсутствие сайта не установлено."
+            }
+          }
+        },
+        "telegram": {
+          "status": "verified",
+          "url": "https://t.me/motodomekb",
+          "kind": "direct_chat",
+          "role": "administrator",
+          "role_evidence": "В подтверждённой карточке Яндекс Карт филиала (Екатеринбург, ул. Гагарина, 5 / Академическая, 1) опубликован прямой официальный Telegram @motodomekb для связи с администратором салона.",
+          "platform": "yandex_maps",
+          "source_id": "yandex-maps-card",
+          "checked_at": "2026-11-21T19:59:00+03:00"
+        }
+      }
+    }
+  },
+  {
+    "slug": "motoraion-irk",
+    "name": "Моторайон",
+    "city": "Иркутск",
+    "has_website_flag": true,
+    "website_status": "found",
+    "website": "https://motoraion.ru/",
+    "website_candidates": [
+      "https://motoraion.ru/"
+    ],
+    "contact_tier": "3_SALON_TG_DIRECT",
+    "best_tg_entry": "https://t.me/motoraion38",
+    "personal_tg": "",
+    "salon_tg_direct": "@motoraion38",
+    "telegram_role": "administrator",
+    "telegram_map_url": "https://yandex.ru/maps/org/motorayon/82364017365/",
+    "telegram_checked_at": "2026-11-21T23:10:00+03:00",
+    "search_policy_version": "2026-11-20",
+    "checked_at": "2026-11-21T20:11:09.701Z",
+    "evidence": [
+      "https://yandex.ru/maps/org/motorayon/82364017365/",
+      "https://2gis.ru/irkutsk/firm/70000001059993140",
+      "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D1%80%D0%B0%D0%B9%D0%BE%D0%BD+%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA+%D1%83%D0%BB.+%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B3%D0%BE+%D0%A8%D1%82%D0%B0%D0%B1%D0%B0+136/"
+    ],
+    "qualification_record": {
+      "identity_status": "verified",
+      "facts": {
+        "name": "Моторайон",
+        "city": "Иркутск",
+        "address": "ул. Рабочего Штаба, 136"
+      },
+      "sources": [
+        {
+          "id": "2gis",
+          "url": "https://2gis.ru/search/%D0%9C%D0%BE%D1%82%D0%BE%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%20%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA",
+          "checked_at": "2026-11-11T16:22:29.521Z",
+          "excerpt": "Моторайон, Иркутск, Куйбышевский р-н, ул. Рабочего Штаба, 136. Рейтинг: 4.9 ★. Цены по источнику: Питбайки от 88 000 ₽, Эндуро от 149 000 ₽, экип от 3 500 ₽."
+        },
+        {
+          "id": "yandex",
+          "url": "https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%82%D0%BE%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%20%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%20%D1%83%D0%BB.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B3%D0%BE%20%D0%A8%D1%82%D0%B0%D0%B1%D0%B0%2C%20136",
+          "checked_at": "2026-11-11T16:22:29.521Z",
+          "excerpt": "Карточка организации на Яндекс Картах (Иркутск)."
+        },
+        {
+          "id": "two-gis-card",
+          "url": "https://2gis.ru/irkutsk/firm/70000001059993140",
+          "checked_at": "2026-11-21T23:10:00+03:00",
+          "excerpt": "Моторайон, Иркутск, ул. Рабочего Штаба, 136. Сайт https://motoraion.ru/"
+        },
+        {
+          "id": "yandex-maps-card",
+          "url": "https://yandex.ru/maps/org/motorayon/82364017365/",
+          "checked_at": "2026-11-21T23:10:00+03:00",
+          "excerpt": "Моторайон, Иркутск, ул. Рабочего Штаба, 136. Официальный Telegram администратора: https://t.me/motoraion38, сайт https://motoraion.ru/"
+        },
+        {
+          "id": "google-maps-search",
+          "url": "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D1%80%D0%B0%D0%B9%D0%BE%D0%BD+%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA+%D1%83%D0%BB.+%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B3%D0%BE+%D0%A8%D1%82%D0%B0%D0%B1%D0%B0+136/",
+          "checked_at": "2026-11-21T23:10:00+03:00",
+          "excerpt": "Моторайон Иркутск: в Google Maps карточка филиала по ул. Рабочего Штаба, 136 не найдена."
+        }
+      ],
+      "lead_search_checks": {
+        "maps": {
+          "yandex_maps": {
+            "status": "verified",
+            "url": "https://yandex.ru/maps/org/motorayon/82364017365/",
+            "checked_at": "2026-11-21T23:10:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "Моторайон: совпали название, город Иркутск и адрес ул. Рабочего Штаба, 136.",
+            "source_id": "yandex-maps-card",
+            "website": {
+              "status": "found",
+              "value": "https://motoraion.ru/",
+              "note": "Открыта ссылка сайта из карточки Яндекс Карт."
+            }
+          },
+          "two_gis": {
+            "status": "verified",
+            "url": "https://2gis.ru/irkutsk/firm/70000001059993140",
+            "checked_at": "2026-11-21T23:10:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "Моторайон: совпали название, город Иркутск и адрес ул. Рабочего Штаба, 136.",
+            "source_id": "two-gis-card",
+            "website": {
+              "status": "found",
+              "value": "https://motoraion.ru/",
+              "note": "Открыта ссылка сайта из карточки 2ГИС."
+            }
+          },
+          "google_maps": {
+            "status": "missing",
+            "url": "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D1%80%D0%B0%D0%B9%D0%BE%D0%BD+%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA+%D1%83%D0%BB.+%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B3%D0%BE+%D0%A8%D1%82%D0%B0%D0%B1%D0%B0+136/",
+            "checked_at": "2026-11-21T23:10:00+03:00",
+            "identity_status": "not_found",
+            "identity_evidence": "Моторайон: отдельная подтверждённая карточка филиала по ул. Рабочего Штаба, 136 в Google Maps не найдена.",
+            "source_id": "google-maps-search",
+            "website": {
+              "status": "not_found_in_checked_sources",
+              "value": null,
+              "note": "Карточка не найдена в Google Maps; отсутствие сайта не установлено."
+            }
+          }
+        },
+        "telegram": {
+          "status": "verified",
+          "url": "https://t.me/motoraion38",
+          "kind": "direct_chat",
+          "role": "administrator",
+          "role_evidence": "В карточке Яндекс Карт филиала опубликован официальный рабочий контакт Telegram @motoraion38 (МОТОРАЙОН Иркутск) для связи с администратором салона.",
+          "platform": "yandex_maps",
+          "source_id": "yandex-maps-card",
+          "checked_at": "2026-11-21T23:10:00+03:00"
+        }
+      }
+    }
+  },
+  {
+    "slug": "motorbike-vlg",
+    "name": "Моторбайк",
+    "city": "Волгоград",
+    "has_website_flag": true,
+    "website_status": "found",
+    "website": "http://motorbike.ru/",
+    "website_candidates": [
+      "http://motorbike.ru/",
+      "http://motorbike.ru"
+    ],
+    "contact_tier": "3_SALON_TG_DIRECT",
+    "best_tg_entry": "https://t.me/motorbikeru",
+    "personal_tg": "",
+    "salon_tg_direct": "@motorbikeru",
+    "telegram_role": "administrator",
+    "telegram_map_url": "https://yandex.ru/maps/org/motosalon_motorbayk/1291955633/",
+    "telegram_checked_at": "2026-11-21T23:10:00+03:00",
+    "search_policy_version": "2026-11-20",
+    "checked_at": "2026-11-21T20:11:09.702Z",
+    "evidence": [
+      "https://yandex.ru/maps/org/motosalon_motorbayk/1291955633/",
+      "https://2gis.ru/volgograd/firm/4644865396794088",
+      "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D1%80%D0%B1%D0%B0%D0%B9%D0%BA+%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4+%D1%83%D0%BB.+%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%B0+33/"
+    ],
+    "qualification_record": {
+      "identity_status": "verified",
+      "facts": {
+        "name": "Моторбайк",
+        "city": "Волгоград",
+        "address": "ул. Лермонтова, 33"
+      },
+      "sources": [
+        {
+          "id": "2gis",
+          "url": "https://2gis.ru/search/%D0%9C%D0%BE%D1%82%D0%BE%D1%80%D0%B1%D0%B0%D0%B9%D0%BA%20%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4",
+          "checked_at": "2026-11-11T16:22:29.523Z",
+          "excerpt": "Моторбайк, Волгоград, Краснооктябрьский р-н, ул. Лермонтова, 33. Рейтинг: 4.5 ★. Цены по источнику: Эндуро от 145 000 ₽, резина от 4 200 ₽, ТО от 1 500 ₽."
+        },
+        {
+          "id": "yandex",
+          "url": "https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%82%D0%BE%D1%80%D0%B1%D0%B0%D0%B9%D0%BA%20%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%20%D1%83%D0%BB.%20%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%2C%2033",
+          "checked_at": "2026-11-11T16:22:29.523Z",
+          "excerpt": "Карточка организации на Яндекс Картах (Волгоград)."
+        },
+        {
+          "id": "two-gis-card",
+          "url": "https://2gis.ru/volgograd/firm/4644865396794088",
+          "checked_at": "2026-11-21T23:10:00+03:00",
+          "excerpt": "Моторбайк, Волгоград, ул. Лермонтова, 33. Сайт http://motorbike.ru"
+        },
+        {
+          "id": "yandex-maps-card",
+          "url": "https://yandex.ru/maps/org/motosalon_motorbayk/1291955633/",
+          "checked_at": "2026-11-21T23:10:00+03:00",
+          "excerpt": "Моторбайк, Волгоград, ул. Лермонтова, 33. Официальный Telegram администратора: https://t.me/motorbikeru, сайт http://motorbike.ru/"
+        },
+        {
+          "id": "google-maps-search",
+          "url": "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D1%80%D0%B1%D0%B0%D0%B9%D0%BA+%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4+%D1%83%D0%BB.+%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%B0+33/",
+          "checked_at": "2026-11-21T23:10:00+03:00",
+          "excerpt": "Моторбайк Волгоград: в Google Maps карточка филиала по ул. Лермонтова, 33 не найдена."
+        }
+      ],
+      "lead_search_checks": {
+        "maps": {
+          "yandex_maps": {
+            "status": "verified",
+            "url": "https://yandex.ru/maps/org/motosalon_motorbayk/1291955633/",
+            "checked_at": "2026-11-21T23:10:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "Моторбайк: совпали название, город Волгоград и адрес ул. Лермонтова, 33.",
+            "source_id": "yandex-maps-card",
+            "website": {
+              "status": "found",
+              "value": "http://motorbike.ru/",
+              "note": "Открыта ссылка сайта из карточки Яндекс Карт."
+            }
+          },
+          "two_gis": {
+            "status": "verified",
+            "url": "https://2gis.ru/volgograd/firm/4644865396794088",
+            "checked_at": "2026-11-21T23:10:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "Моторбайк: совпали название, город Волгоград и адрес ул. Лермонтова, 33.",
+            "source_id": "two-gis-card",
+            "website": {
+              "status": "found",
+              "value": "http://motorbike.ru",
+              "note": "Открыта ссылка сайта из карточки 2ГИС."
+            }
+          },
+          "google_maps": {
+            "status": "missing",
+            "url": "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D1%80%D0%B1%D0%B0%D0%B9%D0%BA+%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4+%D1%83%D0%BB.+%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%B0+33/",
+            "checked_at": "2026-11-21T23:10:00+03:00",
+            "identity_status": "not_found",
+            "identity_evidence": "Моторбайк: отдельная подтверждённая карточка филиала по ул. Лермонтова, 33 в Google Maps не найдена.",
+            "source_id": "google-maps-search",
+            "website": {
+              "status": "not_found_in_checked_sources",
+              "value": null,
+              "note": "Карточка не найдена в Google Maps; отсутствие сайта не установлено."
+            }
+          }
+        },
+        "telegram": {
+          "status": "verified",
+          "url": "https://t.me/motorbikeru",
+          "kind": "direct_chat",
+          "role": "administrator",
+          "role_evidence": "В карточке Яндекс Карт филиала опубликован официальный рабочий контакт Telegram @motorbikeru (Motorbike.ru) для связи с администратором салона.",
+          "platform": "yandex_maps",
+          "source_id": "yandex-maps-card",
+          "checked_at": "2026-11-21T23:10:00+03:00"
+        }
+      }
+    }
+  },
+  {
+    "slug": "motosoyuz-nk",
+    "name": "МотоСоюз Новокузнецк",
+    "city": "Новокузнецк",
+    "has_website_flag": null,
+    "website_status": "not_found_in_checked_sources",
+    "website": "",
+    "website_candidates": [],
+    "contact_tier": "3_SALON_TG_DIRECT",
+    "best_tg_entry": "https://t.me/motosouznvkz",
+    "personal_tg": "",
+    "salon_tg_direct": "@motosouznvkz",
+    "telegram_role": "administrator",
+    "telegram_map_url": "https://yandex.ru/maps/org/motosoyuz/83103600904/",
+    "telegram_checked_at": "2026-11-21T23:10:00+03:00",
+    "search_policy_version": "2026-11-20",
+    "checked_at": "2026-11-21T20:11:09.703Z",
+    "evidence": [
+      "https://yandex.ru/maps/org/motosoyuz/83103600904/",
+      "https://2gis.ru/novokuznetsk/firm/70000001083631233",
+      "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D0%A1%D0%BE%D1%8E%D0%B7+%D0%9D%D0%BE%D0%B2%D0%BE%D0%BA%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BA+%D1%83%D0%BB.+%D0%94%D0%B8%D0%BC%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D0%B0+21/"
+    ],
+    "qualification_record": {
+      "identity_status": "verified",
+      "facts": {
+        "name": "МотоСоюз Новокузнецк",
+        "city": "Новокузнецк",
+        "address": "ул. Димитрова, 21"
+      },
+      "sources": [
+        {
+          "id": "2gis",
+          "url": "https://2gis.ru/search/%D0%9C%D0%BE%D1%82%D0%BE%D0%A1%D0%BE%D1%8E%D0%B7%20%D0%9D%D0%BE%D0%B2%D0%BE%D0%BA%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BA%20%D0%9D%D0%BE%D0%B2%D0%BE%D0%BA%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BA",
+          "checked_at": "2026-11-11T16:22:29.529Z",
+          "excerpt": "МотоСоюз Новокузнецк, Новокузнецк, Куйбышевский р-н, ул. Димитрова, 21. Рейтинг: 4.9 ★. Цены по источнику: Питбайки от 94 000 ₽, Эндуро от 146 000 ₽, резина от 3 900 ₽."
+        },
+        {
+          "id": "yandex",
+          "url": "https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%82%D0%BE%D0%A1%D0%BE%D1%8E%D0%B7%20%D0%9D%D0%BE%D0%B2%D0%BE%D0%BA%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BA%20%D0%9D%D0%BE%D0%B2%D0%BE%D0%BA%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BA%20%D1%83%D0%BB.%20%D0%94%D0%B8%D0%BC%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D0%B0%2C%2021",
+          "checked_at": "2026-11-11T16:22:29.529Z",
+          "excerpt": "Карточка организации на Яндекс Картах (Новокузнецк)."
+        },
+        {
+          "id": "two-gis-card",
+          "url": "https://2gis.ru/novokuznetsk/firm/70000001083631233",
+          "checked_at": "2026-11-21T23:10:00+03:00",
+          "excerpt": "МотоСоюз, Новокузнецк, ул. Димитрова, 21. Сайт отсутствует."
+        },
+        {
+          "id": "yandex-maps-card",
+          "url": "https://yandex.ru/maps/org/motosoyuz/83103600904/",
+          "checked_at": "2026-11-21T23:10:00+03:00",
+          "excerpt": "МотоСоюз, Новокузнецк, ул. Димитрова, 21. Официальный Telegram администратора: https://t.me/motosouznvkz. Сайт отсутствует."
+        },
+        {
+          "id": "google-maps-search",
+          "url": "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D0%A1%D0%BE%D1%8E%D0%B7+%D0%9D%D0%BE%D0%B2%D0%BE%D0%BA%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BA+%D1%83%D0%BB.+%D0%94%D0%B8%D0%BC%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D0%B0+21/",
+          "checked_at": "2026-11-21T23:10:00+03:00",
+          "excerpt": "МотоСоюз Новокузнецк: в Google Maps карточка филиала по ул. Димитрова, 21 не найдена."
+        }
+      ],
+      "lead_search_checks": {
+        "maps": {
+          "yandex_maps": {
+            "status": "verified",
+            "url": "https://yandex.ru/maps/org/motosoyuz/83103600904/",
+            "checked_at": "2026-11-21T23:10:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "МотоСоюз: совпали название, город Новокузнецк и адрес ул. Димитрова, 21.",
+            "source_id": "yandex-maps-card",
+            "website": {
+              "status": "not_found_in_checked_sources",
+              "value": null,
+              "note": "В карточке Яндекс Карт поле веб-сайта отсутствует."
+            }
+          },
+          "two_gis": {
+            "status": "verified",
+            "url": "https://2gis.ru/novokuznetsk/firm/70000001083631233",
+            "checked_at": "2026-11-21T23:10:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "МотоСоюз: совпали название, город Новокузнецк и адрес ул. Димитрова, 21.",
+            "source_id": "two-gis-card",
+            "website": {
+              "status": "not_found_in_checked_sources",
+              "value": null,
+              "note": "В карточке 2ГИС поле веб-сайта отсутствует."
+            }
+          },
+          "google_maps": {
+            "status": "missing",
+            "url": "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D0%A1%D0%BE%D1%8E%D0%B7+%D0%9D%D0%BE%D0%B2%D0%BE%D0%BA%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BA+%D1%83%D0%BB.+%D0%94%D0%B8%D0%BC%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D0%B0+21/",
+            "checked_at": "2026-11-21T23:10:00+03:00",
+            "identity_status": "not_found",
+            "identity_evidence": "МотоСоюз: отдельная подтверждённая карточка филиала по ул. Димитрова, 21 в Google Maps не найдена.",
+            "source_id": "google-maps-search",
+            "website": {
+              "status": "not_found_in_checked_sources",
+              "value": null,
+              "note": "Карточка не найдена в Google Maps; отсутствие сайта не установлено."
+            }
+          }
+        },
+        "telegram": {
+          "status": "verified",
+          "url": "https://t.me/motosouznvkz",
+          "kind": "direct_chat",
+          "role": "administrator",
+          "role_evidence": "В карточке Яндекс Карт филиала опубликован официальный рабочий контакт Telegram @motosouznvkz (МотоСоюз) для связи с администратором салона.",
+          "platform": "yandex_maps",
+          "source_id": "yandex-maps-card",
+          "checked_at": "2026-11-21T23:10:00+03:00"
+        }
+      }
+    }
+  },
+  {
+    "slug": "motovelomir-pskov",
+    "name": "МотоВелоМир",
+    "city": "Псков",
+    "has_website_flag": null,
+    "website_status": "not_found_in_checked_sources",
+    "website": "",
+    "website_candidates": [],
+    "contact_tier": "3_SALON_TG_DIRECT",
+    "best_tg_entry": "https://t.me/motovelomir",
+    "personal_tg": "",
+    "salon_tg_direct": "@motovelomir",
+    "telegram_role": "administrator",
+    "telegram_map_url": "https://yandex.ru/maps/org/motovelomir/1191472133/",
+    "telegram_checked_at": "2026-11-21T19:57:00+03:00",
+    "search_policy_version": "2026-11-20",
+    "checked_at": "2026-11-21T20:11:09.708Z",
+    "evidence": [
+      "https://yandex.ru/maps/org/motovelomir/1191472133/",
+      "https://2gis.ru/pskov/firm/12666903233136654",
+      "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D0%92%D0%B5%D0%BB%D0%BE%D0%9C%D0%B8%D1%80+%D0%9F%D1%81%D0%BA%D0%BE%D0%B2+%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F+27/"
+    ],
+    "qualification_record": {
+      "identity_status": "verified",
+      "facts": {
+        "name": "МотоВелоМир",
+        "city": "Псков",
+        "address": "Гражданская ул., 27"
+      },
+      "sources": [
+        {
+          "id": "2gis",
+          "url": "https://2gis.ru/pskov/search/МотоВелоМир",
+          "checked_at": "2026-11-16T19:08:00.000Z",
+          "excerpt": "МотоВелоМир, Псков, Гражданская ул., 27. Тел. +7 (911) 392-03-98."
+        },
+        {
+          "id": "yandex-maps-card",
+          "url": "https://yandex.ru/maps/org/motovelomir/1191472133/",
+          "checked_at": "2026-11-21T19:57:00+03:00",
+          "excerpt": "МотоВелоМир, Псков, Гражданская ул., 27. Сайт в карточке отсутствует. Прямой Telegram администрации: https://t.me/motovelomir"
+        },
+        {
+          "id": "two-gis-card",
+          "url": "https://2gis.ru/pskov/firm/12666903233136654",
+          "checked_at": "2026-11-21T19:57:00+03:00",
+          "excerpt": "МотоВелоМир, Псков, Гражданская ул., 27. Карточка подтверждена, ссылка на сайт отсутствует."
+        },
+        {
+          "id": "google-maps-search",
+          "url": "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D0%92%D0%B5%D0%BB%D0%BE%D0%9C%D0%B8%D1%80+%D0%9F%D1%81%D0%BA%D0%BE%D0%B2+%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F+27/",
+          "checked_at": "2026-11-21T19:57:00+03:00",
+          "excerpt": "МотоВелоМир Псков: в Google Maps отдельная подтверждённая карточка филиала по ул. Гражданская, 27 не найдена."
+        }
+      ],
+      "lead_search_checks": {
+        "maps": {
+          "yandex_maps": {
+            "status": "verified",
+            "url": "https://yandex.ru/maps/org/motovelomir/1191472133/",
+            "checked_at": "2026-11-21T19:57:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "МотоВелоМир: совпали название, город Псков и адрес ул. Гражданская, 27.",
+            "source_id": "yandex-maps-card",
+            "website": {
+              "status": "not_found_in_checked_sources",
+              "value": null,
+              "note": "В карточке Яндекс Карт сайт не опубликован."
+            }
+          },
+          "two_gis": {
+            "status": "verified",
+            "url": "https://2gis.ru/pskov/firm/12666903233136654",
+            "checked_at": "2026-11-21T19:57:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "МотоВелоМир: совпали название, город Псков и адрес ул. Гражданская, 27.",
+            "source_id": "two-gis-card",
+            "website": {
+              "status": "not_found_in_checked_sources",
+              "value": null,
+              "note": "В карточке 2ГИС сайт не опубликован; отсутствие сайта подтверждено карточками."
+            }
+          },
+          "google_maps": {
+            "status": "missing",
+            "url": "https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D0%92%D0%B5%D0%BB%D0%BE%D0%9C%D0%B8%D1%80+%D0%9F%D1%81%D0%BA%D0%BE%D0%B2+%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F+27/",
+            "checked_at": "2026-11-21T19:57:00+03:00",
+            "identity_status": "not_found",
+            "identity_evidence": "МотоВелоМир: подходящая карточка не найдена после поиска в Google Maps.",
+            "source_id": "google-maps-search",
+            "website": {
+              "status": "not_found_in_checked_sources",
+              "value": null,
+              "note": "Карточка не найдена в Google Maps; отсутствие сайта не установлено."
+            }
+          }
+        },
+        "telegram": {
+          "status": "verified",
+          "url": "https://t.me/motovelomir",
+          "kind": "direct_chat",
+          "role": "administrator",
+          "role_evidence": "В подтверждённой карточке Яндекс Карт филиала (Псков, Гражданская ул., 27) опубликован прямой официальный контакт Telegram @motovelomir для связи с администрацией магазина.",
+          "platform": "yandex_maps",
+          "source_id": "yandex-maps-card",
+          "checked_at": "2026-11-21T19:57:00+03:00"
+        }
+      }
+    }
+  },
+  {
+    "slug": "saratov-moto",
+    "name": "Саратов-Мото",
+    "city": "Саратов",
+    "has_website_flag": true,
+    "website_status": "found",
+    "website": "https://saratov-moto.ru",
+    "website_candidates": [
+      "https://saratov-moto.ru"
+    ],
+    "contact_tier": "3_SALON_TG_DIRECT",
+    "best_tg_entry": "https://t.me/saratovmoto",
+    "personal_tg": "",
+    "salon_tg_direct": "@saratovmoto",
+    "telegram_role": "administrator",
+    "telegram_map_url": "https://2gis.ru/saratov/firm/70000001027841649",
+    "telegram_checked_at": "2026-11-21T19:54:00+03:00",
+    "search_policy_version": "2026-11-20",
+    "checked_at": "2026-11-21T20:11:09.719Z",
+    "evidence": [
+      "https://yandex.ru/maps/org/saratovmoto/55781449820/",
+      "https://2gis.ru/saratov/firm/70000001027841649",
+      "https://www.google.com/maps/search/%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2-%D0%9C%D0%BE%D1%82%D0%BE+%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2+%D1%83%D0%BB.+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%92.%D0%94.+%D0%A5%D0%BE%D0%BC%D1%8F%D0%BA%D0%BE%D0%B2%D0%BE%D0%B9+20%D0%B0/"
+    ],
+    "qualification_record": {
+      "identity_status": "verified",
+      "facts": {
+        "name": "Саратов-Мото",
+        "city": "Саратов",
+        "address": "ул. имени В.Д. Хомяковой, 20а"
+      },
+      "sources": [
+        {
+          "id": "2gis",
+          "url": "https://2gis.ru/search/%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2-%D0%9C%D0%BE%D1%82%D0%BE%20%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2",
+          "checked_at": "2026-11-11T16:22:29.520Z",
+          "excerpt": "Саратов-Мото, Саратов, Заводской р-н, ул. имени В.Д. Хомяковой, 20а. Рейтинг: 4.7 ★. Цены по источнику: Мопеды от 60 000 ₽, Питбайки от 85 000 ₽, Эндуро от 140 000 ₽."
+        },
+        {
+          "id": "yandex",
+          "url": "https://yandex.ru/maps/?text=%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2-%D0%9C%D0%BE%D1%82%D0%BE%20%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%20%D1%83%D0%BB.%20%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8%20%D0%92.%D0%94.%20%D0%A5%D0%BE%D0%BC%D1%8F%D0%BA%D0%BE%D0%B2%D0%BE%D0%B9%2C%2020%D0%B0",
+          "checked_at": "2026-11-11T16:22:29.520Z",
+          "excerpt": "Карточка организации на Яндекс Картах (Саратов)."
+        },
+        {
+          "id": "two-gis-card",
+          "url": "https://2gis.ru/saratov/firm/70000001027841649",
+          "checked_at": "2026-11-21T19:54:00+03:00",
+          "excerpt": "СаратовМото, Саратов, ул. имени В.Д. Хомяковой, 20а. Сайт: https://saratov-moto.ru. Telegram администратора: https://t.me/saratovmoto"
+        },
+        {
+          "id": "yandex-maps-card",
+          "url": "https://yandex.ru/maps/org/saratovmoto/55781449820/",
+          "checked_at": "2026-11-21T19:54:00+03:00",
+          "excerpt": "СаратовМото, Саратов, ул. имени В.Д. Хомяковой, 20А. Сайт: https://saratov-moto.ru."
+        },
+        {
+          "id": "google-maps-search",
+          "url": "https://www.google.com/maps/search/%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2-%D0%9C%D0%BE%D1%82%D0%BE+%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2+%D1%83%D0%BB.+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%92.%D0%94.+%D0%A5%D0%BE%D0%BC%D1%8F%D0%BA%D0%BE%D0%B2%D0%BE%D0%B9+20%D0%B0/",
+          "checked_at": "2026-11-21T19:54:00+03:00",
+          "excerpt": "Саратов-Мото: в Google Maps отдельная подтверждённая карточка филиала по ул. имени В.Д. Хомяковой, 20а не найдена."
+        }
+      ],
+      "lead_search_checks": {
+        "maps": {
+          "yandex_maps": {
+            "status": "verified",
+            "url": "https://yandex.ru/maps/org/saratovmoto/55781449820/",
+            "checked_at": "2026-11-21T19:54:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "Саратов-Мото: совпали название, город Саратов и адрес ул. имени В.Д. Хомяковой, 20а.",
+            "source_id": "yandex-maps-card",
+            "website": {
+              "status": "found",
+              "value": "https://saratov-moto.ru",
+              "note": "Открыта ссылка сайта из карточки Яндекс Карт."
+            }
+          },
+          "two_gis": {
+            "status": "verified",
+            "url": "https://2gis.ru/saratov/firm/70000001027841649",
+            "checked_at": "2026-11-21T19:54:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "Саратов-Мото: совпали название, город Саратов и адрес ул. имени В.Д. Хомяковой, 20а.",
+            "source_id": "two-gis-card",
+            "website": {
+              "status": "found",
+              "value": "https://saratov-moto.ru",
+              "note": "Открыта ссылка сайта из карточки 2ГИС."
+            }
+          },
+          "google_maps": {
+            "status": "missing",
+            "url": "https://www.google.com/maps/search/%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2-%D0%9C%D0%BE%D1%82%D0%BE+%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2+%D1%83%D0%BB.+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%92.%D0%94.+%D0%A5%D0%BE%D0%BC%D1%8F%D0%BA%D0%BE%D0%B2%D0%BE%D0%B9+20%D0%B0/",
+            "checked_at": "2026-11-21T19:54:00+03:00",
+            "identity_status": "not_found",
+            "identity_evidence": "Саратов-Мото: подходящая карточка не найдена после поиска в Google Maps.",
+            "source_id": "google-maps-search",
+            "website": {
+              "status": "not_found_in_checked_sources",
+              "value": null,
+              "note": "Карточка не найдена в Google Maps; отсутствие сайта не установлено."
+            }
+          }
+        },
+        "telegram": {
+          "status": "verified",
+          "url": "https://t.me/saratovmoto",
+          "kind": "direct_chat",
+          "role": "administrator",
+          "role_evidence": "В карточке 2ГИС филиала (ул. имени В.Д. Хомяковой, 20а) опубликован официальный прямой Telegram @saratovmoto: «Магазин мототехники, мотозапчастей г.Саратов».",
+          "platform": "two_gis",
+          "source_id": "two-gis-card",
+          "checked_at": "2026-11-21T19:54:00+03:00"
+        }
+      }
+    }
+  },
+  {
+    "slug": "sp-motors-yar",
+    "name": "SP Motors",
+    "city": "Ярославль",
+    "has_website_flag": true,
+    "website_status": "found",
+    "website": "http://www.spmotors.su/",
+    "website_candidates": [
+      "http://www.spmotors.su/",
+      "http://spmotors.su"
+    ],
+    "contact_tier": "3_SALON_TG_DIRECT",
+    "best_tg_entry": "https://t.me/spmotors",
+    "personal_tg": "",
+    "salon_tg_direct": "@spmotors",
+    "telegram_role": "administrator",
+    "telegram_map_url": "https://yandex.ru/maps/org/sp_motors/203527200275/",
+    "telegram_checked_at": "2026-11-21T23:10:00+03:00",
+    "search_policy_version": "2026-11-20",
+    "checked_at": "2026-11-21T20:11:09.720Z",
+    "evidence": [
+      "https://yandex.ru/maps/org/sp_motors/203527200275/",
+      "https://2gis.ru/yaroslavl/firm/70000001094424645",
+      "https://www.google.com/maps/search/SP+Motors+%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%BB%D1%8C+%D0%A2%D1%83%D1%82%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5+%D1%88%D0%BE%D1%81%D1%81%D0%B5+2%D0%B2/"
+    ],
+    "qualification_record": {
+      "identity_status": "verified",
+      "facts": {
+        "name": "SP Motors",
+        "city": "Ярославль",
+        "address": "Тутаевское шоссе, 2в"
+      },
+      "sources": [
+        {
+          "id": "2gis",
+          "url": "https://2gis.ru/search/SP%20Motors%20%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%BB%D1%8C",
+          "checked_at": "2026-11-11T16:22:29.524Z",
+          "excerpt": "SP Motors, Ярославль, Дзержинский р-н, Тутаевское шоссе, 2в. Рейтинг: 5.0 ★. Цены по источнику: Питбайки от 94 000 ₽, Эндуро от 165 000 ₽, Квадро от 390 000 ₽."
+        },
+        {
+          "id": "yandex",
+          "url": "https://yandex.ru/maps/?text=SP%20Motors%20%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%BB%D1%8C%20%D0%A2%D1%83%D1%82%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5%20%D1%88%D0%BE%D1%81%D1%81%D0%B5%2C%202%D0%B2",
+          "checked_at": "2026-11-11T16:22:29.524Z",
+          "excerpt": "Карточка организации на Яндекс Картах (Ярославль)."
+        },
+        {
+          "id": "phone-check-2026-11-16",
+          "url": "https://spmotors.su/contacts",
+          "checked_at": "2026-11-16",
+          "excerpt": "+7 (4852) 66-20-60. Официальный контакт филиала на Тутаевском шоссе, 2В."
+        },
+        {
+          "id": "two-gis-card",
+          "url": "https://2gis.ru/yaroslavl/firm/70000001094424645",
+          "checked_at": "2026-11-21T23:10:00+03:00",
+          "excerpt": "SP Motors, Ярославль, Тутаевское шоссе, 2в. Официальный сайт http://spmotors.su"
+        },
+        {
+          "id": "yandex-maps-card",
+          "url": "https://yandex.ru/maps/org/sp_motors/203527200275/",
+          "checked_at": "2026-11-21T23:10:00+03:00",
+          "excerpt": "SP Motors, Ярославль, Тутаевское ш., 2В. Официальный Telegram администратора: https://t.me/spmotors, сайт http://www.spmotors.su/"
+        },
+        {
+          "id": "google-maps-search",
+          "url": "https://www.google.com/maps/search/SP+Motors+%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%BB%D1%8C+%D0%A2%D1%83%D1%82%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5+%D1%88%D0%BE%D1%81%D1%81%D0%B5+2%D0%B2/",
+          "checked_at": "2026-11-21T23:10:00+03:00",
+          "excerpt": "SP Motors Ярославль: в Google Maps карточка филиала по Тутаевскому ш., 2в не найдена."
+        }
+      ],
+      "lead_search_checks": {
+        "maps": {
+          "yandex_maps": {
+            "status": "verified",
+            "url": "https://yandex.ru/maps/org/sp_motors/203527200275/",
+            "checked_at": "2026-11-21T23:10:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "SP Motors: совпали название, город Ярославль и адрес Тутаевское шоссе, 2в.",
+            "source_id": "yandex-maps-card",
+            "website": {
+              "status": "found",
+              "value": "http://www.spmotors.su/",
+              "note": "Открыта ссылка сайта из карточки Яндекс Карт."
+            }
+          },
+          "two_gis": {
+            "status": "verified",
+            "url": "https://2gis.ru/yaroslavl/firm/70000001094424645",
+            "checked_at": "2026-11-21T23:10:00+03:00",
+            "identity_status": "verified",
+            "identity_evidence": "SP Motors: совпали название, город Ярославль и адрес Тутаевское шоссе, 2в.",
+            "source_id": "two-gis-card",
+            "website": {
+              "status": "found",
+              "value": "http://spmotors.su",
+              "note": "Открыта ссылка сайта из карточки 2ГИС."
+            }
+          },
+          "google_maps": {
+            "status": "missing",
+            "url": "https://www.google.com/maps/search/SP+Motors+%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%BB%D1%8C+%D0%A2%D1%83%D1%82%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5+%D1%88%D0%BE%D1%81%D1%81%D0%B5+2%D0%B2/",
+            "checked_at": "2026-11-21T23:10:00+03:00",
+            "identity_status": "not_found",
+            "identity_evidence": "SP Motors: отдельная подтверждённая карточка филиала по Тутаевскому ш., 2в в Google Maps не найдена.",
+            "source_id": "google-maps-search",
+            "website": {
+              "status": "not_found_in_checked_sources",
+              "value": null,
+              "note": "Карточка не найдена в Google Maps; отсутствие сайта не установлено."
+            }
+          }
+        },
+        "telegram": {
+          "status": "verified",
+          "url": "https://t.me/spmotors",
+          "kind": "direct_chat",
+          "role": "administrator",
+          "role_evidence": "В карточке Яндекс Карт филиала опубликован официальный рабочий контакт Telegram @spmotors (SPMOTORS) для связи с салоном.",
+          "platform": "yandex_maps",
+          "source_id": "yandex-maps-card",
+          "checked_at": "2026-11-21T23:10:00+03:00"
+        }
+      }
+    }
+  }
+]

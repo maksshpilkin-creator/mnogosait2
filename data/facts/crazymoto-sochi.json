@@ -14,6 +14,24 @@
       "url": "https://yandex.ru/maps/?text=CrazyMoto%20%D0%A1%D0%BE%D1%87%D0%B8%20%D1%83%D0%BB.%20%D0%90%D0%B2%D0%B8%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%2C%2019%D0%90",
       "checked_at": "2026-11-11T16:22:29.528Z",
       "excerpt": "Карточка организации на Яндекс Картах (Сочи)."
+    },
+    {
+      "id": "yandex-maps-card",
+      "url": "https://yandex.ru/maps/org/kreyzimoto/68642883298/",
+      "checked_at": "2026-11-21T19:54:00+03:00",
+      "excerpt": "CrazyMoto Сочи, ул. Авиационная, 19А. Канал t.me/crazymoto_pro (159 подписчиков)."
+    },
+    {
+      "id": "two-gis-search",
+      "url": "https://2gis.ru/sochi/search/CrazyMoto",
+      "checked_at": "2026-11-21T19:54:00+03:00",
+      "excerpt": "CrazyMoto Сочи: карточка филиала не найдена в 2ГИС."
+    },
+    {
+      "id": "google-maps-search",
+      "url": "https://www.google.com/maps/search/CrazyMoto+Sochi+Aviatsionnaya/",
+      "checked_at": "2026-11-21T19:54:00+03:00",
+      "excerpt": "CrazyMoto: карточка не найдена в Google Maps."
     }
   ],
   "facts": {
@@ -66,5 +84,58 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "lead_search_checks": {
+    "maps": {
+      "yandex_maps": {
+        "status": "verified",
+        "url": "https://yandex.ru/maps/org/kreyzimoto/68642883298/",
+        "checked_at": "2026-11-21T19:54:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "CrazyMoto: совпали название, город Сочи и адрес ул. Авиационная, 19А.",
+        "source_id": "yandex-maps-card",
+        "website": {
+          "status": "found",
+          "value": "https://crazymoto.pro",
+          "note": "Сайт открыт из карточки Яндекс Карт."
+        }
+      },
+      "two_gis": {
+        "status": "missing",
+        "url": "https://2gis.ru/sochi/search/CrazyMoto",
+        "checked_at": "2026-11-21T19:54:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "CrazyMoto: карточка филиала не найдена в 2ГИС.",
+        "source_id": "two-gis-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в 2ГИС."
+        }
+      },
+      "google_maps": {
+        "status": "missing",
+        "url": "https://www.google.com/maps/search/CrazyMoto+Sochi+Aviatsionnaya/",
+        "checked_at": "2026-11-21T19:54:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "CrazyMoto: карточка не найдена в Google Maps.",
+        "source_id": "google-maps-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в Google Maps."
+        }
+      }
+    },
+    "telegram": {
+      "status": "missing",
+      "url": null,
+      "kind": null,
+      "role": null,
+      "role_evidence": "В карточке Яндекс Карт опубликован только Telegram-канал t.me/crazymoto_pro (159 подписчиков); прямой контакт отсутствует.",
+      "platform": null,
+      "source_id": null,
+      "checked_at": "2026-11-21T19:54:00+03:00"
+    }
+  }
 }

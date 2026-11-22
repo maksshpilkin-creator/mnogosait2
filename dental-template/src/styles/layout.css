@@ -1,0 +1,66 @@
+/* Layout System & Grid Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(16px, 3.5vw, 48px);
+  padding-right: clamp(16px, 3.5vw, 48px);
+  position: relative;
+}
+
+.section {
+  width: 100%;
+  padding-top: clamp(60px, 7vw, 110px);
+  padding-bottom: clamp(60px, 7vw, 110px);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: clamp(32px, 4.5vw, 56px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.section-header.dark {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Background Variations */
+.bg-light {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+}
+
+.bg-dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-white);
+}
+
+.bg-white {
+  background-color: var(--color-bg-white);
+  color: var(--color-text-dark);
+}
+
+.bg-blue {
+  background-color: var(--color-blue-primary);
+  color: var(--color-text-white);
+}
+
+/* Watermark Script Styling */
+.watermark-script {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  font-family: 'Brush Script MT', 'Marck Script', cursive, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  z-index: 1;
+}

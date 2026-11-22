@@ -1,0 +1,39 @@
+:root {
+  /* Brand Blue Palette */
+  --color-blue-primary: #0D55E8;
+  --color-blue-vibrant: #1A8CFF;
+  --color-blue-dark: #00103A;
+  --color-blue-midnight: #06112C;
+  --color-blue-glow: #0056F6;
+  --color-cyan-accent: #38BDF8;
+  --color-blue-badge: #0B3B82;
+
+  /* Neutral Backgrounds */
+  --color-bg-dark: #000000;
+  --color-bg-light: #F8F9FA;
+  --color-bg-white: #FFFFFF;
+  --color-card-border: #E8ECEF;
+  --color-card-hover: #F1F4F9;
+
+  /* Text Colors */
+  --color-text-white: #FFFFFF;
+  --color-text-dark: #111111;
+  --color-text-muted: #8E95A2;
+  --color-text-dim: rgba(255, 255, 255, 0.65);
+  --color-disclaimer: #4B5563;
+
+  /* Borders & Dividers */
+  --border-light: 1px solid #E5E7EB;
+  --border-dark: 1px solid rgba(255, 255, 255, 0.12);
+  --border-active-blue: 1px solid #1A8CFF;
+
+  /* Typography */
+  --font-display: 'Unbounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Container & Spacing */
+  --container-max: 1440px;
+
+
+}

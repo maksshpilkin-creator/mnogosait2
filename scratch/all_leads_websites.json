@@ -1,0 +1,720 @@
+{
+  "total": 119,
+  "withSiteCount": 58,
+  "withoutSiteCount": 61,
+  "withSite": [
+    {
+      "slug": "ponarin-mx",
+      "name": "Ponarin MX",
+      "city": "Воронеж",
+      "website": "ponarinmx.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "drivemoto-kzn",
+      "name": "Drivemoto",
+      "city": "Казань",
+      "website": "dmoto16.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "motovelo-kolomna",
+      "name": "Мото-вело",
+      "city": "Коломна",
+      "website": "https://progasi.ru/dealers.html",
+      "hasWebsite": false
+    },
+    {
+      "slug": "megacross",
+      "name": "Мегакросс",
+      "city": "Краснодар",
+      "website": "megacross.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "moto48-lipetsk",
+      "name": "Мото48",
+      "city": "Липецк",
+      "website": "https://moto48.ru/kontakty/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "mototehcentr-murmansk",
+      "name": "МотоТехЦентр",
+      "city": "Мурманск",
+      "website": "https://tools51.ru/kontakty",
+      "hasWebsite": false
+    },
+    {
+      "slug": "moto-racer-odintsovo",
+      "name": "Мото Рейсер",
+      "city": "Одинцово",
+      "website": "https://moto-racer.ru/oplata/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "extreme-sport-penza",
+      "name": "ЭКСТРИМ Sport",
+      "city": "Пенза",
+      "website": "экстрим58.рф",
+      "hasWebsite": true
+    },
+    {
+      "slug": "motonachinka-rzn",
+      "name": "Мотоначинка",
+      "city": "Рязань",
+      "website": "motonachinka.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "motopark-tula",
+      "name": "Мотопарк",
+      "city": "Тула",
+      "website": "https://motoparkcentr.ru/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "avangard-cherepovets",
+      "name": "Мотосалон Авангард",
+      "city": "Череповец",
+      "website": "https://avangard35.ru/motosalon/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "sp-motors-yar",
+      "name": "SP Motors",
+      "city": "Ярославль",
+      "website": "spmotors.su",
+      "hasWebsite": true
+    },
+    {
+      "slug": "multi-moto-samara",
+      "name": "Мульти-мото",
+      "city": "Самара",
+      "website": "163motors.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "motovelomag-syzran",
+      "name": "МотоВелоМагазин",
+      "city": "Сызрань",
+      "website": "https://www.motovelomag.ru/syzran-motovelomagazin.html",
+      "hasWebsite": false
+    },
+    {
+      "slug": "azimut74-miass",
+      "name": "Азимут 74",
+      "city": "Миасс",
+      "website": "https://azimut59.ru/miass",
+      "hasWebsite": false
+    },
+    {
+      "slug": "pro100moto-tmn",
+      "name": "Pro-100moto",
+      "city": "Тюмень",
+      "website": "pro-100moto.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "moto-vektor-ufa",
+      "name": "Мото вектор",
+      "city": "Уфа",
+      "website": "motovektor.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "fox-moto-chel",
+      "name": "FOX moto",
+      "city": "Челябинск",
+      "website": "foxmoto.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "motomarket19-abakan",
+      "name": "Мотомаркет19",
+      "city": "Абакан",
+      "website": "https://gladiatormotors.ru/spisok-dillerov-map/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "pitbike-magazine",
+      "name": "Pitbike magazine",
+      "city": "Новосибирск",
+      "website": "pbm54.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "motohit27-khv",
+      "name": "МотоХит27",
+      "city": "Хабаровск",
+      "website": "https://motohit27.clients.site/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "rockot-armavir",
+      "name": "Мотосалон Rockot",
+      "city": "Армавир",
+      "website": "https://armavir.rockot-motors.ru/contacts.html",
+      "hasWebsite": false
+    },
+    {
+      "slug": "mnogokvadroff-novgorod",
+      "name": "МногоКвадроФФ53",
+      "city": "Великий Новгород",
+      "website": "https://mnogokvadroff53.ru/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "mototandem-vladimir",
+      "name": "Мототандем",
+      "city": "Владимир",
+      "website": "https://мототандем.рф/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "motorbike-vlg",
+      "name": "Моторбайк",
+      "city": "Волгоград",
+      "website": "motorbike.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "dnkmoto-ivanovo",
+      "name": "DnkMoto",
+      "city": "Иваново",
+      "website": "https://yandex.com/maps/org/dnkmoto/152539164507/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "bars-moto-kzn",
+      "name": "Барс-мото",
+      "city": "Казань",
+      "website": "https://bars-moto.clients.site/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "moto-moto-kovrov",
+      "name": "Мото-мото",
+      "city": "Ковров",
+      "website": "https://tk-gorodok.ru/shops/motosalon-moto-moto.html",
+      "hasWebsite": false
+    },
+    {
+      "slug": "guruenduro",
+      "name": "Guruenduro",
+      "city": "Краснодар",
+      "website": "guruenduro.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "crazymoto-maykop",
+      "name": "КрейзиМото",
+      "city": "Майкоп",
+      "website": "https://crazymoto.pro/contact/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "kickmoto-minvody",
+      "name": "Кикмото",
+      "city": "Минеральные Воды",
+      "website": "https://kikmoto.clients.site/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "lkmoto-mytishchi",
+      "name": "ЛКМото",
+      "city": "Мытищи",
+      "website": "lkmoto.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "darex-moto-nn",
+      "name": "Darex Moto",
+      "city": "Нижний Новгород",
+      "website": "darexmoto.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "gsbmoto-rostov",
+      "name": "GSBMOTO",
+      "city": "Ростов-на-Дону",
+      "website": "gsbmoto.com",
+      "hasWebsite": true
+    },
+    {
+      "slug": "moto-active-spb",
+      "name": "Мото-Актив",
+      "city": "Санкт-Петербург",
+      "website": "moto-active.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "crazymoto-sochi",
+      "name": "CrazyMoto",
+      "city": "Сочи",
+      "website": "crazymoto.pro",
+      "hasWebsite": true
+    },
+    {
+      "slug": "tagenduro-taganrog",
+      "name": "Tagenduro",
+      "city": "Таганрог",
+      "website": "https://yandex.com/maps/org/tagenduro/166033710418/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "saratov-moto",
+      "name": "Саратов-Мото",
+      "city": "Саратов",
+      "website": "saratov-moto.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "volga-drive-tlt",
+      "name": "Волга Драйв",
+      "city": "Тольятти",
+      "website": "globaldrive.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "bike4you-ulyanovsk",
+      "name": "Bike4you Ульяновск",
+      "city": "Ульяновск",
+      "website": "bike4you.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "motodom-ekb",
+      "name": "Motodom (Мотодом)",
+      "city": "Екатеринбург",
+      "website": "https://rting.ru/ekaterinburg/co/motodom/4147932",
+      "hasWebsite": false
+    },
+    {
+      "slug": "motolider-ekb",
+      "name": "Мотолидер",
+      "city": "Екатеринбург",
+      "website": "мото66.рф",
+      "hasWebsite": true
+    },
+    {
+      "slug": "drive-kamensk",
+      "name": "Мотоцентр Drive",
+      "city": "Каменск-Уральский",
+      "website": "https://regulmoto.ru/dealer/?PAGEN_1=4",
+      "hasWebsite": false
+    },
+    {
+      "slug": "motokrug-orenburg",
+      "name": "Мотокруг",
+      "city": "Оренбург",
+      "website": "motokrug56.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "impulse-sila-perm",
+      "name": "Импульс Силы",
+      "city": "Пермь",
+      "website": "impulse-s.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "zona-enduro-omsk",
+      "name": "Zona Enduro / Питбайк Омск55",
+      "city": "Омск",
+      "website": "zona-enduro.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "enduro-sibir-krsk",
+      "name": "ЭндуроСибирь24",
+      "city": "Красноярск",
+      "website": "endurosibir24.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "motobro",
+      "name": "МотоБРО",
+      "city": "Новосибирск",
+      "website": "motobro.shop",
+      "hasWebsite": true
+    },
+    {
+      "slug": "rusich-moto",
+      "name": "Мототехника Русич",
+      "city": "Новосибирск",
+      "website": "https://nvs.zavod-rusich.ru/contact_us",
+      "hasWebsite": false
+    },
+    {
+      "slug": "bike4you-tomsk",
+      "name": "Bike4you",
+      "city": "Томск",
+      "website": "https://bike4you.ru/contacts/stores/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "avtomoto-bratsk",
+      "name": "АвтоМото",
+      "city": "Братск",
+      "website": "https://spravkainform.ru/russia/bratsk/zapchasti-dlya-avtomobiley-inostrannogo-proizvodstva/avtomoto",
+      "hasWebsite": false
+    },
+    {
+      "slug": "motoraion-irk",
+      "name": "Моторайон",
+      "city": "Иркутск",
+      "website": "motoraion.ru",
+      "hasWebsite": true
+    },
+    {
+      "slug": "motodepo-vladivostok",
+      "name": "Мото Депо",
+      "city": "Владивосток",
+      "website": "https://moto-depo.com/page/contacts",
+      "hasWebsite": false
+    },
+    {
+      "slug": "redbike-anapa",
+      "name": "Redbike",
+      "city": "Анапа",
+      "website": "https://red-bike.ru/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "tvoy-ekstrim-yoshkarola",
+      "name": "Твой Экстрим",
+      "city": "Йошкар-Ола",
+      "website": "https://твойэкстрим.рф/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "mototehnika-posad",
+      "name": "Мототехника",
+      "city": "Сергиев Посад",
+      "website": "https://sergiev-posad.spravker.ru/mototsikly/mototekhnika.htm",
+      "hasWebsite": false
+    },
+    {
+      "slug": "moto-drive-salavat",
+      "name": "Мото-Драйв",
+      "city": "Салават",
+      "website": "https://ufa.auto2.info/salavat/motor-65749/",
+      "hasWebsite": false
+    },
+    {
+      "slug": "t-moto-biysk",
+      "name": "Т-мото",
+      "city": "Бийск",
+      "website": "https://brl.auto2.info/biysk/mototehnika/",
+      "hasWebsite": false
+    }
+  ],
+  "withoutSite": [
+    {
+      "slug": "almet-moto-almetyevsk",
+      "name": "Альмет Мото",
+      "city": "Альметьевск"
+    },
+    {
+      "slug": "rollingmoto-arkhangelsk",
+      "name": "Роллинг Мото",
+      "city": "Архангельск"
+    },
+    {
+      "slug": "mototehnika-bataysk",
+      "name": "Мототехника",
+      "city": "Батайск"
+    },
+    {
+      "slug": "mototime-belgorod",
+      "name": "Мото-Тайм",
+      "city": "Белгород"
+    },
+    {
+      "slug": "moto-pervy-bryansk",
+      "name": "Мотосалон Первый",
+      "city": "Брянск"
+    },
+    {
+      "slug": "motomir-volgodonsk",
+      "name": "МотоМир",
+      "city": "Волгодонск"
+    },
+    {
+      "slug": "triamoto-dzerzhinsk",
+      "name": "Триамото",
+      "city": "Дзержинск"
+    },
+    {
+      "slug": "tvoya-territoriya-dmitrov",
+      "name": "Твоя Территория",
+      "city": "Дмитров"
+    },
+    {
+      "slug": "riderschoice-domodedovo",
+      "name": "Райдерс Чойс",
+      "city": "Домодедово"
+    },
+    {
+      "slug": "eto-moto-yelets",
+      "name": "ЭТО МОТО",
+      "city": "Елец"
+    },
+    {
+      "slug": "buggyjump-kaluga",
+      "name": "Buggy Jump",
+      "city": "Калуга"
+    },
+    {
+      "slug": "motoded-kirov",
+      "name": "МотоДед",
+      "city": "Киров"
+    },
+    {
+      "slug": "kursk-moto",
+      "name": "Курск-Мото",
+      "city": "Курск"
+    },
+    {
+      "slug": "cross05-makhachkala",
+      "name": "Cross05",
+      "city": "Махачкала"
+    },
+    {
+      "slug": "avto-moto-murom",
+      "name": "Авто мото",
+      "city": "Муром"
+    },
+    {
+      "slug": "1001moto-novoross",
+      "name": "1001MOTO",
+      "city": "Новороссийск"
+    },
+    {
+      "slug": "virazh-novocherkassk",
+      "name": "Вираж",
+      "city": "Новочеркасск"
+    },
+    {
+      "slug": "beshenaya-taburetka-noginsk",
+      "name": "Бешеная Табуретка",
+      "city": "Ногинск"
+    },
+    {
+      "slug": "loncin-territoriya-obninsk",
+      "name": "Территория Мото",
+      "city": "Обнинск"
+    },
+    {
+      "slug": "japanmoto57-orel",
+      "name": "Japan Moto 57",
+      "city": "Орёл"
+    },
+    {
+      "slug": "moto-arena-ptz",
+      "name": "Мото-Арена",
+      "city": "Петрозаводск"
+    },
+    {
+      "slug": "podmoto-podolsk",
+      "name": "Подмото",
+      "city": "Подольск"
+    },
+    {
+      "slug": "motovelomir-pskov",
+      "name": "МотоВелоМир",
+      "city": "Псков"
+    },
+    {
+      "slug": "bro-bike-kmv",
+      "name": "Bro Bike",
+      "city": "Пятигорск"
+    },
+    {
+      "slug": "motocity-pyatigorsk",
+      "name": "Мото Сити",
+      "city": "Пятигорск"
+    },
+    {
+      "slug": "aktiv-motorsport-ramenskoe",
+      "name": "Актив Мотор Спорт",
+      "city": "Раменское"
+    },
+    {
+      "slug": "motovelo-rybinsk",
+      "name": "Мото-Вело",
+      "city": "Рыбинск"
+    },
+    {
+      "slug": "pitbikemarket-saransk",
+      "name": "Питбайкмаркет",
+      "city": "Саранск"
+    },
+    {
+      "slug": "motovelocenter-serpukhov",
+      "name": "Мото-Вело-Центр",
+      "city": "Серпухов"
+    },
+    {
+      "slug": "67moto-smolensk",
+      "name": "67МОТО",
+      "city": "Смоленск"
+    },
+    {
+      "slug": "justmoto-stavropol",
+      "name": "ДжастМото",
+      "city": "Ставрополь"
+    },
+    {
+      "slug": "shb-moto-oskol",
+      "name": "ШБ-МОТО",
+      "city": "Старый Оскол"
+    },
+    {
+      "slug": "motomarket-syktyvkar",
+      "name": "МотоМаркет",
+      "city": "Сыктывкар"
+    },
+    {
+      "slug": "tehnomoto-tambov",
+      "name": "Техно Мото",
+      "city": "Тамбов"
+    },
+    {
+      "slug": "planeta-moto-tver",
+      "name": "Планета Мото",
+      "city": "Тверь"
+    },
+    {
+      "slug": "motodrive-cheboksary",
+      "name": "Moto Drive",
+      "city": "Чебоксары"
+    },
+    {
+      "slug": "plaza-motors-shakhty",
+      "name": "Плаза-Моторс",
+      "city": "Шахты"
+    },
+    {
+      "slug": "motohacker-balakovo",
+      "name": "Мотохакер",
+      "city": "Балаково"
+    },
+    {
+      "slug": "osa-moto-engels",
+      "name": "Мотосалон Оса",
+      "city": "Энгельс"
+    },
+    {
+      "slug": "motodrive-kurgan",
+      "name": "MotoDrive",
+      "city": "Курган"
+    },
+    {
+      "slug": "megabike-mgn",
+      "name": "МегаБайк",
+      "city": "Магнитогорск"
+    },
+    {
+      "slug": "favorit-chelny",
+      "name": "Мотосалон Фаворит",
+      "city": "Набережные Челны"
+    },
+    {
+      "slug": "master-moto-neftekamsk",
+      "name": "Мастер Мото",
+      "city": "Нефтекамск"
+    },
+    {
+      "slug": "motohouse-sterlitamak",
+      "name": "MotoHouse",
+      "city": "Стерлитамак"
+    },
+    {
+      "slug": "forsazh-surgut",
+      "name": "Форсаж",
+      "city": "Сургут"
+    },
+    {
+      "slug": "motosoyuz-barnaul",
+      "name": "МотоСоюз",
+      "city": "Барнаул"
+    },
+    {
+      "slug": "susanin-kemerovo",
+      "name": "Сусанин",
+      "city": "Кемерово"
+    },
+    {
+      "slug": "motosoyuz-nk",
+      "name": "МотоСоюз Новокузнецк",
+      "city": "Новокузнецк"
+    },
+    {
+      "slug": "aktrade-angarsk",
+      "name": "АкТрейд",
+      "city": "Ангарск"
+    },
+    {
+      "slug": "bringmoto-ulan-ude",
+      "name": "Bringmoto",
+      "city": "Улан-Удэ"
+    },
+    {
+      "slug": "extreme-blagoveshchensk",
+      "name": "Экстрим",
+      "city": "Благовещенск"
+    },
+    {
+      "slug": "promoto-chita",
+      "name": "Pro Moto",
+      "city": "Чита"
+    },
+    {
+      "slug": "endurosport-ussuriysk",
+      "name": "EnduroSport",
+      "city": "Уссурийск"
+    },
+    {
+      "slug": "sakhalin-enduro-yuzhno",
+      "name": "Сахалин Эндуро Парк",
+      "city": "Южно-Сахалинск"
+    },
+    {
+      "slug": "ya-moto-balashikha",
+      "name": "Я Мото",
+      "city": "Балашиха"
+    },
+    {
+      "slug": "bayk-post-volzhsky",
+      "name": "Байк-Пост",
+      "city": "Волжский"
+    },
+    {
+      "slug": "ss-motors-vologda",
+      "name": "СС Моторс",
+      "city": "Вологда"
+    },
+    {
+      "slug": "u-pavla-kostroma",
+      "name": "Мотосалон У Павла",
+      "city": "Кострома"
+    },
+    {
+      "slug": "motomir-kaliningrad",
+      "name": "МотоМир",
+      "city": "Калининград"
+    },
+    {
+      "slug": "dvakita-astrakhan",
+      "name": "Два кита",
+      "city": "Астрахань"
+    },
+    {
+      "slug": "motocenter-tagil",
+      "name": "Мотоцентр",
+      "city": "Нижний Тагил"
+    }
+  ]
+}

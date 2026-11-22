@@ -20,6 +20,24 @@
       "url": "https://spmotors.su/contacts",
       "checked_at": "2026-11-16",
       "excerpt": "+7 (4852) 66-20-60. Официальный контакт филиала на Тутаевском шоссе, 2В."
+    },
+    {
+      "id": "two-gis-card",
+      "url": "https://2gis.ru/yaroslavl/firm/70000001094424645",
+      "checked_at": "2026-11-21T23:10:00+03:00",
+      "excerpt": "SP Motors, Ярославль, Тутаевское шоссе, 2в. Официальный сайт http://spmotors.su"
+    },
+    {
+      "id": "yandex-maps-card",
+      "url": "https://yandex.ru/maps/org/sp_motors/203527200275/",
+      "checked_at": "2026-11-21T23:10:00+03:00",
+      "excerpt": "SP Motors, Ярославль, Тутаевское ш., 2В. Официальный Telegram администратора: https://t.me/spmotors, сайт http://www.spmotors.su/"
+    },
+    {
+      "id": "google-maps-search",
+      "url": "https://www.google.com/maps/search/SP+Motors+%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%BB%D1%8C+%D0%A2%D1%83%D1%82%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5+%D1%88%D0%BE%D1%81%D1%81%D0%B5+2%D0%B2/",
+      "checked_at": "2026-11-21T23:10:00+03:00",
+      "excerpt": "SP Motors Ярославль: в Google Maps карточка филиала по Тутаевскому ш., 2в не найдена."
     }
   ],
   "facts": {
@@ -81,5 +99,58 @@
     ],
     "note": "Официальный контакт филиала на Тутаевском шоссе, 2В.",
     "previous_phone": "+7 (965) 726-20-60"
+  },
+  "lead_search_checks": {
+    "maps": {
+      "yandex_maps": {
+        "status": "verified",
+        "url": "https://yandex.ru/maps/org/sp_motors/203527200275/",
+        "checked_at": "2026-11-21T23:10:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "SP Motors: совпали название, город Ярославль и адрес Тутаевское шоссе, 2в.",
+        "source_id": "yandex-maps-card",
+        "website": {
+          "status": "found",
+          "value": "http://www.spmotors.su/",
+          "note": "Открыта ссылка сайта из карточки Яндекс Карт."
+        }
+      },
+      "two_gis": {
+        "status": "verified",
+        "url": "https://2gis.ru/yaroslavl/firm/70000001094424645",
+        "checked_at": "2026-11-21T23:10:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "SP Motors: совпали название, город Ярославль и адрес Тутаевское шоссе, 2в.",
+        "source_id": "two-gis-card",
+        "website": {
+          "status": "found",
+          "value": "http://spmotors.su",
+          "note": "Открыта ссылка сайта из карточки 2ГИС."
+        }
+      },
+      "google_maps": {
+        "status": "missing",
+        "url": "https://www.google.com/maps/search/SP+Motors+%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%BB%D1%8C+%D0%A2%D1%83%D1%82%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5+%D1%88%D0%BE%D1%81%D1%81%D0%B5+2%D0%B2/",
+        "checked_at": "2026-11-21T23:10:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "SP Motors: отдельная подтверждённая карточка филиала по Тутаевскому ш., 2в в Google Maps не найдена.",
+        "source_id": "google-maps-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в Google Maps; отсутствие сайта не установлено."
+        }
+      }
+    },
+    "telegram": {
+      "status": "verified",
+      "url": "https://t.me/spmotors",
+      "kind": "direct_chat",
+      "role": "administrator",
+      "role_evidence": "В карточке Яндекс Карт филиала опубликован официальный рабочий контакт Telegram @spmotors (SPMOTORS) для связи с салоном.",
+      "platform": "yandex_maps",
+      "source_id": "yandex-maps-card",
+      "checked_at": "2026-11-21T23:10:00+03:00"
+    }
   }
 }

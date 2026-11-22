@@ -49,6 +49,18 @@
 
 ---
 
-## 5. Итоговый вердикт
+## 5. Проверка квалификации лида и Telegram (правила 20.11.2026)
+
+- **Дата проверки:** 2026-11-21T19:57:00+03:00
+- **Яндекс Карты:** https://yandex.ru/maps/org/motovelomir/1191472133/ — открыта карточка филиала по ул. Гражданская, 27. Сайт в карточке отсутствует (`not_found_in_checked_sources`). Опубликован официальный Telegram администрации @motovelomir.
+- **2ГИС:** https://2gis.ru/pskov/firm/12666903233136654 — карточка филиала подтверждена, сайт отсутствует.
+- **Google Карты:** Поиск https://www.google.com/maps/search/%D0%9C%D0%BE%D1%82%D0%BE%D0%92%D0%B5%D0%BB%D0%BE%D0%9C%D0%B8%D1%80+%D0%9F%D1%81%D0%BA%D0%BE%D0%B2+%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F+27/ — подходящая карточка не найдена (`missing` / `not_found`).
+- **Telegram:** https://t.me/motovelomir — проверен через API, статус: «You can contact @motovelomir right away» (прямой рабочий аккаунт, `kind: direct_chat`, роль `administrator`).
+- **Сайт бизнеса:** `not_found_in_checked_sources` (сайта нет — ключевой целевой клиент для продажи демо-сайта).
+- **Квалификационный допуск:** Допущен в `sales/qualified_owners_telegram.json`.
+
+---
+
+## 6. Итоговый вердикт
 
 **Решение:** `pass`

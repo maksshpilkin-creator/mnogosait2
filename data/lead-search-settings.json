@@ -1,0 +1,12 @@
+{
+  "version": "2026-11-20",
+  "required_map_platforms": ["yandex_maps", "two_gis", "google_maps"],
+  "website_check_required": true,
+  "telegram": {
+    "required": true,
+    "published_on_matched_map_card": true,
+    "allowed_roles": ["administrator", "owner"],
+    "allowed_kind": "direct_chat"
+  },
+  "incomplete_action": "defer"
+}

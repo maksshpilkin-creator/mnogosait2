@@ -118,17 +118,13 @@ function readSalesStack(markdown) {
   const genericNote = paragraph(6, 'Заполни скобки');
   const templates = {
     admin: quoteAfter(5, '**Основное сообщение:**'),
-    adminObserved: quoteAfter(5, '**Вариант с конкретным наблюдением'),
-    adminNoSite: quoteAfter(5, '**Если сайт не найден:**'),
     ownerHasSite: quoteAfter(6, '### Сайт есть'),
     ownerNoSite: quoteAfter(6, '### Сайт не найден'),
     review: quoteAfter(7, '### Сообщение вместе с готовым видео'),
     call: quoteAfter(9, '**Приглашение:**')
   };
   const notes = {
-    admin: paragraph(5, 'Пиши в опубликованный'),
-    adminObserved: paragraph(5, 'Это пример наблюдения'),
-    adminNoSite: paragraph(4, 'Название, часы'),
+    admin: paragraph(5, 'Пиши в опубликованный') + '\n\n' + paragraph(5, 'Для первого обращения'),
     ownerHasSite: genericNote + '\n\n' + paragraph(6, 'Можно добавить'),
     ownerNoSite: genericNote + '\n\n' + paragraph(6, 'Когда ссылку дали'),
     review: quickSteps[4] + '\n\n' + paragraph(7, 'Прикрепи видео'),

@@ -14,6 +14,24 @@
       "url": "https://armavir.rockot-motors.ru/contacts.html",
       "checked_at": "2026-11-16",
       "excerpt": "+7 (938) 533-73-73. Контакт ROCKOT в Армавире. Официальный адрес Ефремова, 227, в карточке 229А."
+    },
+    {
+      "id": "two-gis-card",
+      "url": "https://2gis.ru/armavir/firm/70000001021481944",
+      "checked_at": "2026-11-21T19:50:00+03:00",
+      "excerpt": "Rockot Армавир, ул. Ефремова, 229А. В карточке Telegram отсутствует."
+    },
+    {
+      "id": "yandex-maps-card",
+      "url": "https://yandex.ru/maps/org/rockot/136570198361/",
+      "checked_at": "2026-11-21T19:50:00+03:00",
+      "excerpt": "Rockot Армавир, ул. Ефремова, 227. Опубликован телефонный Telegram t.me/+79385337373."
+    },
+    {
+      "id": "google-maps-search",
+      "url": "https://www.google.com/maps/search/Rockot+Armavir+Efremova/",
+      "checked_at": "2026-11-21T19:50:00+03:00",
+      "excerpt": "Rockot Армавир: карточка не найдена в Google Maps."
     }
   ],
   "facts": {
@@ -75,5 +93,58 @@
     ],
     "note": "Контакт ROCKOT в Армавире. Официальный адрес Ефремова, 227, в карточке 229А.",
     "previous_phone": "+7 (918) 333-22-11"
+  },
+  "lead_search_checks": {
+    "maps": {
+      "yandex_maps": {
+        "status": "verified",
+        "url": "https://yandex.ru/maps/org/rockot/136570198361/",
+        "checked_at": "2026-11-21T19:50:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "Rockot: совпали название, город Армавир и адрес ул. Ефремова, 227/229А.",
+        "source_id": "yandex-maps-card",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "В карточке Яндекс Карт сайт не указан."
+        }
+      },
+      "two_gis": {
+        "status": "verified",
+        "url": "https://2gis.ru/armavir/firm/70000001021481944",
+        "checked_at": "2026-11-21T19:50:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "Rockot: совпали название, город Армавир и адрес ул. Ефремова, 229А.",
+        "source_id": "two-gis-card",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "В карточке 2ГИС сайт не указан."
+        }
+      },
+      "google_maps": {
+        "status": "missing",
+        "url": "https://www.google.com/maps/search/Rockot+Armavir+Efremova/",
+        "checked_at": "2026-11-21T19:50:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "Rockot Армавир: карточка не найдена в Google Maps.",
+        "source_id": "google-maps-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в Google Maps."
+        }
+      }
+    },
+    "telegram": {
+      "status": "missing",
+      "url": null,
+      "kind": null,
+      "role": null,
+      "role_evidence": "В карточке Яндекс Карт опубликован только телефонный номер t.me/+79385337373; прямой рабочий контакт владельца отсутствует.",
+      "platform": null,
+      "source_id": null,
+      "checked_at": "2026-11-21T19:50:00+03:00"
+    }
   }
 }

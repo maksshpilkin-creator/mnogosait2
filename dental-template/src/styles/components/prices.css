@@ -1,0 +1,116 @@
+/* Section 04: Цены */
+.prices-section {
+  background-color: var(--color-bg-light);
+  position: relative;
+}
+
+.prices-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+}
+
+.price-category-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-card-border);
+  border-radius: 16px;
+  padding: clamp(24px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+
+}
+
+.price-category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.price-category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #111111;
+  margin-bottom: 20px;
+}
+
+.price-category-title {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.price-category-code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-blue-primary);
+  background: #EBF2FF;
+  padding: 3px 8px;
+  border-radius: 9999px;
+}
+
+.price-rows-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.price-row-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.price-row-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #374151;
+  flex: 1;
+}
+
+.price-row-value {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+  color: #111111;
+  white-space: nowrap;
+}
+
+.price-category-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
+}
+
+.btn-price-book {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111111;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+
+}
+
+.btn-price-book:hover {
+  color: var(--color-blue-primary);
+}
+
+@media (max-width: 900px) {
+  .prices-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -51,7 +51,7 @@
     "salon_tg": "",
     "mobile": "+79875552210",
     "fns": "",
-    "htmlLength": 140972
+    "htmlLength": 141301
   },
   {
     "slug": "bike4you-tomsk",
@@ -105,7 +105,7 @@
     "salon_tg": "@Crazy_moto",
     "mobile": "+79184032305",
     "fns": "",
-    "htmlLength": 157484
+    "htmlLength": 157483
   },
   {
     "slug": "crazymoto-sochi",
@@ -123,7 +123,7 @@
     "salon_tg": "@Crazy_moto",
     "mobile": "+79184032302",
     "fns": "",
-    "htmlLength": 307622
+    "htmlLength": 307621
   },
   {
     "slug": "darex-moto-nn",
@@ -174,18 +174,18 @@
     "name": "ЭКСТРИМ Sport",
     "city": "Пенза",
     "site": "https://экстрим58.рф",
-    "status": 200,
-    "hasViewport": true,
+    "status": 500,
+    "hasViewport": false,
     "cms": "Самопис/Другое",
-    "noModernYear": false,
-    "title": "Экстрим Sport — квадроциклы и мотоциклы в Пензе",
+    "noModernYear": true,
+    "title": "",
     "tg": "https://t.me/konstantinov_a",
     "tier": "1_PERSONAL_TG_VERIFIED",
     "personal_tg": "@konstantinov_a",
     "salon_tg": "",
     "mobile": "+79674450304",
     "fns": "БЕКЕТОВА ВАЛЕНТИНА АЛЕКСЕЕВНА",
-    "htmlLength": 123222
+    "htmlLength": 0
   },
   {
     "slug": "fox-moto-chel",
@@ -210,18 +210,13 @@
     "name": "GSBMOTO",
     "city": "Ростов-на-Дону",
     "site": "https://gsbmoto.com",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Самопис/Другое",
-    "noModernYear": false,
-    "title": "Мототехника, экипировка и запчасти — купить | GSBM",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "",
     "tier": "6_LANDLINE_ONLY",
     "personal_tg": "",
     "salon_tg": "@gsb_moto (2 421 subscribers)",
     "mobile": "",
-    "fns": "ДИРЕКТОР: Мамаев Тимофей Сергеевич",
-    "htmlLength": 55617
+    "fns": "ДИРЕКТОР: Мамаев Тимофей Сергеевич"
   },
   {
     "slug": "guruenduro",
@@ -264,18 +259,13 @@
     "name": "Кикмото",
     "city": "Минеральные Воды",
     "site": "https://kikmoto.clients.site/",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "clients.site (авто-конструктор Яндекса)",
-    "noModernYear": true,
-    "title": "Кикмото",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79331818933",
     "tier": "5_MOBILE_IMPORT_ONLY",
     "personal_tg": "",
     "salon_tg": "",
     "mobile": "+79331818933",
-    "fns": "",
-    "htmlLength": 146342
+    "fns": ""
   },
   {
     "slug": "lkmoto-mytishchi",
@@ -293,7 +283,7 @@
     "salon_tg": "@LKMoto_showroom",
     "mobile": "+79932758701",
     "fns": "ЗОБОВ АНАТОЛИЙ СЕРГЕЕВИЧ",
-    "htmlLength": 236922
+    "htmlLength": 236902
   },
   {
     "slug": "megacross",
@@ -311,25 +301,20 @@
     "salon_tg": "",
     "mobile": "+79649008833",
     "fns": "ПАВЕЛКОВ ВИТАЛИЙ ВИТАЛЬЕВИЧ",
-    "htmlLength": 460911
+    "htmlLength": 460896
   },
   {
     "slug": "mnogokvadroff-novgorod",
     "name": "МногоКвадроФФ53",
     "city": "Великий Новгород",
     "site": "https://mnogokvadroff53.ru/",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Самопис/Другое",
-    "noModernYear": false,
-    "title": "МногоКвадрофф53 Салон квадроциклов, снегоходов, мо",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79116005353",
     "tier": "5_MOBILE_IMPORT_ONLY",
     "personal_tg": "",
     "salon_tg": "",
     "mobile": "+79116005353",
-    "fns": "",
-    "htmlLength": 148128
+    "fns": ""
   },
   {
     "slug": "moto-active-spb",
@@ -390,18 +375,13 @@
     "name": "Мото вектор",
     "city": "Уфа",
     "site": "https://motovektor.ru",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Bitrix",
-    "noModernYear": false,
-    "title": "Мототехника в Уфе — мотосалон «МотоВектор»",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79174495255",
     "tier": "4_MOBILE_IMPORT_WITH_OWNER_NAME",
     "personal_tg": "",
     "salon_tg": "@motovektor (71 subscribers)",
     "mobile": "+79174495255",
-    "fns": "САВЕНКОВ СЕРГЕЙ ВЛАДИМИРОВИЧ",
-    "htmlLength": 247049
+    "fns": "САВЕНКОВ СЕРГЕЙ ВЛАДИМИРОВИЧ"
   },
   {
     "slug": "moto48-lipetsk",
@@ -426,36 +406,26 @@
     "name": "МотоБРО",
     "city": "Новосибирск",
     "site": "https://motobro.shop",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Bitrix",
-    "noModernYear": true,
-    "title": "Магазин экипировки для эндуро/мотокросса для взрос",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/motobro_shop?direct",
     "tier": "3_SALON_TG_DIRECT",
     "personal_tg": "",
     "salon_tg": "https://t.me/motobro_shop?direct",
     "mobile": "+79833022816",
-    "fns": "ИВАНОВ РУСЛАН МИХАЙЛОВИЧ",
-    "htmlLength": 56821
+    "fns": "ИВАНОВ РУСЛАН МИХАЙЛОВИЧ"
   },
   {
     "slug": "motodepo-vladivostok",
     "name": "Мото Депо",
     "city": "Владивосток",
     "site": "https://moto-depo.com/page/contacts",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Самопис/Другое",
-    "noModernYear": false,
-    "title": "Интернет-магазин moto-depo.com г. Владивосток, ул.",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79025244711",
     "tier": "5_MOBILE_IMPORT_ONLY",
     "personal_tg": "",
     "salon_tg": "",
     "mobile": "+79025244711",
-    "fns": "",
-    "htmlLength": 510570
+    "fns": ""
   },
   {
     "slug": "motodom-ekb",
@@ -473,7 +443,7 @@
     "salon_tg": "",
     "mobile": "+79662229991",
     "fns": "",
-    "htmlLength": 15990
+    "htmlLength": 15997
   },
   {
     "slug": "motohit27-khv",
@@ -491,43 +461,33 @@
     "salon_tg": "",
     "mobile": "+79145459279",
     "fns": "СМЕТАННИКОВ НИКОЛАЙ ЮРЬЕВИЧ",
-    "htmlLength": 192701
+    "htmlLength": 193030
   },
   {
     "slug": "motokrug-orenburg",
     "name": "Мотокруг",
     "city": "Оренбург",
     "site": "https://motokrug56.ru",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Самопис/Другое",
-    "noModernYear": false,
-    "title": "Мотомагазин МотоКруг56 в Оренбурге",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79325309565",
     "tier": "5_MOBILE_IMPORT_ONLY",
     "personal_tg": "",
     "salon_tg": "",
     "mobile": "+79325309565",
-    "fns": "",
-    "htmlLength": 95867
+    "fns": ""
   },
   {
     "slug": "motolider-ekb",
     "name": "Мотолидер",
     "city": "Екатеринбург",
     "site": "https://мото66.рф",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Bitrix",
-    "noModernYear": false,
-    "title": "МотоЛидер Мотосалон Донбасская 19",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79058770809",
     "tier": "5_MOBILE_IMPORT_ONLY",
     "personal_tg": "",
     "salon_tg": "",
     "mobile": "+79058770809",
-    "fns": "",
-    "htmlLength": 462812
+    "fns": ""
   },
   {
     "slug": "motomarket19-abakan",
@@ -545,7 +505,7 @@
     "salon_tg": "@gladiatormotors (336 subscribers)",
     "mobile": "+79020100080",
     "fns": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Дунин Юрий Викторович",
-    "htmlLength": 1238652
+    "htmlLength": 1238688
   },
   {
     "slug": "motonachinka-rzn",
@@ -581,7 +541,7 @@
     "salon_tg": "@motopark_tula (621 subscribers)",
     "mobile": "+79109400058",
     "fns": "",
-    "htmlLength": 20151
+    "htmlLength": 20117
   },
   {
     "slug": "motoraion-irk",
@@ -601,144 +561,104 @@
     "name": "Моторбайк",
     "city": "Волгоград",
     "site": "https://motorbike.ru",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Самопис/Другое",
-    "noModernYear": false,
-    "title": "Мотосалон MOTORBIKE Японских мотоциклов для владел",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79275100374",
     "tier": "5_MOBILE_IMPORT_ONLY",
     "personal_tg": "",
     "salon_tg": "",
     "mobile": "+79275100374",
-    "fns": "",
-    "htmlLength": 51860
+    "fns": ""
   },
   {
     "slug": "mototandem-vladimir",
     "name": "Мототандем",
     "city": "Владимир",
     "site": "https://мототандем.рф/",
-    "status": 200,
-    "hasViewport": false,
-    "cms": "Joomla",
-    "noModernYear": false,
-    "title": "Квадроциклы, снегоходы, мотоциклы, максискутеры - ",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79209333232",
     "tier": "5_MOBILE_IMPORT_ONLY",
     "personal_tg": "",
     "salon_tg": "@mototandem (37 members, 7 online)",
     "mobile": "+79209333232",
-    "fns": "",
-    "htmlLength": 43603
+    "fns": ""
   },
   {
     "slug": "mototehcentr-murmansk",
     "name": "МотоТехЦентр",
     "city": "Мурманск",
     "site": "https://tools51.ru/kontakty",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Самопис/Другое",
-    "noModernYear": true,
-    "title": "Контакты - Магазин &quot;Инструмент&quot;, г. Мурм",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79813026887",
     "tier": "2_HIDDEN_PERSONAL_PHONE",
     "personal_tg": "",
     "salon_tg": "",
     "mobile": "+79113007965",
-    "fns": "Директор: Чувакин Антон Андреевич",
-    "htmlLength": 100271
+    "fns": "Директор: Чувакин Антон Андреевич"
   },
   {
     "slug": "motovelomag-syzran",
     "name": "МотоВелоМагазин",
     "city": "Сызрань",
     "site": "https://www.motovelomag.ru/syzran-motovelomagazin.html",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Самопис/Другое",
-    "noModernYear": false,
-    "title": "Про нашу компанию :: Наши магазины :: г. Сызрань, ",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79272104455",
     "tier": "4_MOBILE_IMPORT_WITH_OWNER_NAME",
     "personal_tg": "",
     "salon_tg": "",
     "mobile": "+79272104455",
-    "fns": "Тимохин Виталий Федорович",
-    "htmlLength": 71523
+    "fns": "Тимохин Виталий Федорович"
   },
   {
     "slug": "multi-moto-samara",
     "name": "Мульти-мото",
     "city": "Самара",
     "site": "https://163motors.ru",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Bitrix",
-    "noModernYear": false,
-    "title": "Мульти мото: Мотоциклы, запчасти, экипировка, серв",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79277597217",
     "tier": "2_HIDDEN_PERSONAL_PHONE",
     "personal_tg": "",
     "salon_tg": "@MultiMoto163 (200 subscribers)",
     "mobile": "+79370666623",
-    "fns": "СНЕСАРЕВ АНТОН АЛЕКСАНДРОВИЧ",
-    "htmlLength": 181821
+    "fns": "СНЕСАРЕВ АНТОН АЛЕКСАНДРОВИЧ"
   },
   {
     "slug": "pitbike-magazine",
     "name": "Pitbike magazine",
     "city": "Новосибирск",
     "site": "https://pbm54.ru",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Самопис/Другое",
-    "noModernYear": false,
-    "title": "Pitbike Magazine | Питбайки и кроссовые мотоциклы ",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79930079400",
     "tier": "4_MOBILE_IMPORT_WITH_OWNER_NAME",
     "personal_tg": "",
     "salon_tg": "",
     "mobile": "+79930079400",
-    "fns": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Хрюкин Александр Александрович",
-    "htmlLength": 292088
+    "fns": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Хрюкин Александр Александрович"
   },
   {
     "slug": "ponarin-mx",
     "name": "Ponarin MX",
     "city": "Воронеж",
     "site": "https://ponarinmx.ru",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Bitrix",
-    "noModernYear": false,
-    "title": "Как выбрать свой идеальный эндуро-мотоцикл: Советы",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/sponarin",
     "tier": "1_PERSONAL_TG_VERIFIED",
     "personal_tg": "@sponarin",
     "salon_tg": "@ponarinmx (469 subscribers)",
     "mobile": "+79601308620",
-    "fns": "ПОНАРЬИН СЕМЁН ВЛАДИМИРОВИЧ",
-    "htmlLength": 343995
+    "fns": "ПОНАРЬИН СЕМЁН ВЛАДИМИРОВИЧ"
   },
   {
     "slug": "pro100moto-tmn",
     "name": "Pro-100moto",
     "city": "Тюмень",
     "site": "https://pro-100moto.ru",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Bitrix",
-    "noModernYear": false,
-    "title": "Pro-100moto Про 100 Мото магазин мото техники в Тю",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79088773838",
     "tier": "4_MOBILE_IMPORT_WITH_OWNER_NAME",
     "personal_tg": "",
     "salon_tg": "@promoto100 (236 subscribers)",
     "mobile": "+79088773838",
-    "fns": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Ендовицкий Валерий Викторович",
-    "htmlLength": 707778
+    "fns": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Ендовицкий Валерий Викторович"
   },
   {
     "slug": "redbike-anapa",
@@ -758,108 +678,78 @@
     "name": "Мотосалон Rockot",
     "city": "Армавир",
     "site": "https://armavir.rockot-motors.ru/contacts.html",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Самопис/Другое",
-    "noModernYear": false,
-    "title": "Контакты Rockot-Motors в Армавире",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/rockot",
     "tier": "3_SALON_TG_DIRECT",
     "personal_tg": "",
     "salon_tg": "@rockot",
     "mobile": "+79385337373",
-    "fns": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Являнский Николай Николаевич",
-    "htmlLength": 107203
+    "fns": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Являнский Николай Николаевич"
   },
   {
     "slug": "rusich-moto",
     "name": "Мототехника Русич",
     "city": "Новосибирск",
     "site": "https://nvs.zavod-rusich.ru/contact_us",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Bitrix",
-    "noModernYear": false,
-    "title": "Контакты Санкт-Петербург",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/Zavod_Rusich_bot",
     "tier": "3_SALON_TG_DIRECT",
     "personal_tg": "",
     "salon_tg": "@Zavod_Rusich_bot",
     "mobile": "+79139152040",
-    "fns": "",
-    "htmlLength": 179304
+    "fns": ""
   },
   {
     "slug": "saratov-moto",
     "name": "Саратов-Мото",
     "city": "Саратов",
     "site": "https://saratov-moto.ru",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Самопис/Другое",
-    "noModernYear": false,
-    "title": "Мотосалон и интернет-магазин - мотоциклы,  запчаст",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/SaratovMoto",
     "tier": "3_SALON_TG_DIRECT",
     "personal_tg": "",
     "salon_tg": "@SaratovMoto",
     "mobile": "+79173112002",
-    "fns": "",
-    "htmlLength": 97925
+    "fns": ""
   },
   {
     "slug": "sp-motors-yar",
     "name": "SP Motors",
     "city": "Ярославль",
     "site": "https://spmotors.su",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Самопис/Другое",
-    "noModernYear": false,
-    "title": "SP Motors — квадроциклы, снегоходы, багги, прицепы",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79657262060",
     "tier": "4_MOBILE_IMPORT_WITH_OWNER_NAME",
     "personal_tg": "",
     "salon_tg": "@aodesspmotors (no members)",
     "mobile": "+79657262060",
-    "fns": "Генеральный директор: Рыцк Константин Александрович",
-    "htmlLength": 457452
+    "fns": "Генеральный директор: Рыцк Константин Александрович"
   },
   {
     "slug": "tvoy-ekstrim-yoshkarola",
     "name": "Твой Экстрим",
     "city": "Йошкар-Ола",
     "site": "https://твойэкстрим.рф/",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Самопис/Другое",
-    "noModernYear": true,
-    "title": "Мотоцентр ТВОЙ ЭКСТРИМ Йошкар-Ола",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/+79278801122",
     "tier": "5_MOBILE_IMPORT_ONLY",
     "personal_tg": "",
     "salon_tg": "",
     "mobile": "+79278801122",
-    "fns": "",
-    "htmlLength": 420303
+    "fns": ""
   },
   {
     "slug": "volga-drive-tlt",
     "name": "Волга Драйв",
     "city": "Тольятти",
     "site": "https://globaldrive.ru",
-    "status": 200,
-    "hasViewport": true,
-    "cms": "Bitrix",
-    "noModernYear": false,
-    "title": "Мотомагазин-Мотосалон в Москве -Интернет магазин т",
+    "status": "ERROR: The operation was aborted due to timeout",
     "tg": "https://t.me/Global_Drive_Chat_Bot",
     "tier": "3_SALON_TG_DIRECT",
     "personal_tg": "",
     "salon_tg": "@Global_Drive_Chat_Bot",
     "mobile": "+79311051862",
-    "fns": "",
-    "htmlLength": 751209
+    "fns": ""
   },
   {
     "slug": "zona-enduro-omsk",

@@ -1,0 +1,59 @@
+/* Marquee / Running Ticker */
+.marquee-bar {
+  background-color: #000000;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  will-change: transform;
+
+}
+
+.marquee-bar:hover .marquee-track {
+
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.5vw, 32px);
+  font-weight: 900;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.marquee-content span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.marquee-star {
+  color: var(--color-cyan-accent);
+  padding: 0 12px;
+  font-size: 0.85em;
+  display: inline-block;
+  line-height: 1;
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+
+    overflow-x: auto;
+  }
+}

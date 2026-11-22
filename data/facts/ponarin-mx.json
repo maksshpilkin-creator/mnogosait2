@@ -14,6 +14,24 @@
       "url": "https://yandex.ru/maps/?text=Ponarin%20MX%20%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%20%D1%83%D0%BB.%20%D0%90%D0%BD%D1%82%D0%BE%D0%BD%D0%BE%D0%B2%D0%B0-%D0%9E%D0%B2%D1%81%D0%B5%D0%B5%D0%BD%D0%BA%D0%BE%2C%209%D0%92",
       "checked_at": "2026-11-11T16:22:29.518Z",
       "excerpt": "Карточка организации на Яндекс Картах (Воронеж)."
+    },
+    {
+      "id": "yandex-maps-card",
+      "url": "https://yandex.ru/maps/org/moto_ponarin_mkh/172059395202/",
+      "checked_at": "2026-11-21T19:47:00+03:00",
+      "excerpt": "Мото Понарин Мх, Воронеж, ул. Мазлумова, 25А / ул. Антонова-Овсеенко, 9В. Сайт: https://ponarinmx.ru. Telegram: t.me/ponarinmx (канал, 469 подписчиков)."
+    },
+    {
+      "id": "two-gis-card",
+      "url": "https://2gis.ru/voronezh/firm/70000001081692097",
+      "checked_at": "2026-11-21T19:47:00+03:00",
+      "excerpt": "Ponarin MX, Воронеж, ул. Антонова-Овсеенко, 9в. Опубликованы t.me/ponarinmx (канал) и t.me/+79601308620 (телефон)."
+    },
+    {
+      "id": "google-maps-search",
+      "url": "https://www.google.com/maps/search/Ponarin+MX+Voronezh/",
+      "checked_at": "2026-11-21T19:47:00+03:00",
+      "excerpt": "Ponarin MX: подходящая карточка не найдена после поиска в Google Maps."
     }
   ],
   "facts": {
@@ -66,5 +84,58 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "lead_search_checks": {
+    "maps": {
+      "yandex_maps": {
+        "status": "verified",
+        "url": "https://yandex.ru/maps/org/moto_ponarin_mkh/172059395202/",
+        "checked_at": "2026-11-21T19:47:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "Ponarin MX: совпали название, город Воронеж и адреса Мазлумова 25А / Антонова-Овсеенко 9В.",
+        "source_id": "yandex-maps-card",
+        "website": {
+          "status": "found",
+          "value": "https://ponarinmx.ru",
+          "note": "Сайт открыт из карточки Яндекс Карт."
+        }
+      },
+      "two_gis": {
+        "status": "verified",
+        "url": "https://2gis.ru/voronezh/firm/70000001081692097",
+        "checked_at": "2026-11-21T19:47:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "Ponarin MX: совпали название, город Воронеж и адрес ул. Антонова-Овсеенко, 9в.",
+        "source_id": "two-gis-card",
+        "website": {
+          "status": "found",
+          "value": "https://ponarinmx.ru",
+          "note": "Сайт открыт из карточки 2ГИС."
+        }
+      },
+      "google_maps": {
+        "status": "missing",
+        "url": "https://www.google.com/maps/search/Ponarin+MX+Voronezh/",
+        "checked_at": "2026-11-21T19:47:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "Ponarin MX: подходящая карточка не найдена после поиска в Google Maps.",
+        "source_id": "google-maps-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в Google Maps."
+        }
+      }
+    },
+    "telegram": {
+      "status": "missing",
+      "url": null,
+      "kind": null,
+      "role": null,
+      "role_evidence": "В карточках на картах опубликован только Telegram-канал t.me/ponarinmx (469 подписчиков) и телефонная ссылка t.me/+79601308620; прямой рабочий чат владельца/администратора на картах отсутствует.",
+      "platform": null,
+      "source_id": null,
+      "checked_at": "2026-11-21T19:47:00+03:00"
+    }
+  }
 }

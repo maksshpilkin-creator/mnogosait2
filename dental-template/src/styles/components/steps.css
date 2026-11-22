@@ -1,0 +1,112 @@
+/* Section 03: Первый визит */
+.steps-section {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-white);
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.steps-title-block {
+  margin-bottom: clamp(40px, 6vw, 70px);
+}
+
+.steps-heading {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4.4vw, 56px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.steps-heading-white {
+  color: #FFFFFF;
+  display: block;
+}
+
+.steps-heading-blue {
+  color: var(--color-blue-vibrant);
+  display: block;
+}
+
+/* 4 Steps Grid */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.step-card {
+  padding: clamp(24px, 3vw, 40px) clamp(16px, 2vw, 28px);
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+
+}
+
+.step-card:first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.step-card:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.step-number {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-blue-vibrant);
+  letter-spacing: 0.08em;
+}
+
+.step-title {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.step-description {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 900px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .step-card:first-child {
+    border-left: none;
+  }
+  .step-card:nth-child(2) {
+    border-right: none;
+  }
+  .step-card:nth-child(3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .step-card:nth-child(4) {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-right: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .step-card {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .step-card:last-child {
+    border-bottom: none;
+  }
+}

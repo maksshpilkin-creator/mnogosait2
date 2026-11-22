@@ -8,6 +8,15 @@ const { readSalesStack } = require('./sales-stack-content');
 const root = path.resolve(__dirname, '..');
 const source = fs.readFileSync(path.join(root, 'sales/FULL_SALES_STACK.md'), 'utf8');
 const stack = readSalesStack(source);
+const approvedAdminText = 'Здравствуйте! Подскажите рабочий Telegram владельца «[название]»? Я Максим, разрабатываю сайты — работы и отзывы есть в профиле. Хочу показать ему в коротком видео пару идей, как покупателям удобнее выбирать технику и уточнять наличие.';
+assert.equal(stack.templates.admin, approvedAdminText, 'Первое сообщение администратору отличается от утверждённого текста');
+const activeDocs = ['sales/FULL_SALES_STACK.md', 'sales/OUTREACH_PLAYBOOK.md', 'sales/OUTREACH_TELEGRAM_SCRIPTS.md', 'sales/MAXIM_PROFILE_AND_RULES.md'];
+for (const file of activeDocs) {
+  const text = fs.readFileSync(path.join(root, file), 'utf8');
+  assert(text.includes('> ' + approvedAdminText), file + ': нет утверждённого первого сообщения');
+  assert(!/пересл|перешл|пересыл/i.test(text), file + ': осталась просьба переслать сообщение');
+}
+assert(!/пересл|перешл|пересыл/i.test(fs.readFileSync(path.join(root, 'sales/CALL_SCRIPTS.md'), 'utf8')), 'CALL_SCRIPTS.md: осталась просьба переслать сообщение');
 const leadCount = fs.readdirSync(path.join(root, 'data/facts')).filter(file => file.endsWith('.json')).length;
 const sectionCount = (source.match(/^## /gm) || []).length;
 const files = ['sales/CALL_STATION.html', 'dist/station/index.html', 'dist/station.html'];
@@ -19,6 +28,7 @@ assert(html.includes(stack.guideHtml), 'Полный встроенный сте
 assert(html.includes(stack.faqHtml), 'Ответы/условия/поддержка не совпадают с источником');
 assert(html.includes(stack.videoGuideHtml) && html.includes(stack.callGuideHtml), 'Подсказки видео или звонка расходятся');
 assert.equal((html.match(/<details id="stack-section-/g) || []).length, sectionCount, 'Не все разделы стека встроены');
+assert(!html.includes('message-variant'), 'В станции остался переключатель разных первых сообщений');
 for (const outdated of ['2–4 мин', '10–15 мин', 'пилот 25 контактов', 'рейтинг отличный', 'есть пара конкретных идей']) {
   assert(!html.includes(outdated), 'Старая подсказка: ' + outdated);
 }
@@ -39,8 +49,8 @@ let draftsChecked = 0;
 for (const lead of leadsData) {
   const cases = [
     ['admin', undefined, 'admin'],
-    ['admin', 'adminObserved', 'adminObserved'],
-    ['admin', 'adminNoSite', 'adminNoSite'],
+    ['admin', 'adminObserved', 'admin'],
+    ['admin', 'adminNoSite', 'admin'],
     ['owner', undefined, lead.hasWebsite ? 'ownerHasSite' : 'ownerNoSite'],
     ['review', undefined, 'review'],
     ['call', undefined, 'call']
@@ -51,7 +61,9 @@ for (const lead of leadsData) {
     draftsChecked++;
   }
   const initial = createOutreachDraft(lead, 'admin');
+  assert.equal(initial, approvedAdminText.replaceAll('[название]', lead.name), lead.slug + ': первый текст должен отличаться только названием салона');
   assert(!/посмотрел|заметил|нашёл модели|рейтинг отличный/i.test(initial), 'Непроверенное наблюдение в основном первом сообщении');
+  assert(!/пересл|перешл|пересыл/i.test(initial), 'Просьба переслать в первом сообщении');
   assert(html.includes('id="note-' + lead.slug + '"') && html.includes('oninput="saveNote(\'' + lead.slug + '\', this.value)"'), 'Нет сохранения заметки при вводе');
 }
 for (const key of ['motosalon_crm_statuses_v2', 'motosalon_crm_notes_v2']) assert(html.includes(key));

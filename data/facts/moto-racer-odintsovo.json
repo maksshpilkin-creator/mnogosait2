@@ -14,6 +14,24 @@
       "url": "https://moto-racer.ru/oplata/",
       "checked_at": "2026-11-16",
       "excerpt": "+7 (905) 577-73-35. Контакт Moto Racer в Одинцове."
+    },
+    {
+      "id": "yandex-maps-card",
+      "url": "https://yandex.ru/maps/org/moto_reyser/1294820192/",
+      "checked_at": "2026-11-21T19:48:00+03:00",
+      "excerpt": "Мото Рейсер, Одинцово, Озёрная ул., 115. Рейтинг 4.8. Telegram в карточке отсутствует."
+    },
+    {
+      "id": "two-gis-search",
+      "url": "https://2gis.ru/moscow/search/racer",
+      "checked_at": "2026-11-21T19:48:00+03:00",
+      "excerpt": "Мото Рейсер: активная карточка филиала в 2ГИС не найдена, только общий поиск."
+    },
+    {
+      "id": "google-maps-search",
+      "url": "https://www.google.com/maps/search/Moto+Racer+Odintsovo/",
+      "checked_at": "2026-11-21T19:48:00+03:00",
+      "excerpt": "Мото Рейсер Одинцово: подходящая карточка не найдена в Google Maps."
     }
   ],
   "facts": {
@@ -75,5 +93,58 @@
     ],
     "note": "Контакт Moto Racer в Одинцове.",
     "previous_phone": "+7 (495) 780-45-45"
+  },
+  "lead_search_checks": {
+    "maps": {
+      "yandex_maps": {
+        "status": "verified",
+        "url": "https://yandex.ru/maps/org/moto_reyser/1294820192/",
+        "checked_at": "2026-11-21T19:48:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "Мото Рейсер: совпали название, город Одинцово и адрес Озёрная ул., 115.",
+        "source_id": "yandex-maps-card",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "В карточке Яндекс Карт сайт не указан."
+        }
+      },
+      "two_gis": {
+        "status": "missing",
+        "url": "https://2gis.ru/moscow/search/racer",
+        "checked_at": "2026-11-21T19:48:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "Мото Рейсер: карточка филиала не найдена в 2ГИС.",
+        "source_id": "two-gis-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в 2ГИС."
+        }
+      },
+      "google_maps": {
+        "status": "missing",
+        "url": "https://www.google.com/maps/search/Moto+Racer+Odintsovo/",
+        "checked_at": "2026-11-21T19:48:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "Мото Рейсер: карточка не найдена в Google Maps.",
+        "source_id": "google-maps-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в Google Maps."
+        }
+      }
+    },
+    "telegram": {
+      "status": "missing",
+      "url": null,
+      "kind": null,
+      "role": null,
+      "role_evidence": "В карточках на картах ссылка на Telegram отсутствует (встречалась только на сайте moto-racer.ru/oplata/).",
+      "platform": null,
+      "source_id": null,
+      "checked_at": "2026-11-21T19:48:00+03:00"
+    }
   }
 }

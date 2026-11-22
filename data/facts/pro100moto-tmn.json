@@ -14,6 +14,24 @@
       "url": "https://yandex.ru/maps/?text=Pro-100moto%20%D0%A2%D1%8E%D0%BC%D0%B5%D0%BD%D1%8C%20%D0%91%D0%B5%D1%80%D0%B5%D0%B7%D0%BD%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB.%2C%204%2C%20%D1%81%D1%82%D1%80.%202",
       "checked_at": "2026-11-11T16:22:29.519Z",
       "excerpt": "Карточка организации на Яндекс Картах (Тюмень)."
+    },
+    {
+      "id": "yandex-maps-card",
+      "url": "https://yandex.ru/maps/org/pro_100moto/64157936924/",
+      "checked_at": "2026-11-21T19:58:00+03:00",
+      "excerpt": "Pro-100moto Тюмень, Березняковская ул., 4, стр. 2. Опубликован Telegram-канал t.me/promoto100 (236 подписчиков)."
+    },
+    {
+      "id": "two-gis-card",
+      "url": "https://2gis.ru/tyumen/firm/70000001084102839",
+      "checked_at": "2026-11-21T19:58:00+03:00",
+      "excerpt": "Pro-100moto Тюмень. Опубликован канал t.me/promoto100 и телефон t.me/+79088773838."
+    },
+    {
+      "id": "google-maps-search",
+      "url": "https://www.google.com/maps/search/Pro-100moto+Tyumen+Bereznyakovskaya/",
+      "checked_at": "2026-11-21T19:58:00+03:00",
+      "excerpt": "Pro-100moto: карточка не найдена в Google Maps."
     }
   ],
   "facts": {
@@ -66,5 +84,58 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "lead_search_checks": {
+    "maps": {
+      "yandex_maps": {
+        "status": "verified",
+        "url": "https://yandex.ru/maps/org/pro_100moto/64157936924/",
+        "checked_at": "2026-11-21T19:58:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "Pro-100moto: совпали название, город Тюмень и адрес ул. Березняковская, 4, стр. 2.",
+        "source_id": "yandex-maps-card",
+        "website": {
+          "status": "found",
+          "value": "https://pro-100moto.ru",
+          "note": "Сайт открыт из карточки Яндекс Карт."
+        }
+      },
+      "two_gis": {
+        "status": "verified",
+        "url": "https://2gis.ru/tyumen/firm/70000001084102839",
+        "checked_at": "2026-11-21T19:58:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "Pro-100moto: совпали название, город Тюмень и адрес ул. Березняковская, 4, стр. 2.",
+        "source_id": "two-gis-card",
+        "website": {
+          "status": "found",
+          "value": "https://pro-100moto.ru",
+          "note": "Сайт открыт из карточки 2ГИС."
+        }
+      },
+      "google_maps": {
+        "status": "missing",
+        "url": "https://www.google.com/maps/search/Pro-100moto+Tyumen+Bereznyakovskaya/",
+        "checked_at": "2026-11-21T19:58:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "Pro-100moto: карточка не найдена в Google Maps.",
+        "source_id": "google-maps-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в Google Maps."
+        }
+      }
+    },
+    "telegram": {
+      "status": "missing",
+      "url": null,
+      "kind": null,
+      "role": null,
+      "role_evidence": "В карточках на картах опубликован только Telegram-канал t.me/promoto100 (236 подписчиков) и телефон t.me/+79088773838; прямой контакт администратора на картах отсутствует.",
+      "platform": null,
+      "source_id": null,
+      "checked_at": "2026-11-21T19:58:00+03:00"
+    }
+  }
 }

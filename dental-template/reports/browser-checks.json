@@ -1,0 +1,94 @@
+{
+  "checkedAt": "2026-11-22",
+  "url": "http://127.0.0.1:5173/",
+  "widthChecks": [
+    {
+      "brokenImages": 0,
+      "client": 360,
+      "scroll": 360,
+      "width": 375
+    },
+    {
+      "brokenImages": 0,
+      "client": 753,
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "brokenImages": 0,
+      "client": 1009,
+      "scroll": 1009,
+      "width": 1024
+    },
+    {
+      "brokenImages": 0,
+      "client": 1425,
+      "scroll": 1425,
+      "width": 1440
+    }
+  ],
+  "services": [
+    {
+      "label": "ГИГИЕНА",
+      "code": "HG-02",
+      "selected": "true"
+    },
+    {
+      "label": "ОТБЕЛИВАНИЕ",
+      "code": "WH-03",
+      "selected": "true"
+    },
+    {
+      "label": "ОРТОДОНТИЯ",
+      "code": "OR-04",
+      "selected": "true"
+    },
+    {
+      "label": "ХИРУРГИЯ",
+      "code": "SG-05",
+      "selected": "true"
+    },
+    {
+      "label": "ПРОТЕЗИРОВАНИЕ",
+      "code": "PR-06",
+      "selected": "true"
+    },
+    {
+      "label": "ТЕРАПИЯ",
+      "code": "TH-01",
+      "selected": "true"
+    }
+  ],
+  "faq": [
+    {
+      "item": 2,
+      "opened": "true",
+      "closed": "false"
+    },
+    {
+      "item": 3,
+      "opened": "true",
+      "closed": "false"
+    },
+    {
+      "item": 4,
+      "opened": "true",
+      "closed": "false"
+    },
+    {
+      "item": 5,
+      "opened": "true",
+      "closed": "false"
+    }
+  ],
+  "checks": {
+    "noMotion": true,
+    "menuFocusTrap": true,
+    "drawerFocusTrap": true,
+    "escapeRestoresFocus": true,
+    "formValidation": true,
+    "localDraftNoSend": true,
+    "fieldsPreservedOnDraft": true,
+    "cleanedTestData": true
+  }
+}

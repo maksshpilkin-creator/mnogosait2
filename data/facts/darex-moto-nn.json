@@ -20,6 +20,24 @@
       "url": "https://yandex.ru/maps/org/darex_moto/18587033313/",
       "checked_at": "2026-11-16",
       "excerpt": "+7 (800) 351-31-30. Телефон филиала в Нижнем Новгороде, Московское шоссе, 302/1Д. Прежний номер опубликован для Казани."
+    },
+    {
+      "id": "yandex-maps-card",
+      "url": "https://yandex.ru/maps/org/darex_moto/18587033313/",
+      "checked_at": "2026-11-21T19:52:00+03:00",
+      "excerpt": "Darex Moto, Нижний Новгород, Московское шоссе, 302/1Д. Опубликован Telegram-канал t.me/darex_moto_ru (6801 подписчик) и сайт darexmoto.ru."
+    },
+    {
+      "id": "two-gis-search",
+      "url": "https://2gis.ru/n_novgorod/search/Darex%20Moto",
+      "checked_at": "2026-11-21T19:52:00+03:00",
+      "excerpt": "Darex Moto: карточка филиала не найдена в 2ГИС."
+    },
+    {
+      "id": "google-maps-search",
+      "url": "https://www.google.com/maps/search/Darex+Moto+Nizhny+Novgorod/",
+      "checked_at": "2026-11-21T19:52:00+03:00",
+      "excerpt": "Darex Moto: карточка не найдена в Google Maps."
     }
   ],
   "facts": {
@@ -81,5 +99,58 @@
     ],
     "note": "Телефон филиала в Нижнем Новгороде, Московское шоссе, 302/1Д. Прежний номер опубликован для Казани.",
     "previous_phone": "+7 (937) 587-27-41"
+  },
+  "lead_search_checks": {
+    "maps": {
+      "yandex_maps": {
+        "status": "verified",
+        "url": "https://yandex.ru/maps/org/darex_moto/18587033313/",
+        "checked_at": "2026-11-21T19:52:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "Darex Moto: совпали название, город Нижний Новгород и адрес Московское шоссе, 302/1Д.",
+        "source_id": "yandex-maps-card",
+        "website": {
+          "status": "found",
+          "value": "https://darexmoto.ru",
+          "note": "Сайт открыт из карточки Яндекс Карт."
+        }
+      },
+      "two_gis": {
+        "status": "missing",
+        "url": "https://2gis.ru/n_novgorod/search/Darex%20Moto",
+        "checked_at": "2026-11-21T19:52:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "Darex Moto: карточка филиала не найдена в 2ГИС.",
+        "source_id": "two-gis-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в 2ГИС."
+        }
+      },
+      "google_maps": {
+        "status": "missing",
+        "url": "https://www.google.com/maps/search/Darex+Moto+Nizhny+Novgorod/",
+        "checked_at": "2026-11-21T19:52:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "Darex Moto: карточка не найдена в Google Maps.",
+        "source_id": "google-maps-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в Google Maps."
+        }
+      }
+    },
+    "telegram": {
+      "status": "missing",
+      "url": null,
+      "kind": null,
+      "role": null,
+      "role_evidence": "В карточке Яндекс Карт опубликован только канал t.me/darex_moto_ru (6801 подписчик); прямой контакт администратора на картах отсутствует.",
+      "platform": null,
+      "source_id": null,
+      "checked_at": "2026-11-21T19:52:00+03:00"
+    }
   }
 }

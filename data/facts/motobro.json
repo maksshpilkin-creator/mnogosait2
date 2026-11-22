@@ -14,6 +14,24 @@
       "url": "https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%82%D0%BE%D0%91%D0%A0%D0%9E%20%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA%20%D1%83%D0%BB.%20%D0%9F%D0%B8%D1%81%D0%B0%D1%80%D0%B5%D0%B2%D0%B0%2C%2060%20(%D0%A2%D0%A6%20%D0%91%D0%B0z%D0%B0%2C%20%D0%BF%D0%B0%D0%B2.%201.4.1)",
       "checked_at": "2026-11-11T16:22:29.513Z",
       "excerpt": "Карточка организации на Яндекс Картах (Новосибирск)."
+    },
+    {
+      "id": "yandex-maps-card",
+      "url": "https://yandex.ru/maps/org/motobro/147653886434/",
+      "checked_at": "2026-11-21T19:52:00+03:00",
+      "excerpt": "МотоБРО, Новосибирск, ул. Писарева, 60. Опубликован канал t.me/motobro_shop (473 подписчика) и сайт motobro.shop."
+    },
+    {
+      "id": "two-gis-card",
+      "url": "https://2gis.ru/novosibirsk/firm/141265769628791",
+      "checked_at": "2026-11-21T19:52:00+03:00",
+      "excerpt": "МотоБРО, Новосибирск, ул. Писарева, 60. Telegram отсутствует."
+    },
+    {
+      "id": "google-maps-search",
+      "url": "https://www.google.com/maps/search/Motobro+Novosibirsk+Pisareva+60/",
+      "checked_at": "2026-11-21T19:52:00+03:00",
+      "excerpt": "МотоБРО: карточка не найдена в Google Maps."
     }
   ],
   "facts": {
@@ -66,5 +84,58 @@
       "status": "verified",
       "source_id": "2gis"
     }
-  ]
+  ],
+  "lead_search_checks": {
+    "maps": {
+      "yandex_maps": {
+        "status": "verified",
+        "url": "https://yandex.ru/maps/org/motobro/147653886434/",
+        "checked_at": "2026-11-21T19:52:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "МотоБРО: совпали название, город Новосибирск и адрес ул. Писарева, 60.",
+        "source_id": "yandex-maps-card",
+        "website": {
+          "status": "found",
+          "value": "https://motobro.shop",
+          "note": "Сайт открыт из карточки Яндекс Карт."
+        }
+      },
+      "two_gis": {
+        "status": "verified",
+        "url": "https://2gis.ru/novosibirsk/firm/141265769628791",
+        "checked_at": "2026-11-21T19:52:00+03:00",
+        "identity_status": "verified",
+        "identity_evidence": "МотоБРО: совпали название, город Новосибирск и адрес ул. Писарева, 60.",
+        "source_id": "two-gis-card",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Сайт в карточке 2ГИС не указан."
+        }
+      },
+      "google_maps": {
+        "status": "missing",
+        "url": "https://www.google.com/maps/search/Motobro+Novosibirsk+Pisareva+60/",
+        "checked_at": "2026-11-21T19:52:00+03:00",
+        "identity_status": "not_found",
+        "identity_evidence": "МотоБРО: карточка не найдена в Google Maps.",
+        "source_id": "google-maps-search",
+        "website": {
+          "status": "not_found_in_checked_sources",
+          "value": null,
+          "note": "Карточка не найдена в Google Maps."
+        }
+      }
+    },
+    "telegram": {
+      "status": "missing",
+      "url": null,
+      "kind": null,
+      "role": null,
+      "role_evidence": "В карточке Яндекс Карт опубликован только Telegram-канал t.me/motobro_shop (473 подписчика); прямой чат на картах отсутствует.",
+      "platform": null,
+      "source_id": null,
+      "checked_at": "2026-11-21T19:52:00+03:00"
+    }
+  }
 }

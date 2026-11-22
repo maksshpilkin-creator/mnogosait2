@@ -2,12 +2,14 @@
 'use strict';
 
 /**
- * Автоматический поиск владельцев и прямых контактов Telegram/VK для лидов из data/facts/*.json.
+ * Строгий отбор контактов по проверкам карт в data/facts/*.json.
+ * Карты открывает исследователь по sales/LEAD_SEARCH_RULES.md; этот скрипт
+ * проверяет комплект доказательств, не скрейпит карты и не угадывает Telegram.
  * Не изменяет template/, dist/, data/facts/ или content/.
  * Результаты сохраняет в:
- *   - sales/owners_telegram.csv (UTF-8 BOM для Excel)
- *   - sales/owners_telegram.json (полные доказательства и URL источников)
- *   - sales/owners_contacts.vcf (vCard для импорта мобильных номеров в контакты Telegram)
+ *   - sales/qualified_owners_telegram.csv (UTF-8 BOM для Excel)
+ *   - sales/qualified_owners_telegram.json (новая строгая выборка с доказательствами)
+ * Старые owners_telegram.json/csv/vcf и станция не изменяются.
  *
  * Использование:
  *   node scripts/find-owners.js --limit 25
@@ -15,10 +17,12 @@
  *   node scripts/find-owners.js --only-with-site
  *   node scripts/find-owners.js --slugs motobro,ponarin-mx,67moto-smolensk
  *   node scripts/find-owners.js --all
+ *   node scripts/find-owners.js --all --dry-run
  */
 
 const fs = require('fs');
 const path = require('path');
+const { settings, assessLead, mergeResults } = require('./lead-search-policy');
 
 const ROOT = path.resolve(__dirname, '..');
 const FACTS_DIR = path.join(ROOT, 'data', 'facts');
@@ -37,6 +41,7 @@ const hasFlag = (name) => args.includes(`--${name}`);
 const LIMIT = hasFlag('all') ? Infinity : Number(getArg('limit', '20'));
 const ONLY_NO_SITE = hasFlag('only-no-site');
 const ONLY_WITH_SITE = hasFlag('only-with-site');
+const DRY_RUN = hasFlag('dry-run');
 const SLUGS_FILTER = getArg('slugs', '') ? getArg('slugs', '').split(',').map(s => s.trim()).filter(Boolean) : null;
 const CONCURRENCY = Math.max(1, Math.min(6, Number(getArg('concurrency', '4'))));
 
@@ -744,84 +749,95 @@ function buildVCard(results) {
   return cards.join('\r\n');
 }
 
-async function main() {
+function main() {
+  if (!Number.isFinite(LIMIT) && LIMIT !== Infinity || LIMIT <= 0 || LIMIT !== Infinity && !Number.isInteger(LIMIT)) {
+    throw new Error('--limit должен быть положительным целым числом');
+  }
+  if (ONLY_NO_SITE && ONLY_WITH_SITE) throw new Error('Выбери только один фильтр сайта');
   const allFiles = fs.readdirSync(FACTS_DIR).filter(f => f.endsWith('.json')).sort();
-  const selected = [];
+  const ready = [];
+  const deferred = [];
+  let filtered = 0;
   for (const file of allFiles) {
     const slug = path.basename(file, '.json');
     if (SLUGS_FILTER && !SLUGS_FILTER.includes(slug)) continue;
-    const raw = JSON.parse(fs.readFileSync(path.join(FACTS_DIR, file), 'utf8'));
-    const hasSite = Boolean(raw.facts?.has_website || raw.facts?.existing_website);
-    if (ONLY_NO_SITE && hasSite) continue;
-    if (ONLY_WITH_SITE && !hasSite) continue;
-    selected.push(path.join(FACTS_DIR, file));
-    if (selected.length >= LIMIT) break;
+    let raw;
+    try { raw = JSON.parse(fs.readFileSync(path.join(FACTS_DIR, file), 'utf8')); }
+    catch (error) { deferred.push({ slug, reasons: [`JSON не читается: ${error.message}`] }); continue; }
+    const assessment = assessLead(raw);
+    if (!assessment.eligible) { deferred.push({ slug, reasons: assessment.reasons }); continue; }
+    if (ONLY_NO_SITE && assessment.website_status !== 'not_found_in_checked_sources'
+      || ONLY_WITH_SITE && assessment.website_status !== 'found') { filtered++; continue; }
+    const tgHandle = '@' + assessment.telegram_url.split('/').pop();
+    const field = value => value && typeof value === 'object' ? value.value : value;
+    ready.push({
+      slug,
+      name: field(raw.facts.name),
+      city: field(raw.facts.city),
+      has_website_flag: assessment.website_status === 'found' ? true : null,
+      website_status: assessment.website_status,
+      website: assessment.website || '',
+      website_candidates: assessment.website_candidates,
+      contact_tier: assessment.telegram_role === 'owner' ? '1_PERSONAL_TG_VERIFIED' : '3_SALON_TG_DIRECT',
+      best_tg_entry: assessment.telegram_url,
+      personal_tg: assessment.telegram_role === 'owner' ? tgHandle : '',
+      salon_tg_direct: assessment.telegram_role === 'administrator' ? tgHandle : '',
+      telegram_role: assessment.telegram_role,
+      telegram_map_url: assessment.telegram_map_url,
+      telegram_checked_at: raw.lead_search_checks.telegram.checked_at,
+      search_policy_version: settings.version,
+      checked_at: new Date().toISOString(),
+      evidence: settings.required_map_platforms.map(platform => raw.lead_search_checks.maps[platform].url),
+      qualification_record: {
+        identity_status: raw.identity_status,
+        facts: { name: raw.facts.name, city: raw.facts.city, address: raw.facts.address },
+        sources: raw.sources,
+        lead_search_checks: raw.lead_search_checks
+      }
+    });
   }
-
-  console.log(`Старт поиска владельцев: ${selected.length} лидов (параллельность=${CONCURRENCY})...`);
-  const t0 = Date.now();
-  const results = [];
-
-  for (let i = 0; i < selected.length; i += CONCURRENCY) {
-    const batch = selected.slice(i, i + CONCURRENCY);
-    const batchRes = await Promise.all(batch.map(fp => processLead(fp).catch(e => ({
-      slug: path.basename(fp, '.json'),
-      error: e.message
-    }))));
-    for (const r of batchRes) {
-      results.push(r);
-      const tag = r.personal_tg || r.hidden_personal_phone || r.salon_tg_direct || r.fns_owner || r.public_mobile || 'нет данных';
-      console.log(`  [${results.length}/${selected.length}] ${r.name || r.slug} (${r.city || ''}) -> ${r.contact_tier || 'ERR'} | ${tag}`);
+  const selected = ready.slice(0, LIMIT);
+  console.log(`Строгий отбор по правилам ${settings.version}; проверка карт выполняется исследователем, сетевых запросов нет.`);
+  console.log(`Готовы: ${ready.length}; выбраны с учётом лимита: ${selected.length}; отложены: ${deferred.length}; не подходят фильтру сайта: ${filtered}.`);
+  for (const row of selected) console.log(`  ГОТОВ: ${row.slug} | ${row.website_status} | ${row.best_tg_entry}`);
+  for (const row of deferred) console.log(`  ОТЛОЖЕН: ${row.slug} | ${row.reasons.join('; ')}`);
+  if (DRY_RUN) {
+    console.log('Dry-run: файлы не записывались, старые контакты и станция не изменены.');
+    return { selected, deferred, filtered };
+  }
+  if (!selected.length) {
+    console.log('Нет готовых записей: файлы результатов не создавались и не перезаписывались.');
+    return { selected, deferred, filtered };
+  }
+  const jsonPath = path.join(SALES_DIR, 'qualified_owners_telegram.json');
+  const csvPath = path.join(SALES_DIR, 'qualified_owners_telegram.csv');
+  let existing = [];
+  if (fs.existsSync(jsonPath)) {
+    existing = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+    if (!Array.isArray(existing) || existing.some(row => !row || !row.slug
+      || row.search_policy_version !== settings.version || !row.qualification_record
+      || !assessLead(row.qualification_record).eligible)) {
+      throw new Error('В qualified_owners_telegram.json есть записи без актуального комплекта доказательств; файл сохранён без изменений, требуется проверка.');
     }
   }
-
-  // Сортируем от самых "горячих" (личный TG владельца) к обычным мобильным
-  results.sort((a, b) => String(a.contact_tier || '9').localeCompare(String(b.contact_tier || '9')));
-
+  const results = mergeResults(existing, selected)
+    .sort((a, b) => a.slug.localeCompare(b.slug));
+  const headers = ['slug', 'name', 'city', 'website_status', 'website', 'best_tg_entry', 'telegram_role', 'telegram_map_url', 'telegram_checked_at', 'search_policy_version', 'evidence'];
+  const csvRows = [headers.join(';'), ...results.map(row => headers.map(key => csvEscape(
+    key === 'evidence' ? (row.evidence || []).join(' | ') : row[key]
+  )).join(';'))];
   if (!fs.existsSync(SALES_DIR)) fs.mkdirSync(SALES_DIR, { recursive: true });
-
-  const jsonPath = path.join(SALES_DIR, 'owners_telegram.json');
   fs.writeFileSync(jsonPath, JSON.stringify(results, null, 2), 'utf8');
-
-  const headers = [
-    'tier', 'slug', 'name', 'city', 'website', 'fns_owner', 'fns_kind', 'inn',
-    'best_tg_entry', 'personal_tg', 'personal_tg_note', 'hidden_personal_phone',
-    'public_mobile', 'owner_vk', 'owner_vk_name', 'owner_vk_match',
-    'salon_vk', 'salon_tg', 'salon_tg_direct', 'email', 'evidence'
-  ];
-  const csvRows = [headers.join(';')];
-  for (const r of results) {
-    csvRows.push([
-      r.contact_tier, r.slug, r.name, r.city, r.website, r.fns_owner, r.fns_kind, r.inn,
-      r.best_tg_entry, r.personal_tg, r.personal_tg_note, r.hidden_personal_phone,
-      r.public_mobile, r.owner_vk, r.owner_vk_name, r.owner_vk_match,
-      r.salon_vk, r.salon_tg, r.salon_tg_direct, r.email, (r.evidence || []).join(' | ')
-    ].map(csvEscape).join(';'));
-  }
-  const csvPath = path.join(SALES_DIR, 'owners_telegram.csv');
   fs.writeFileSync(csvPath, '\uFEFF' + csvRows.join('\r\n'), 'utf8');
-
-  const vcfPath = path.join(SALES_DIR, 'owners_contacts.vcf');
-  fs.writeFileSync(vcfPath, buildVCard(results), 'utf8');
-
-  // Итоговая сводка
-  const stats = {};
-  for (const r of results) {
-    stats[r.contact_tier] = (stats[r.contact_tier] || 0) + 1;
-  }
-  const withFns = results.filter(r => r.fns_owner).length;
-  const withVk = results.filter(r => r.salon_vk).length;
-  const withPersonalTg = results.filter(r => r.personal_tg).length;
-  const withSalonTg = results.filter(r => r.salon_tg || r.salon_tg_direct).length;
-
-  console.log(`\nГотово за ${((Date.now() - t0) / 1000).toFixed(1)} сек!`);
-  console.log(`Всего обработано: ${results.length}`);
-  console.log(`Найдено ФИО владельца (ФНС/ИП): ${withFns}`);
-  console.log(`Найдено групп ВК: ${withVk}`);
-  console.log(`Найден личный TG (@username): ${withPersonalTg}`);
-  console.log(`Найден TG салона / ?direct: ${withSalonTg}`);
-  console.log('Распределение по уровням:', stats);
-  console.log(`Файлы сохранены:\n  - ${csvPath}\n  - ${jsonPath}\n  - ${vcfPath}`);
+  console.log(`Добавлены/обновлены ${selected.length} строгих записей; всего в отдельной выборке ${results.length}.`);
+  console.log(`Результаты: ${jsonPath} и ${csvPath}. Исторические owners_telegram и станция не изменены.`);
+  return { selected, deferred, filtered };
 }
 
-main();
+// Legacy network heuristics above are retained for reference only. main() does
+// not call processLead(), inspectTGHandle(), phone import or guessed usernames.
+if (require.main === module) {
+  try { main(); }
+  catch (error) { console.error(error.message); process.exitCode = 1; }
+}
+module.exports = { main };
