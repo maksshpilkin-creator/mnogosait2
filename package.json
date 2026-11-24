@@ -11,7 +11,13 @@
     "build:reference": "node scripts/build-reference.js",
     "build:leads": "node scripts/build-all-leads.js",
     "verify:leads": "node scripts/verify-all-leads.js",
-    "dev": "node scripts/serve.js"
+    "dev": "node scripts/serve.js",
+    "build:station": "node scripts/build-call-station.js",
+    "verify:station": "node scripts/verify-sales-stack-sync.js",
+    "test:station": "node scripts/build-call-station.js && node scripts/verify-sales-stack-sync.js",
+    "build:triamoto": "cd dental-template && npm run build",
+    "test:triamoto": "cd dental-template && node tests/test-triamoto.js",
+    "audit:triamoto": "cd dental-template && node scripts/human-design-audit.js"
   },
   "keywords": [
     "vibecoding",
