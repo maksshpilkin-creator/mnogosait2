@@ -1,0 +1,107 @@
+{
+  "browser": "Edge via CUA",
+  "build": [
+    "index-yxa9MkzF.css",
+    "index-CklS4fjS.js"
+  ],
+  "viewports": [
+    {
+      "broken": 0,
+      "client": 360,
+      "formWidth": 316,
+      "manifestoPhotoOverlap": 0,
+      "pricesWidth": 316,
+      "scroll": 360,
+      "width": 375
+    },
+    {
+      "broken": 0,
+      "client": 753,
+      "formWidth": 402.890625,
+      "manifestoPhotoOverlap": 12720.8203125,
+      "pricesWidth": 694.65625,
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "broken": 0,
+      "client": 1009,
+      "formWidth": 540.078125,
+      "manifestoPhotoOverlap": 36476.359375,
+      "pricesWidth": 931.1875,
+      "scroll": 1009,
+      "width": 1024
+    },
+    {
+      "broken": 0,
+      "client": 1425,
+      "formWidth": 710.390625,
+      "manifestoPhotoOverlap": 104144.3115234375,
+      "pricesWidth": 1315.5625,
+      "scroll": 1425,
+      "width": 1440
+    }
+  ],
+  "checks": {
+    "servicesRapidKeyboard": {
+      "selected": "prosthetics",
+      "code": "PR-06",
+      "layersBeforeTab": 4,
+      "layersAfterTab": 0,
+      "buttonOpacityAfterTab": "1"
+    },
+    "dialog": {
+      "pointerOpen": true,
+      "escapeReturnsFocus": true,
+      "ctaSelects": "Протезирование",
+      "focus": "client-name",
+      "scrollUnlocked": true
+    },
+    "form": {
+      "emptyNameRejected": true,
+      "missingConsentRejected": true,
+      "localDraft": true,
+      "message": "Ничего не отправлено, запись не создана",
+      "testDataCleared": true
+    },
+    "mobilePriceAction": {
+      "procedure": "Керамический винир E.max",
+      "selected": "Протезирование",
+      "nameTop": 457.609375,
+      "viewportHeight": 844
+    },
+    "faq": {
+      "desktopLatest": 2,
+      "mobileLatest": 3,
+      "visibleMobile": [
+        "faq-answer-3"
+      ]
+    },
+    "menu": {
+      "mobileOpen": true,
+      "focusOnOpen": "mobile-nav-close",
+      "focusAfterAnchor": "prices",
+      "unlocked": true
+    },
+    "pause": {
+      "circleDuration": "10s",
+      "circlePaused": true,
+      "tickerPaused": true,
+      "heroShift": "0px",
+      "layers": 0,
+      "tickerTransformBefore": "matrix(1, 0, 0, 1, -430.438, 0)",
+      "tickerTransformAfter": "matrix(1, 0, 0, 1, -430.438, 0)",
+      "resume": "running"
+    },
+    "logs": {
+      "error": 0,
+      "warn": 0
+    },
+    "limits": [
+      "No real phone",
+      "No OS reduced-motion toggle",
+      "No FPS profiling",
+      "No full cross-browser coverage"
+    ]
+  }
+}

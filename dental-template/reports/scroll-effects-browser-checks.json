@@ -1,0 +1,341 @@
+{
+  "checkedAt": "2026-11-22",
+  "heroEntrance": {
+    "initialViewport": [
+      1280,
+      720
+    ],
+    "lineMasks": [
+      2,
+      2
+    ],
+    "mode": "lines",
+    "implantStart": {
+      "scale": 0.86,
+      "y": 24,
+      "opacity": 0
+    },
+    "watermarkStartOpacity": 0,
+    "spinnerSeconds": 10,
+    "arrowTransform": "none"
+  },
+  "start": {
+    "colors": [
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)"
+    ],
+    "fill": "0.000",
+    "header": {
+      "blur": "blur(14px)",
+      "top": 0
+    },
+    "heroVars": "--hero-title-shift: 0px; --hero-watermark-shift: 0px; --hero-implant-shift: 0px;",
+    "parallax": "0.000",
+    "ticker": {
+      "duration": "42s",
+      "seam": 0,
+      "transform": "matrix(1, 0, 0, 1, -767.809, 0)",
+      "widths": [
+        1610.21875,
+        1610.21875
+      ]
+    },
+    "y": 0
+  },
+  "middle": {
+    "colors": [
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(51, 51, 51)",
+      "rgb(141, 141, 141)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)"
+    ],
+    "fill": "0.343",
+    "headerTop": 0,
+    "heroVars": "--hero-title-shift: -3.743562572851542px; --hero-watermark-shift: -11.230687718554627px; --hero-implant-shift: -7.487125145703084px;",
+    "parallax": "0.374",
+    "ticker": "matrix(1, 0, 0, 1, -830.432, 0)",
+    "y": 324
+  },
+  "filled": {
+    "colors": [
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(8, 8, 8)",
+      "rgb(51, 51, 51)",
+      "rgb(141, 141, 141)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)",
+      "rgb(188, 188, 188)"
+    ],
+    "fill": "0.764",
+    "heroVars": "--hero-title-shift: -7.405743350641093px; --hero-watermark-shift: -22.21723005192328px; --hero-implant-shift: -14.811486701282186px;",
+    "parallax": "0.741",
+    "y": 594
+  },
+  "reverse": {
+    "fill": "0.343",
+    "first": "rgb(8, 8, 8)",
+    "last": "rgb(188, 188, 188)",
+    "y": 324
+  },
+  "theme": {
+    "light": {
+      "bg": "rgb(207, 207, 207)",
+      "fg": "rgb(0, 0, 0)",
+      "progress": "0.146",
+      "y": 1494
+    },
+    "middle": {
+      "bg": "rgb(123, 123, 123)",
+      "fg": "rgb(0, 0, 0)",
+      "progress": "0.509",
+      "y": 1674
+    },
+    "dark": {
+      "bg": "rgb(10, 10, 10)",
+      "fg": "rgb(255, 255, 255)",
+      "progress": "1.000",
+      "secondary": "rgb(188, 188, 188)",
+      "y": 2081
+    }
+  },
+  "galleryStart": {
+    "activeIndex": {
+      "opacity": "0.918325",
+      "text": "05"
+    },
+    "buttonOpacity": "0.752306",
+    "clonedControls": 0,
+    "code": "SG-05",
+    "image": "/assets/images/generated/service-implant-satin-v1.png",
+    "layers": 4,
+    "metaOpacity": "0.752306",
+    "price": "ОТ 3 500 ₽",
+    "priceOpacity": "0.752306"
+  },
+  "focusedPreviewAfterQuickTab": {
+    "focus": "btn-service-detail",
+    "opacity": 1,
+    "layers": 0,
+    "state": "idle"
+  },
+  "priceKeyboard": {
+    "action": "Синус-лифтинг",
+    "selected": "Хирургия",
+    "focus": "client-name",
+    "opacity": 1
+  },
+  "formStates": {
+    "bookingTop": -10.28125,
+    "choices": [
+      {
+        "bg": "rgb(255, 255, 255)",
+        "border": "rgb(255, 255, 255)",
+        "fg": "rgb(17, 17, 17)",
+        "pressed": "true",
+        "text": "Гигиена",
+        "transition": "0.28s, 0.28s, 0.28s, 0.28s, 0.28s"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "border": "rgb(255, 255, 255)",
+        "fg": "rgb(17, 17, 17)",
+        "pressed": "true",
+        "text": "ЧТ26НОЯБ",
+        "transition": "0.28s, 0.28s, 0.28s, 0.28s, 0.28s"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "border": "rgb(255, 255, 255)",
+        "fg": "rgb(17, 17, 17)",
+        "pressed": "true",
+        "text": "12:00–15:00",
+        "transition": "0.28s, 0.28s, 0.28s, 0.28s, 0.28s"
+      }
+    ]
+  },
+  "faqExclusive": {
+    "focus": "faq-question-2",
+    "icon": {
+      "opacity": "0",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)"
+    },
+    "items": [
+      {
+        "animating": false,
+        "expanded": "false",
+        "height": 0,
+        "hidden": true,
+        "id": "faq-question-1",
+        "inert": ""
+      },
+      {
+        "animating": false,
+        "expanded": "true",
+        "height": 94,
+        "hidden": false,
+        "id": "faq-question-2",
+        "inert": null
+      },
+      {
+        "animating": false,
+        "expanded": "false",
+        "height": 0,
+        "hidden": true,
+        "id": "faq-question-3",
+        "inert": ""
+      },
+      {
+        "animating": false,
+        "expanded": "false",
+        "height": 0,
+        "hidden": true,
+        "id": "faq-question-4",
+        "inert": null
+      },
+      {
+        "animating": false,
+        "expanded": "false",
+        "height": 0,
+        "hidden": true,
+        "id": "faq-question-5",
+        "inert": null
+      }
+    ]
+  },
+  "pausedScenes": {
+    "circle": "paused",
+    "fill": "1.000",
+    "hero": "--hero-title-shift: 0px; --hero-watermark-shift: 0px; --hero-implant-shift: 0px;",
+    "layers": 0,
+    "mode": "paused",
+    "theme": "1.000",
+    "ticker": "paused",
+    "tickerTransform": "matrix(1, 0, 0, 1, -1017.12, 0)"
+  },
+  "mobile": {
+    "hero": {
+      "broken": 0,
+      "circle": "10s",
+      "client": 360,
+      "height": 844,
+      "heroMode": [
+        "lines",
+        "lines"
+      ],
+      "masks": 0,
+      "scrollWidth": 360,
+      "width": 375,
+      "y": 0
+    },
+    "anchor": {
+      "bookingTop": 63.84375,
+      "focus": "client-name",
+      "nameTop": 414.9375,
+      "y": 5524
+    },
+    "priceActionsVisible": 21,
+    "priceSelection": "Протезирование",
+    "priceFocus": "client-name",
+    "faq": {
+      "animating": 0,
+      "expanded": [
+        "false",
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      "visibleBodies": [
+        {
+          "height": 157,
+          "id": "faq-answer-3",
+          "inert": null
+        }
+      ]
+    }
+  },
+  "widths": [
+    {
+      "width": 375,
+      "client": 360,
+      "scrollWidth": 360,
+      "broken": 0
+    },
+    {
+      "broken": 0,
+      "client": 753,
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "broken": 0,
+      "client": 1009,
+      "scrollWidth": 1009,
+      "width": 1024
+    },
+    {
+      "width": 1440,
+      "client": 1425,
+      "scrollWidth": 1425,
+      "broken": 0
+    }
+  ],
+  "limits": [
+    "System reduced-motion checked by source/VM, not by changing live OS setting",
+    "No FPS profiling or broad cross-browser pass",
+    "Puppeteer not run; browser interactions performed through CUA"
+  ],
+  "build": {
+    "css": "index-CrRc3rRs.css",
+    "js": "index-20-ptsBw.js"
+  },
+  "console": [],
+  "finalFaq": {
+    "closedColor": "rgb(123, 123, 123)",
+    "expanded": "faq-question-3",
+    "openColor": "rgb(8, 8, 8)",
+    "visibleCount": 1
+  },
+  "initialRuntimeBuild": "index-CMqWOUV2.js"
+}

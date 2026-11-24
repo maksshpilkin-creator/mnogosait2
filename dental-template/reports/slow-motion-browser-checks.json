@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-11-22",
+  "build": {
+    "css": "index-N_2m6wBP.css",
+    "js": "index-8V7CGshA.js"
+  },
+  "hero": {
+    "brokenImages": 0,
+    "client": 1176,
+    "masks": 0,
+    "scroll": 0,
+    "scrollWidth": 1176,
+    "states": [
+      "complete",
+      "complete"
+    ]
+  },
+  "mobile": {
+    "brokenImages": 0,
+    "client": 360,
+    "height": 844,
+    "masks": 0,
+    "scroll": 0,
+    "scrollWidth": 360,
+    "states": [
+      "complete",
+      "complete"
+    ],
+    "width": 375
+  },
+  "preview": {
+    "code": "PR-06",
+    "layers": 0,
+    "selected": "service-tab-prosthetics",
+    "state": "idle"
+  },
+  "faq": {
+    "animating": false,
+    "expanded": "true",
+    "height": 157
+  },
+  "pause": {
+    "circle": "paused",
+    "layers": 0,
+    "masks": 0,
+    "motion": "paused"
+  },
+  "console": [],
+  "notes": [
+    "Drawer Escape→Return reopens latest PR-06; final Escape unlocks page",
+    "OS reduced-motion not changed in live browser; existing VM regression passed"
+  ]
+}

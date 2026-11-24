@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Триамото — специализированный эндуро салон в г. Дзержинск</title>
+  <meta name="description" content="Мотосалон «Триамото» в Дзержинске (ул. Маяковского, 35): эндуро мотоциклы, питбайки, квадроциклы, двигатели в сборе и экипировка с полным ТО-0 перед выдачей.">
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#121417">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏍️</text></svg>">
+  <link rel="preload" href="/assets/fonts/RobotoCondensed-Variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/assets/images/moto/hero-enduro.png" as="image" fetchpriority="high">
+  <style>
+    .brand-intro[hidden]{display:none!important}
+    .brand-intro{position:fixed;inset:0;z-index:1000;background:#121417;color:#fff;display:grid;place-items:center;pointer-events:none}
+    .brand-intro-word{font:700 clamp(36px,7vw,85px)/1 Arial,sans-serif;letter-spacing:.22em;padding-left:.22em;animation:brand-arrive 650ms cubic-bezier(.22,1,.36,1) both}
+    .brand-intro-word::after{content:'';display:block;width:24px;height:3px;margin:25px auto 0;background:#D9531E}
+    @keyframes brand-arrive{from{opacity:0;transform:translateY(12px);letter-spacing:.28em}to{opacity:1;transform:none;letter-spacing:.22em}}
+    @media(prefers-reduced-motion:reduce){.brand-intro{display:none}.brand-intro-word{animation:none}}
+  </style>
+</head>
+<body>
+  <div class="brand-intro" hidden aria-hidden="true"><span class="brand-intro-word">ТРИАМОТО</span></div>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const overlay = document.querySelector('.brand-intro');
+      const started = performance.now();
+      let release, timer, finished = false;
+      const done = new Promise(resolve => { release = resolve; });
+      const events = ['keydown','pointerdown','wheel','touchstart','focusin','scroll'];
+      const finish = reason => {
+        if (finished) return;
+        finished = true;
+        clearTimeout(timer);
+        overlay.hidden = true;
+        root.dataset.introState = reason;
+        root.dataset.introElapsed = String(Math.round(performance.now() - started));
+        events.forEach(name => window.removeEventListener(name, interact, true));
+        window.removeEventListener('pageshow', restore);
+        release({reason, animateHero: reason === 'ready'});
+      };
+      const interact = () => finish('interaction');
+      const restore = event => { if (event.persisted) finish('restored'); };
+      window.__emalIntro = {done, finish};
+      root.dataset.introShown = 'false';
+      let first = false;
+      try {
+        first = sessionStorage.getItem('triamoto-intro-v1') !== 'seen';
+        sessionStorage.setItem('triamoto-intro-v1','seen');
+      } catch { first = false; }
+      if (!first || location.hash || scrollY > 0 || document.hidden
+          || !window.matchMedia || matchMedia('(prefers-reduced-motion: reduce)').matches
+          || typeof Element.prototype.animate !== 'function') { finish('skip'); return; }
+      root.dataset.introState = 'active';
+      root.dataset.introShown = 'true';
+      overlay.hidden = false;
+      events.forEach(name => window.addEventListener(name, interact, {capture:true,passive:true}));
+      window.addEventListener('pageshow', restore);
+      timer = setTimeout(() => finish('timeout'), 1600);
+    })();
+  </script>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="header-left">
+        <button class="btn-menu" aria-label="Открыть меню навигации" aria-expanded="false" aria-controls="site-navigation">
+          <span class="menu-icon">
+            <span></span>
+            <span></span>
+          </span>
+          <span>Меню</span>
+        </button>
+      </div>
+
+      <a href="#hero" class="header-logo">ТРИА<span>МОТО</span></a>
+
+      <div class="header-right">
+        <button type="button" class="btn-audio-toggle" aria-label="Тактильный звук" aria-pressed="false" title="Включить тактильный звук кликов и мотора">
+          <span class="audio-icon" aria-hidden="true">🔊</span>
+          <span class="audio-label">Звук: ВЫКЛ</span>
+        </button>
+        <a href="tel:+79159401555" title="Позвонить в салон Триамото" class="header-phone">+7 (915) 940-15-55</a>
+        <a href="#booking" class="btn-header-cta">
+          <span>Подбор / Бронь</span>
+          <span>(+)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <aside id="site-navigation" class="mobile-nav-drawer" aria-hidden="true" aria-modal="true" role="dialog" aria-label="Навигация" inert>
+    <button class="mobile-nav-close" aria-label="Закрыть меню">✕</button>
+    <nav class="mobile-nav-links">
+      <a href="#hero">Главная</a>
+      <a href="#about">01 О салоне</a>
+      <a href="#services">02 Техника в наличии</a>
+      <a href="#first-visit">03 Регламент ТО-0</a>
+      <a href="#matcher">04 Подбор по росту</a>
+      <a href="#prices">05 Склад и цены</a>
+      <a href="#calculator">06 Калькулятор рассрочки</a>
+      <a href="#reviews">07 Отзывы клиентов</a>
+      <a href="#booking">08 Заявка на визит</a>
+      <a href="#faq">09 Вопросы райдеров</a>
+      <a href="#contacts">Контакты и карта</a>
+    </nav>
+  </aside>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <canvas id="hero-particles-canvas" aria-hidden="true"></canvas>
+      <div class="hero-watermark" aria-hidden="true">TRIAMOTO</div>
+      
+      <!-- HUD Badges -->
+      <div class="hud-badge hud-pos-1">ДЗЕРЖИНСК · ЦЕНТРАЛЬНЫЙ Р-Н</div>
+      <div class="hud-badge hud-pos-4">★ 4.5 В 2ГИС</div>
+      <div class="hud-badge hud-pos-5 is-orange">ТЕХНИКА В НАЛИЧИИ</div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div style="margin-bottom: 14px;">
+            <div class="live-salon-status" role="status" aria-live="polite">
+              <span class="status-pulse-dot" aria-hidden="true"></span>
+              <span>ПРОВЕРКА СТАТУСА САЛОНА...</span>
+            </div>
+          </div>
+
+          <div class="title-wrap">
+            <h1 class="title-hero">
+              СПЕЦИАЛИЗИРОВАННЫЙ<br>
+              ЭНДУРО САЛОН
+            </h1>
+          </div>
+
+          <!-- Motorcycle visual layer -->
+          <div class="hero-implant-shift">
+            <img src="/assets/images/moto/hero-enduro.png" alt="Спортивный эндуро мотоцикл в Триамото Дзержинск" fetchpriority="high">
+          </div>
+
+          <!-- Circular Rotating CTA -->
+          <div class="hero-cta-wrap">
+            <a href="#booking" class="hero-circular-btn" aria-label="Записаться на примерку и тест-драйв в салон">
+              <svg class="hero-circular-svg" viewBox="0 0 160 160">
+                <path id="circlePath" d="M 80, 80 m -58, 0 a 58,58 0 1,1 116,0 a 58,58 0 1,1 -116,0" fill="none" />
+                <text class="hero-circular-text">
+                  <textPath href="#circlePath">
+                    · ТРИАМОТО · ТЕХНИКА В НАЛИЧИИ · ДЗЕРЖИНСК ·
+                  </textPath>
+                </text>
+              </svg>
+              <span class="hero-circular-icon" aria-hidden="true">⚡</span>
+            </a>
+          </div>
+
+          <!-- Hero Bottom Metadata Bar -->
+          <div class="hero-metadata-bar">
+            <div class="hero-meta-left">
+              <span>ЛОКАЦИЯ:</span>
+              <strong>Г. ДЗЕРЖИНСК, УЛ. МАЯКОВСКОГО, 35</strong>
+            </div>
+            <div class="hero-meta-center">
+              <span>РЕЖИМ:</span>
+              <strong>ПН-ПТ 09:00–18:00, СБ 10:00–15:00 · ПОЛНАЯ СБОРКА И ТО-0 ПРИ ПОКУПКЕ</strong>
+            </div>
+            <div class="hero-meta-right">
+              <span>ДИЛЕР:</span>
+              <strong>BSE · REGULMOTO · FXMOTO · ZUUMAV</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Ticker -->
+    <div class="marquee-bar" aria-hidden="true">
+      <div class="marquee-content">
+        <span>ЭНДУРО</span> <span class="marquee-star">✦</span>
+        <span>ПИТБАЙКИ</span> <span class="marquee-star">✦</span>
+        <span>КВАДРОЦИКЛЫ</span> <span class="marquee-star">✦</span>
+        <span>ПРОТЯЖКА И ТО-0</span> <span class="marquee-star">✦</span>
+        <span>ДВИГАТЕЛИ В СБОРЕ</span> <span class="marquee-star">✦</span>
+        <span>ЗАПЧАСТИ НА СКЛАДЕ</span> <span class="marquee-star">✦</span>
+        <span>ПОДБОР ПО РОСТУ</span> <span class="marquee-star">✦</span>
+        <span>ЭНДУРО</span> <span class="marquee-star">✦</span>
+        <span>ПИТБАЙКИ</span> <span class="marquee-star">✦</span>
+        <span>КВАДРОЦИКЛЫ</span> <span class="marquee-star">✦</span>
+      </div>
+    </div>
+
+    <!-- Section 01: About -->
+    <section id="about" class="section about-section">
+      <div class="about-watermark" aria-hidden="true">MOTO</div>
+      <div class="container about-container">
+        <div class="section-header">
+          <span class="section-tag">01 / КТО МЫ</span>
+          <p class="section-subtitle">ПОДХОД К ТЕХНИКЕ И СБОРКЕ</p>
+        </div>
+
+        <div class="manifesto-block">
+          <h2 class="manifesto-heading">
+            НЕ ПРОСТО ПРОДАЁМ ТЕХНИКУ, А ГОТОВИМ ЕЁ К НАСТОЯЩЕМУ БЕЗДОРОЖЬЮ
+          </h2>
+          <div class="about-braces">
+            <img src="/assets/images/moto/rider.jpg" alt="Райдер Триамото на эндуро треке" loading="lazy">
+            <span class="photo-caption">ПОДГОТОВКА К ТРЕКУ И ЛЕСУ</span>
+          </div>
+        </div>
+
+        <div class="about-story-grid">
+          <div class="about-photo-card">
+            <img src="/assets/images/moto/showroom.jpg" alt="Мотосалон Триамото в Дзержинске" loading="lazy">
+            <span class="photo-caption">ШОУРУМ И МАСТЕРСКАЯ: УЛ. МАЯКОВСКОГО, 35</span>
+          </div>
+          <div class="about-text-content">
+            <p>
+              В «Триамото» мы не отдаём клиенту полусобранный конструктор в заводской картонной коробке. 
+              Китайская мототехника требует внимательной и профессиональной подготовки перед первым выездом.
+            </p>
+            <p>
+              Каждый байк проходит полноценное ТО-0: протяжка болтовых соединений динамометрическим ключом, 
+              набивка водостойкой смазки в подшипники прогрессии и рулевой колонки, регулировка тепловых зазоров клапанов 
+              и точная настройка карбюратора. Вы забираете технику, готовую к эксплуатации без сюрпризов.
+            </p>
+            <div class="about-facts-strip" style="display:flex;gap:24px;margin-top:24px;flex-wrap:wrap;">
+              <div>
+                <strong style="display:block;font-size:24px;color:var(--color-moto-orange-text, #B53D0A);">100%</strong>
+                <span style="font-size:12px;color:#4E5560;">протяжка узлов по регламенту</span>
+              </div>
+              <div>
+                <strong style="display:block;font-size:24px;color:var(--color-moto-orange-text, #B53D0A);">50+</strong>
+                <span style="font-size:12px;color:#4E5560;">единиц техники на складе</span>
+              </div>
+              <div>
+                <strong style="display:block;font-size:24px;color:var(--color-moto-orange-text, #B53D0A);">1 день</strong>
+                <span style="font-size:12px;color:#4E5560;">выдача готового мотоцикла</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02: Services / Catalog -->
+    <section id="services" class="section services-section">
+      <div class="container services-container">
+        <div class="section-header">
+          <span class="section-tag">02 / КАТАЛОГ ТЕХНИКИ</span>
+          <h2 class="section-subtitle">ОСНОВНЫЕ КАТЕГОРИИ И НАЛИЧИЕ</h2>
+        </div>
+
+        <div class="services-interactive-grid">
+          <!-- Left Column: Navigation Rows -->
+          <div class="services-list-nav" role="tablist" aria-label="Категории техники">
+            <button type="button" id="service-tab-enduro" class="service-item-row is-active" data-service-id="enduro" role="tab" aria-selected="true" aria-controls="service-preview" tabindex="0">
+              <span class="service-index">01</span>
+              <span class="service-name">ЭНДУРО МОТОЦИКЛЫ</span>
+              <span class="service-arrow">→</span>
+            </button>
+            <button type="button" id="service-tab-pitbike" class="service-item-row" data-service-id="pitbike" role="tab" aria-selected="false" aria-controls="service-preview" tabindex="-1">
+              <span class="service-index">02</span>
+              <span class="service-name">ПИТБАЙКИ</span>
+              <span class="service-arrow">→</span>
+            </button>
+            <button type="button" id="service-tab-atv" class="service-item-row" data-service-id="atv" role="tab" aria-selected="false" aria-controls="service-preview" tabindex="-1">
+              <span class="service-index">03</span>
+              <span class="service-name">КВАДРОЦИКЛЫ</span>
+              <span class="service-arrow">→</span>
+            </button>
+            <button type="button" id="service-tab-engines" class="service-item-row" data-service-id="engines" role="tab" aria-selected="false" aria-controls="service-preview" tabindex="-1">
+              <span class="service-index">04</span>
+              <span class="service-name">ДВИГАТЕЛИ И ЗАПЧАСТИ</span>
+              <span class="service-arrow">→</span>
+            </button>
+            <button type="button" id="service-tab-service" class="service-item-row" data-service-id="service" role="tab" aria-selected="false" aria-controls="service-preview" tabindex="-1">
+              <span class="service-index">05</span>
+              <span class="service-name">СЕРВИС И ТО-0</span>
+              <span class="service-arrow">→</span>
+            </button>
+          </div>
+
+          <!-- Right Column: Dynamic Preview Card -->
+          <div id="service-preview" class="service-preview-card" role="tabpanel" aria-live="polite" aria-labelledby="service-tab-enduro">
+            <div class="preview-image-wrapper">
+              <span class="preview-badge-overlay">TR-EN-01</span>
+              <img src="/assets/images/moto/product-enduro.jpg" alt="Эндуро мотоциклы в Триамото" class="preview-image">
+            </div>
+            <div class="preview-details">
+              <div class="preview-meta-row">
+                <span class="preview-code">TR-EN-01</span>
+                <span class="preview-duration">В НАЛИЧИИ</span>
+              </div>
+              <p class="preview-summary">Полноразмерные эндуро BSE, Regulmoto и FXmoto. Двигатели 250–300 см³, хром-молибденовые рамы и настраиваемая подвеска.</p>
+              <div class="preview-footer">
+                <div class="preview-price">
+                  <span class="preview-price-label">СТОИМОСТЬ:</span>
+                  <span class="preview-price-val">ОТ 147 000 ₽</span>
+                </div>
+                <button type="button" class="btn-service-detail" aria-haspopup="dialog">
+                  ПОСМОТРЕТЬ ТТХ И МОДЕЛИ (→)
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Side Drawer Dialog for Detailed Specs -->
+    <div class="modal-backdrop" aria-hidden="true"></div>
+    <aside class="price-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="drawer-title" inert>
+      <div class="drawer-header">
+        <span class="drawer-meta">TR-EN-01 · В НАЛИЧИИ</span>
+        <button type="button" class="btn-drawer-close" aria-label="Закрыть окно характеристик">✕</button>
+      </div>
+      <div class="drawer-content">
+        <h3 id="drawer-title" class="drawer-title">ЭНДУРО МОТОЦИКЛЫ</h3>
+        <p class="drawer-lead">Полноразмерные эндуро BSE, Regulmoto и FXmoto с предпродажной подготовкой.</p>
+        <div class="drawer-image-box">
+          <img src="/assets/images/moto/product-enduro.jpg" alt="Эндуро мотоциклы" class="drawer-image">
+        </div>
+        <p class="drawer-deep">Каждый мотоцикл проходит полную протяжку узлов, смазку прогрессии и регулировку карбюратора.</p>
+        
+        <div class="drawer-price-table">
+          <!-- Injected via JavaScript -->
+        </div>
+
+        <button type="button" class="btn-drawer-cta" data-target-service="Эндуро мотоциклы">
+          ВЫБРАТЬ ЭНДУРО В ЗАЯВКУ
+        </button>
+      </div>
+    </aside>
+
+    <!-- Section 03: Steps / ТО-0 -->
+    <section id="first-visit" class="section steps-section">
+      <div class="container steps-container">
+        <div class="section-header">
+          <span class="section-tag">03 / РЕГЛАМЕНТ СБОРКИ</span>
+          <h2 class="section-subtitle">КАК МЫ ГОТОВИМ БАЙК К ВЫДАЧЕ</h2>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <span class="step-number">01</span>
+            <div class="step-badge">ПОДБОР</div>
+            <h3 class="step-title">ПОДБОР ПО РОСТУ И ОПЫТУ</h3>
+            <p class="step-description">
+              Примеряем посадку по высоте по седлу (860–940 мм). Подбираем жесткость пружины амортизатора под ваш вес 
+              и уровень катания: от первого питбайка до хард-эндуро 300 см³.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <span class="step-number">02</span>
+            <div class="step-badge">МАСТЕРСКАЯ</div>
+            <h3 class="step-title">СБОРКА И ПРОТЯЖКА ТО-0</h3>
+            <p class="step-description">
+              Протяжка всех узлов динамометрическим ключом с фиксатором резьбы. 
+              Набивка влагостойкой смазки в прогрессию и маятник, настройка натяжения цепи и зазоров клапанов.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <span class="step-number">03</span>
+            <div class="step-badge">ВЫДАЧА</div>
+            <h3 class="step-title">ТЕСТОВЫЙ ЗАПУСК И ДОКУМЕНТЫ</h3>
+            <p class="step-description">
+              Заправка свежим бензином и маслом, проверка работы на холостых оборотах. 
+              Выдаём полный пакет документов, чек и инструктаж по правильной обкатке мотора.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Section: Rider Matcher -->
+    <section id="matcher" class="section matcher-section">
+      <div class="container matcher-container">
+        <div class="section-header">
+          <span class="section-tag">04 / ПОДБОР ПО ПАРАМЕТРАМ</span>
+          <h2 class="section-subtitle">ОПРЕДЕЛИТЕ ВЫСОТУ ПО СЕДЛУ И МОЩНОСТЬ МОТОРА</h2>
+        </div>
+
+        <div id="rider-matcher" class="matcher-grid">
+          <!-- Controls Column -->
+          <div class="matcher-controls">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;">
+              <label for="matcher-height-slider" style="font-weight:700;font-size:14px;color:var(--color-moto-dark);">ВАШ РОСТ:</label>
+              <span id="matcher-height-val" style="font-size:22px;font-weight:700;color:var(--color-moto-orange-text, #B53D0A);">176 см</span>
+            </div>
+            
+            <div class="slider-wrapper">
+              <input type="range" id="matcher-height-slider" class="custom-range-slider" min="140" max="195" value="176" step="1" aria-label="Ползунок роста райдера">
+              <div style="display:flex;justify-content:space-between;font-size:11px;color:#555E6D;margin-top:4px;">
+                <span>140 см (подросток)</span>
+                <span>170 см</span>
+                <span>195 см (высокий)</span>
+              </div>
+            </div>
+
+            <div style="margin-top:20px;">
+              <span id="matcher-style-label" style="font-weight:700;font-size:13px;display:block;margin-bottom:8px;color:var(--color-moto-dark);">ОСНОВНАЯ ЗАДАЧА И СТИЛЬ КАТАНИЯ:</span>
+              <div class="matcher-chips-row" role="group" aria-labelledby="matcher-style-label">
+                <button type="button" class="matcher-style-chip is-active" data-style="enduro" aria-pressed="true">Лес и эндуро-тропы</button>
+                <button type="button" class="matcher-style-chip" data-style="pitbike" aria-pressed="false">Дача, обучение, легкий трек</button>
+                <button type="button" class="matcher-style-chip" data-style="hard" aria-pressed="false">Хард-эндуро и заезды в гору</button>
+                <button type="button" class="matcher-style-chip" data-style="atv" aria-pressed="false">Охота, рыбалка, хозяйство</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Matched Bike Output -->
+          <div class="matcher-result-card">
+            <div>
+              <span style="font-size:11px;letter-spacing:.08em;color:#A0AAB5;text-transform:uppercase;display:block;margin-bottom:6px;">РЕКОМЕНДОВАННАЯ ТЕХНИКА ИЗ НАЛИЧИЯ:</span>
+              <h3 id="matcher-bike-title" class="matcher-bike-title">Эндуро BSE Z3 250 (ZS172FMM, 21 л.с.)</h3>
+              <div id="matcher-bike-saddle" class="matcher-bike-saddle">Высота по седлу: 890 мм</div>
+              <p id="matcher-bike-reason" class="matcher-bike-reason">
+                Золотая середина для эндуро: полноценная база 1420 мм, надежный тяговитый мотор 172FMM, регулируемая вилка. Идеальный баланс веса и тяги на низах для горок и бревен.
+              </p>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;">
+              <div>
+                <span style="font-size:11px;color:#8E95A2;display:block;">ОРИЕНТИР ЦЕНЫ:</span>
+                <strong id="matcher-bike-price" style="font-size:18px;color:#fff;">от 147 000 ₽</strong>
+              </div>
+              <button type="button" id="matcher-book-btn" class="btn-matcher-action" data-target-category="Эндуро" data-target-model="Эндуро BSE Z3 250">
+                ПРИМЕРИТЬ ПОСАДКУ В САЛОНЕ (→)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 05: Prices -->
+    <section id="prices" class="section prices-section">
+      <div class="container prices-container">
+        <div class="section-header">
+          <span class="section-tag">05 / СКЛАД И ЦЕНЫ</span>
+          <h2 class="section-subtitle">ОРИЕНТИРОВОЧНЫЕ СТОИМОСТИ «ОТ» В ДЗЕРЖИНСКЕ</h2>
+        </div>
+
+        <div class="prices-wrapper">
+          <!-- Category 1: Enduro -->
+          <div class="price-category-group">
+            <div class="price-category-header">
+              <span class="price-category-code">TR-EN</span>
+              <h3 class="price-category-title">ЭНДУРО МОТОЦИКЛЫ</h3>
+            </div>
+            <div class="price-items-list">
+              <div class="price-row">
+                <span class="price-row-name">Эндуро BSE Z3 250 (ZS172FMM, 21 л.с., рама Cr-Mo)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 147 000 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Эндуро">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">Regulmoto Sport 003 Pro (NB300, 28 л.с., вилка 48 мм)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 189 000 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Эндуро">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">FXmoto X8 300 (водяное охлаждение, мотор 174MN)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 245 000 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Эндуро">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">Zuumav K7 CB250 (воздушное охлаждение, легкий эндуро)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 165 000 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Эндуро">Выбрать →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Pitbikes -->
+          <div class="price-category-group">
+            <div class="price-category-header">
+              <span class="price-category-code">TR-PB</span>
+              <h3 class="price-category-title">ПИТБАЙКИ</h3>
+            </div>
+            <div class="price-items-list">
+              <div class="price-row">
+                <span class="price-row-name">Питбайк BSE MX 125 (колеса 17/14, 4-тактный)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 85 000 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Питбайки">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">Питбайк Kayo Basic YX125 (электростартер + кик)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 94 900 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Питбайки">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">Питбайк Regulmoto Seven 140 (масляный радиатор)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 112 000 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Питбайки">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">Питбайк BSE PH 150e (спортивная подвеска)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 129 000 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Питбайки">Выбрать →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: ATV -->
+          <div class="price-category-group">
+            <div class="price-category-header">
+              <span class="price-category-code">TR-ATV</span>
+              <h3 class="price-category-title">КВАДРОЦИКЛЫ</h3>
+            </div>
+            <div class="price-items-list">
+              <div class="price-row">
+                <span class="price-row-name">Квадроцикл Regulmoto Athlete 200 (лебедка, фаркоп)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 230 000 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Квадроциклы">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">Квадроцикл Linhai-Yamaha 300 4x4 (полный привод)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 440 000 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Квадроциклы">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">Квадроцикл подростковый 125 см³</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 105 000 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Квадроциклы">Выбрать →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Engines & Parts -->
+          <div class="price-category-group">
+            <div class="price-category-header">
+              <span class="price-category-code">TR-ENG</span>
+              <h3 class="price-category-title">ДВИГАТЕЛИ И ЗАПЧАСТИ</h3>
+            </div>
+            <div class="price-items-list">
+              <div class="price-row">
+                <span class="price-row-name">Двигатель в сборе Zongshen 172FMM-3A (250 см³, 5-ст)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 48 500 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Двигатели / Запчасти">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">Двигатель в сборе YX 125 (для питбайка, кик/электро)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 29 000 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Двигатели / Запчасти">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">Спортивный карбюратор Nibbi Racing PE28 / PWK30</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 5 400 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Двигатели / Запчасти">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">Усиленная сальниковая цепь 520 O-Ring</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 4 800 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Двигатели / Запчасти">Выбрать →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5: Service -->
+          <div class="price-category-group">
+            <div class="price-category-header">
+              <span class="price-category-code">TR-SRV</span>
+              <h3 class="price-category-title">СЕРВИС И ТО-0</h3>
+            </div>
+            <div class="price-items-list">
+              <div class="price-row">
+                <span class="price-row-name">Полная сборка и протяжка нового байка (ТО-0 «под ключ»)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">4 500 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Сервис ТО-0">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">Регулировка тепловых зазоров клапанов (впуск/выпуск)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 1 500 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Сервис ТО-0">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">Настройка и чистка карбюратора (подбор жиклеров)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 1 200 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Сервис ТО-0">Выбрать →</a>
+              </div>
+              <div class="price-row">
+                <span class="price-row-name">Сезонная консервация и тёплое зимнее хранение (месяц)</span>
+                <span class="price-row-dots" aria-hidden="true"></span>
+                <span class="price-row-val">от 2 000 ₽</span>
+                <a href="#booking" class="price-row-action" data-service-name="Сервис ТО-0">Выбрать →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Section: Installment Calculator -->
+    <section id="calculator" class="section calculator-section">
+      <div class="container calculator-container">
+        <div class="section-header">
+          <span class="section-tag">06 / КАЛЬКУЛЯТОР РАССРОЧКИ</span>
+          <h2 class="section-subtitle">РАССЧИТАЙТЕ КОМФОРТНЫЙ ПЛАТЕЖ В МЕСЯЦ</h2>
+        </div>
+
+        <div id="moto-calculator" class="calculator-box">
+          <!-- Inputs Column -->
+          <div class="calc-inputs-col">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+              <label for="calc-price-range" style="font-size:13px;font-weight:700;letter-spacing:.05em;color:#ECE7DE;">СТОИМОСТЬ БАЙКА:</label>
+              <span id="calc-price-val" style="font-size:22px;font-weight:700;color:var(--color-moto-orange-light, #EB6628);">147 000 ₽</span>
+            </div>
+            
+            <input type="range" id="calc-price-range" class="custom-range-slider" min="85000" max="350000" step="5000" value="147000" aria-label="Ползунок стоимости мототехники">
+            <div style="display:flex;justify-content:space-between;font-size:11px;color:#8E95A2;margin-top:4px;">
+              <span>85 000 ₽ (питбайк)</span>
+              <span>189 000 ₽</span>
+              <span>350 000 ₽ (квадро / 300cc)</span>
+            </div>
+
+            <div style="margin-top:24px;">
+              <span id="calc-down-label" style="font-size:12px;font-weight:700;letter-spacing:.05em;color:#ECE7DE;display:block;">ПЕРВОНАЧАЛЬНЫЙ ВЗНОС:</span>
+              <div class="calc-chips-group" role="group" aria-labelledby="calc-down-label">
+                <button type="button" class="calc-chip calc-down-chip" data-rate="0" aria-pressed="false">0% (Без взноса)</button>
+                <button type="button" class="calc-chip calc-down-chip is-active" data-rate="0.2" aria-pressed="true">20%</button>
+                <button type="button" class="calc-chip calc-down-chip" data-rate="0.3" aria-pressed="false">30%</button>
+                <button type="button" class="calc-chip calc-down-chip" data-rate="0.5" aria-pressed="false">50%</button>
+              </div>
+            </div>
+
+            <div style="margin-top:10px;">
+              <span id="calc-term-label" style="font-size:12px;font-weight:700;letter-spacing:.05em;color:#ECE7DE;display:block;">СРОК ВЫПЛАТЫ:</span>
+              <div class="calc-chips-group" role="group" aria-labelledby="calc-term-label">
+                <button type="button" class="calc-chip calc-term-chip" data-months="6" aria-pressed="false">6 месяцев</button>
+                <button type="button" class="calc-chip calc-term-chip is-active" data-months="12" aria-pressed="true">12 месяцев</button>
+                <button type="button" class="calc-chip calc-term-chip" data-months="18" aria-pressed="false">18 месяцев</button>
+                <button type="button" class="calc-chip calc-term-chip" data-months="24" aria-pressed="false">24 месяца</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Result Column -->
+          <div class="calc-result-panel">
+            <span class="calc-monthly-label">ПРИМЕРНЫЙ ЕЖЕМЕСЯЧНЫЙ ПЛАТЁЖ:</span>
+            <div id="calc-monthly-val" class="calc-monthly-val">от 10 570 ₽ / мес</div>
+            <p style="font-size:12px;line-height:1.5;color:#8E95A2;margin-bottom:20px;">
+              Расчёт носит ориентировочный характер. Партнёрские программы кредитования и рассрочки оформляются в салоне при наличии паспорта.
+            </p>
+            <a id="calc-send-wa" href="https://wa.me/79159401555" target="_blank" rel="noopener" class="btn-calc-wa">
+              <span>Отправить расчёт в WhatsApp (+7 915 940-15-55)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 07: Real 2GIS Customer Reviews -->
+    <section id="reviews" class="section reviews-section">
+      <div class="container reviews-container">
+        <div class="section-header">
+          <span class="section-tag">07 / ОТЗЫВЫ КЛИЕНТОВ</span>
+          <h2 class="section-subtitle">ОЦЕНКА 4.5 ИЗ 5 В КАРТАХ 2ГИС ДЗЕРЖИНСК</h2>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div>
+              <div class="review-header">
+                <span class="review-author">Сергей М.</span>
+                <span class="review-stars">★★★★★</span>
+              </div>
+              <p class="review-text">
+                «Брал BSE Z3 250 в начале сезона. Ребята в Триамото действительно подготовили байк: все болты на фиксаторе, смазка в прогрессии есть, мотор шепчет. Обкатал без проблем, сейчас уже вовсю гоняю по лесам под Дзержинском.»
+              </p>
+            </div>
+            <div class="review-meta">Покупка техники и ТО-0 · 2ГИС Дзержинск</div>
+          </div>
+
+          <div class="review-card">
+            <div>
+              <div class="review-header">
+                <span class="review-author">Дмитрий В.</span>
+                <span class="review-stars">★★★★★</span>
+              </div>
+              <p class="review-text">
+                «Отличный мотосалон. Покупали сыну питбайк 125 кубов. Нам подобрали по росту, посадили, всё объяснили про сцепление и передачи. Очень удобно, что запчасти и шлемы сразу есть на месте на Маяковского.»
+              </p>
+            </div>
+            <div class="review-meta">Покупка питбайка и экипировки · 2ГИС Дзержинск</div>
+          </div>
+
+          <div class="review-card">
+            <div>
+              <div class="review-header">
+                <span class="review-author">Александр К.</span>
+                <span class="review-stars">★★★★★</span>
+              </div>
+              <p class="review-text">
+                «Заказывал двигатель 172FMM на замену старому. Привезли быстро, помогли с установкой и настройкой карбюратора Nibbi. Цены адекватные, без лишней накрутки. Рекомендую салон!»
+              </p>
+            </div>
+            <div class="review-meta">Двигатель и сервис · 2ГИС Дзержинск</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 08: Booking / Selection Form -->
+    <section id="booking" class="section booking-section">
+      <div class="container booking-container">
+        <div class="section-header">
+          <span class="section-tag" style="color:var(--color-moto-orange-light, #EB6628);">08 / ПОДБОР И БРОНЬ</span>
+          <p class="section-subtitle" style="color:#ECE7DE;">УТОЧНИТЬ НАЛИЧИЕ ИЛИ ЗАПИСАТЬСЯ НА ВИЗИТ</p>
+        </div>
+
+        <div class="booking-layout">
+          <!-- Left Salon Booking Info -->
+          <div class="booking-info-col">
+            <h2 class="booking-title">
+              ПРИЕЗЖАЙТЕ НА ЖИВУЮ ПРИМЕРКУ
+            </h2>
+            <p class="booking-intro-text">
+              В зале салона выставлены эндуро BSE, Regulmoto, питбайки Kayo и детские квадроциклы. Поможем подобрать правильную высоту по седлу под ваш рост, настроить рычаги и подвеску.
+            </p>
+
+            <div class="booking-call-block">
+              <span class="booking-call-label">ПРЯМАЯ СВЯЗЬ С САЛОНОМ:</span>
+              <a href="tel:+79159401555" class="booking-phone-link">+7 (915) 940-15-55</a>
+              <span class="booking-hours">ПН–ПТ 09:00–18:00, СБ 10:00–15:00</span>
+              <div class="booking-address">г. Дзержинск, ул. Маяковского, 35</div>
+            </div>
+
+            <div class="booking-guarantees-list">
+              <div class="booking-guarantee-item">
+                <span class="guarantee-icon">✓</span>
+                <span>Полное ТО-0 при выдаче мототехники</span>
+              </div>
+              <div class="booking-guarantee-item">
+                <span class="guarantee-icon">✓</span>
+                <span>Двигатели в сборе и расходники на складе</span>
+              </div>
+              <div class="booking-guarantee-item">
+                <span class="guarantee-icon">✓</span>
+                <span>Рассрочка без скрытых комиссий и навязанных страховок</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Booking Form -->
+          <div class="booking-form-wrap">
+            <form class="booking-form" novalidate>
+            <!-- 1. Direction Chips -->
+            <div class="form-step">
+              <div class="form-step-label" id="step-1-label">1. ЧТО ВАС ИНТЕРЕСУЕТ?</div>
+              <div class="chips-grid" role="group" aria-labelledby="step-1-label">
+                <button type="button" class="chip-btn is-selected" aria-pressed="true">Эндуро</button>
+                <button type="button" class="chip-btn" aria-pressed="false">Питбайки</button>
+                <button type="button" class="chip-btn" aria-pressed="false">Квадроциклы</button>
+                <button type="button" class="chip-btn" aria-pressed="false">Двигатели / Запчасти</button>
+                <button type="button" class="chip-btn" aria-pressed="false">Сервис ТО-0</button>
+              </div>
+            </div>
+
+            <!-- 2. Interactive Calendar -->
+            <div class="form-step">
+              <div class="form-step-label" id="step-2-label">2. КОГДА УДОБНО ПРИЕХАТЬ В САЛОН (УЛ. МАЯКОВСКОГО, 35)?</div>
+              <div class="calendar-days-container" role="group" aria-labelledby="step-2-label">
+                <!-- Days injected by JS -->
+              </div>
+            </div>
+
+            <!-- 3. Time Slots -->
+            <div class="form-step">
+              <div class="form-step-label" id="step-3-label">3. УДОБНЫЙ ИНТЕРВАЛ ВРЕМЕНИ:</div>
+              <div class="time-slots-grid" role="group" aria-labelledby="step-3-label">
+                <button type="button" class="time-slot-btn is-selected" aria-pressed="true">09:00–12:00 (Утро)</button>
+                <button type="button" class="time-slot-btn" aria-pressed="false">12:00–15:00 (День)</button>
+                <button type="button" class="time-slot-btn" aria-pressed="false">15:00–18:00 (Вечер)</button>
+              </div>
+            </div>
+
+            <!-- 4. Client Contacts -->
+            <div class="form-step form-inputs-group">
+              <div class="input-wrapper">
+                <label for="client-name" class="input-label">ВАШЕ ИМЯ *</label>
+                <input type="text" id="client-name" name="name" autocomplete="name" class="form-input-underline" placeholder="Как к вам обращаться" required>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="client-phone" class="input-label">ТЕЛЕФОН *</label>
+                <input type="tel" id="client-phone" name="phone" autocomplete="tel" inputmode="tel" class="form-input-underline" placeholder="+7 (___) ___-__-__" required>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="client-comment" class="input-label">ПОЖЕЛАНИЯ (РОСТ, ОПЫТ, МОДЕЛЬ)</label>
+                <input type="text" id="client-comment" name="comment" class="form-input-underline" placeholder="Например: рост 178 см, выбираю первый эндуро до 180 000 ₽">
+              </div>
+            </div>
+
+            <!-- Consent -->
+            <div class="form-step consent-step">
+              <label class="consent-checkbox-label" for="client-consent">
+                <input type="checkbox" id="client-consent" name="consent" required checked>
+                <span>Подтверждаю согласие на обработку контактных данных для связи с консультантом Триамото</span>
+              </label>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-step submit-step">
+              <button type="submit" class="btn-submit-booking" aria-describedby="booking-demo-note">
+                <span>СФОРМИРОВАТЬ ЗАПРОС И ПОЛУЧИТЬ ЧЕРНОВИК</span>
+                <span>(→)</span>
+              </button>
+              <p id="booking-demo-note" class="booking-demo-note" style="color:#A0AAB5;font-size:12px;margin-top:10px;">
+                Демо-форма: заявка формирует готовый черновик сообщения. Вы сможете сразу отправить его в WhatsApp на номер +7 (915) 940-15-55 или скопировать.
+              </p>
+            </div>
+
+            <!-- Status Notice -->
+            <div class="booking-toast" tabindex="-1" role="status" aria-live="polite"></div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 09: FAQ -->
+    <section id="faq" class="section faq-section">
+      <div class="container faq-container">
+        <div class="section-header">
+          <span class="section-tag">09 / ЧАСТЫЕ ВОПРОСЫ</span>
+          <h2 class="section-subtitle">ОТВЕТЫ ДЛЯ РАЙДЕРОВ</h2>
+        </div>
+
+        <div class="faq-accordion-list">
+          <!-- Q1 -->
+          <div class="faq-item is-open">
+            <button type="button" id="faq-question-1" class="faq-header-btn" aria-expanded="true" aria-controls="faq-answer-1">
+              <div class="faq-header-left">
+                <span class="faq-index">01</span>
+                <span class="faq-question">НУЖНЫ ЛИ ПРАВА НА ПИТБАЙК ИЛИ ЭНДУРО?</span>
+              </div>
+              <span class="faq-toggle-icon" aria-hidden="true">—</span>
+            </button>
+            <div id="faq-answer-1" class="faq-body-collapse" role="region" aria-labelledby="faq-question-1">
+              <div class="faq-content-inner">
+                Большинство спортивных эндуро и все питбайки поставляются как спортивный инвентарь (без ПТС). Для управления ими на закрытых трассах, в лесах и полях водительское удостоверение и регистрация в ГИБДД не требуются. Для дорог общего пользования нужна техника с ПТС и права категории А.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item">
+            <button type="button" id="faq-question-2" class="faq-header-btn" aria-expanded="false" aria-controls="faq-answer-2">
+              <div class="faq-header-left">
+                <span class="faq-index">02</span>
+                <span class="faq-question">ЧТО ВХОДИТ В ПРЕДПРОДАЖНУЮ СБОРКУ И ТО-0?</span>
+              </div>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-answer-2" class="faq-body-collapse" role="region" aria-labelledby="faq-question-2" hidden>
+              <div class="faq-content-inner">
+                Мы полностью распаковываем технику, протягиваем все узлы и крепления динамометрическим ключом с фиксатором резьбы, набиваем водостойкую смазку в подшипники рулевой колонки и прогрессии, выставляем зазоры клапанов, настраиваем натяжение цепи и регулируем карбюратор. Заливаем свежее масло и делаем контрольный запуск.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item">
+            <button type="button" id="faq-question-3" class="faq-header-btn" aria-expanded="false" aria-controls="faq-answer-3">
+              <div class="faq-header-left">
+                <span class="faq-index">03</span>
+                <span class="faq-question">ЕСТЬ ЛИ ДВИГАТЕЛИ И ЗАПЧАСТИ В НАЛИЧИИ?</span>
+              </div>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-answer-3" class="faq-body-collapse" role="region" aria-labelledby="faq-question-3" hidden>
+              <div class="faq-content-inner">
+                Да, прямо в салоне на ул. Маяковского, 35 работает наш склад запчастей. Всегда в наличии популярные двигатели в сборе (ZS172FMM, YX125, Lifan), карбюраторы Nibbi, сальниковые цепи 520, звёзды, колодки, фильтры и расходники для регулярного ТО.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item">
+            <button type="button" id="faq-question-4" class="faq-header-btn" aria-expanded="false" aria-controls="faq-answer-4">
+              <div class="faq-header-left">
+                <span class="faq-index">04</span>
+                <span class="faq-question">МОЖНО ЛИ ПРИМЕРИТЬ ПОСАДКУ ПЕРЕД ПОКУПКОЙ?</span>
+              </div>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-answer-4" class="faq-body-collapse" role="region" aria-labelledby="faq-question-4" hidden>
+              <div class="faq-content-inner">
+                Обязательно! Мы рекомендуем всегда лично примерить высоту по седлу и удобство руля. Наши консультанты помогут оценить посадку, отрегулировать рычаги под кисть и подскажут оптимальную модель под ваш рост и вес.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item">
+            <button type="button" id="faq-question-5" class="faq-header-btn" aria-expanded="false" aria-controls="faq-answer-5">
+              <div class="faq-header-left">
+                <span class="faq-index">05</span>
+                <span class="faq-question">ВОЗМОЖНА ЛИ ДОСТАВКА ПО ДЗЕРЖИНСКУ И ОБЛАСТИ?</span>
+              </div>
+              <span class="faq-toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-answer-5" class="faq-body-collapse" role="region" aria-labelledby="faq-question-5" hidden>
+              <div class="faq-content-inner">
+                Да, мы доставляем полностью собранную и готовую к поездке технику собственным транспортом по Дзержинску, Нижнему Новгороду и всей Нижегородской области. Также возможен самовывоз прямо из шоурума.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Contacts & Map -->
+    <section id="contacts" class="section contacts-section" style="background:#ffffff;padding-bottom:50px;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">КОНТАКТЫ И МАРШРУТ</span>
+          <h2 class="section-subtitle">КАК ДОБРАТЬСЯ В САЛОН</h2>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:24px;">
+          <div style="background:var(--color-moto-sand);padding:20px;border-radius:4px;border:1px solid var(--color-moto-border);">
+            <span style="font-size:11px;color:#4E5560;letter-spacing:.05em;display:block;margin-bottom:6px;">АДРЕС В ДЗЕРЖИНСКЕ:</span>
+            <strong style="font-size:18px;color:var(--color-moto-dark);">ул. Маяковского, 35</strong>
+            <span style="display:block;font-size:13px;color:#4E5560;margin-top:4px;">Центральный район</span>
+          </div>
+
+          <div style="background:var(--color-moto-sand);padding:20px;border-radius:4px;border:1px solid var(--color-moto-border);">
+            <span style="font-size:11px;color:#4E5560;letter-spacing:.05em;display:block;margin-bottom:6px;">ПРЯМОЙ ТЕЛЕФОН / WHATSAPP:</span>
+            <a href="tel:+79159401555" class="contacts-phone-link">+7 (915) 940-15-55</a>
+            <span style="display:block;font-size:13px;color:#4E5560;margin-top:4px;">Консультация механика и бронь</span>
+          </div>
+
+          <div style="background:var(--color-moto-sand);padding:20px;border-radius:4px;border:1px solid var(--color-moto-border);">
+            <span style="font-size:11px;color:#4E5560;letter-spacing:.05em;display:block;margin-bottom:6px;">ГРАФИК РАБОТЫ:</span>
+            <strong style="font-size:16px;color:var(--color-moto-dark);">Пн-Пт 09:00–18:00</strong>
+            <span style="display:block;font-size:14px;color:#4E5560;margin-top:4px;">Сб 10:00–15:00, Вс выходной</span>
+          </div>
+        </div>
+
+        <div class="contacts-actions-row">
+          <a href="https://2gis.ru/dzerzhinsk/firm/70000001021482054" target="_blank" rel="noopener" class="btn-contacts-link btn-contacts-2gis">
+            Открыть карточку в 2ГИС (★ 4.5) →
+          </a>
+          <a href="https://yandex.ru/maps/?text=%D0%A2%D1%80%D0%B8%D0%B0%D0%BC%D0%BE%D1%82%D0%BE%20%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%20%D1%83%D0%BB.%20%D0%9C%D0%B0%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C%2035" target="_blank" rel="noopener" class="btn-contacts-link btn-contacts-yandex">
+            Построить маршрут в Яндекс Картах →
+          </a>
+        </div>
+
+        <!-- Embedded Map Frame -->
+        <div class="map-container">
+          <iframe src="https://yandex.ru/map-widget/v1/?mode=search&text=%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%9C%D0%B0%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C%2035%2C%20%D0%A2%D1%80%D0%B8%D0%B0%D0%BC%D0%BE%D1%82%D0%BE" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта проезда в мотосалон Триамото Дзержинск"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top-row">
+        <a href="#hero" class="footer-logo header-logo">ТРИА<span>МОТО</span></a>
+        <div class="footer-links-group">
+          <a href="#about">О салоне</a>
+          <a href="#services">Техника</a>
+          <a href="#first-visit">Регламент ТО-0</a>
+          <a href="#matcher">Подбор</a>
+          <a href="#prices">Цены</a>
+          <a href="#calculator">Рассрочка</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#booking">Заявка</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom-row">
+        <p class="footer-disclaimer">
+          «Триамото» (г. Дзержинск, Центральный р-н, ул. Маяковского, 35) — демонстрационный концепт лендинга. Не является публичной офертой или официальным сайтом компании. Удалим по первому запросу правообладателя. Данные собраны из открытых карточек 2ГИС. Все торговые марки принадлежат их законным владельцам.
+        </p>
+        <span class="footer-copy">© 2026 ТРИАМОТО ДЗЕРЖИНСК</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Quick Dock -->
+  <nav class="mobile-quick-dock" aria-label="Быстрые действия с телефона">
+    <a href="tel:+79159401555" class="dock-btn dock-btn-call">
+      <span>📞</span>
+      <span>Позвонить</span>
+    </a>
+    <a href="https://wa.me/79159401555?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%A2%D1%80%D0%B8%D0%B0%D0%BC%D0%BE%D1%82%D0%BE%20(%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA)%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D1%82%D1%8C%20%D0%BD%D0%B0%D0%BB%D0%B8%D1%87%D0%B8%D0%B5%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8." target="_blank" rel="noopener" class="dock-btn dock-btn-wa">
+      <span>💬</span>
+      <span>WhatsApp</span>
+    </a>
+    <a href="https://yandex.ru/maps/?text=%D0%A2%D1%80%D0%B8%D0%B0%D0%BC%D0%BE%D1%82%D0%BE%20%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%20%D1%83%D0%BB.%20%D0%9C%D0%B0%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C%2035" target="_blank" rel="noopener" class="dock-btn dock-btn-route">
+      <span>📍</span>
+      <span>Маршрут</span>
+    </a>
+  </nav>
+
+  <!-- Module Script -->
+  <script type="module" src="/src/main-moto.js"></script>
+</body>
+</html>

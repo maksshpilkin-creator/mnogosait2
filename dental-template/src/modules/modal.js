@@ -1,6 +1,7 @@
 import clinicData from '../data/clinic.json';
 import { selectServiceChip } from './booking.js';
 import { containFocus } from './focus.js';
+import { moveDrawer, scrollToElement } from './motion.js';
 let drawer, backdrop, releaseFocus;
 export function initModal() {
   drawer = document.querySelector('.price-drawer');
@@ -11,11 +12,12 @@ export function initModal() {
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && drawer.classList.contains('is-open')) closeModal();
   });
-  document.querySelector('.btn-drawer-cta')?.addEventListener('click', event => {
+  document.querySelector('.btn-drawer-cta')?.addEventListener('click', async event => {
     const title = event.currentTarget.dataset.targetService;
-    closeModal(false);
+    const closed = await closeModal(false);
+    if (!closed) return;
     selectServiceChip(title);
-    document.querySelector('#booking')?.scrollIntoView({ behavior: 'auto' });
+    scrollToElement(document.querySelector('#booking'));
     document.querySelector('#client-name')?.focus({ preventScroll: true });
   });
 }
@@ -38,15 +40,13 @@ export function openModal(id) {
   cta.dataset.targetService = service.title;
   drawer.inert = false;
   drawer.setAttribute('aria-hidden', 'false');
-  drawer.classList.add('is-open'); backdrop.classList.add('is-open');
-  document.body.classList.add('modal-open');
+  moveDrawer(drawer, backdrop, true);
   drawer.scrollTop = 0;
   releaseFocus?.(false); releaseFocus = containFocus(drawer);
 }
 export function closeModal(restore = true) {
-  if (!drawer || !backdrop) return;
+  if (!drawer || !backdrop) return Promise.resolve(false);
   releaseFocus?.(restore); releaseFocus = null;
-  drawer.classList.remove('is-open'); backdrop.classList.remove('is-open');
   drawer.setAttribute('aria-hidden', 'true'); drawer.inert = true;
-  document.body.classList.remove('modal-open');
+  return moveDrawer(drawer, backdrop, false);
 }

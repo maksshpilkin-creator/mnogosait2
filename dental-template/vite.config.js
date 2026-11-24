@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
   base: './',
@@ -16,6 +17,12 @@ export default defineConfig({
     assetsDir: 'assets',
     emptyOutDir: true,
     sourcemap: false,
-    minify: 'esbuild'
+    minify: 'esbuild',
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        triamoto: resolve(__dirname, 'triamoto.html')
+      }
+    }
   }
 });

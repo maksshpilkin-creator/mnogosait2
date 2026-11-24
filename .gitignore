@@ -15,6 +15,15 @@ desktop.ini
 .env
 .env*.local
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary / Scratch / Logs
+scratch/
+*.log
+
 # IDE
 .vscode/*
 !.vscode/settings.json

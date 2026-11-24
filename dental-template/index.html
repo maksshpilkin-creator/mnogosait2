@@ -8,8 +8,60 @@
   
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#080808">
+  <link rel="preload" href="/assets/fonts/RobotoCondensed-Variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/assets/images/optimized/hero-gradient-layer-v1.webp" as="image" fetchpriority="high">
+  <link rel="preload" href="/assets/images/optimized/hero-implant-layer-v1.webp" as="image" fetchpriority="high">
+  <style>
+    .brand-intro[hidden]{display:none!important}
+    .brand-intro{position:fixed;inset:0;z-index:1000;background:#080808;color:#fff;display:grid;place-items:center;pointer-events:none}
+    .brand-intro-word{font:500 clamp(40px,8vw,90px)/1 Arial,sans-serif;letter-spacing:.2em;padding-left:.2em;animation:brand-arrive 650ms cubic-bezier(.22,1,.36,1) both}
+    .brand-intro-word::after{content:'';display:block;width:18px;height:2px;margin:25px auto 0;background:#249aff}
+    @keyframes brand-arrive{from{opacity:0;transform:translateY(10px);letter-spacing:.26em}to{opacity:1;transform:none;letter-spacing:.2em}}
+    @media(prefers-reduced-motion:reduce){.brand-intro{display:none}.brand-intro-word{animation:none}}
+  </style>
 </head>
 <body>
+  <div class="brand-intro" hidden aria-hidden="true"><span class="brand-intro-word">ЭМАЛЬ</span></div>
+  <script>
+    /* Independent fail-open bootstrap: the document is never hidden or inert. */
+    (() => {
+      const root = document.documentElement;
+      const overlay = document.querySelector('.brand-intro');
+      const started = performance.now();
+      let release, timer, finished = false;
+      const done = new Promise(resolve => { release = resolve; });
+      const events = ['keydown','pointerdown','wheel','touchstart','focusin','scroll'];
+      const finish = reason => {
+        if (finished) return;
+        finished = true;
+        clearTimeout(timer);
+        overlay.hidden = true;
+        root.dataset.introState = reason;
+        root.dataset.introElapsed = String(Math.round(performance.now() - started));
+        events.forEach(name => window.removeEventListener(name, interact, true));
+        window.removeEventListener('pageshow', restore);
+        release({reason, animateHero: reason === 'ready'});
+      };
+      const interact = () => finish('interaction');
+      const restore = event => { if (event.persisted) finish('restored'); };
+      window.__emalIntro = {done, finish};
+      root.dataset.introShown = 'false';
+      let first = false;
+      try {
+        first = sessionStorage.getItem('emal-intro-v1') !== 'seen';
+        sessionStorage.setItem('emal-intro-v1','seen');
+      } catch { first = false; /* Storage restrictions must not create a repeating intro. */ }
+      if (!first || location.hash || scrollY > 0 || document.hidden
+          || !window.matchMedia || matchMedia('(prefers-reduced-motion: reduce)').matches
+          || typeof Element.prototype.animate !== 'function') { finish('skip'); return; }
+      root.dataset.introState = 'active';
+      root.dataset.introShown = 'true';
+      overlay.hidden = false;
+      events.forEach(name => window.addEventListener(name, interact, {capture:true,passive:true}));
+      window.addEventListener('pageshow', restore);
+      timer = setTimeout(() => finish('timeout'), 1800);
+    })();
+  </script>
 
   <!-- Sticky Header -->
   <header class="site-header">
@@ -60,7 +112,10 @@
   <main>
     <!-- HERO SECTION -->
     <section id="hero" class="hero-section">
-      <div class="hero-watermark">улыбка</div>
+      <div class="hero-art-layer" aria-hidden="true">
+        <div class="hero-watermark-shift"><div class="hero-watermark">улыбка</div></div>
+        <div class="hero-implant-shift"><div class="hero-implant-enter"><img src="/assets/images/optimized/hero-implant-layer-v1.webp" width="520" height="1040" class="hero-implant-layer" alt="" fetchpriority="high" decoding="async"></div></div>
+      </div>
       
       <div class="container hero-container">
         <!-- Top Headline -->
@@ -73,14 +128,11 @@
         <!-- 3D Implant Center Visual & HUD Badges -->
         <div class="hero-visual-stage">
 
-          <!-- HUD Technical Badges -->
+          <!-- Quiet editorial labels belong to the concept, not a patient record. -->
           <div class="hud-cluster">
-            <div class="hud-badge hud-pos-1">ПРОТОКОЛ: SMILE_V.02</div>
-            <div class="hud-badge hud-pos-2">ТИП: ЭСТЕТИЧЕСКАЯ СТОМАТОЛОГИЯ</div>
-            <div class="hud-badge hud-pos-3">ID: 26-ЭМАЛЬ-МСК</div>
-            <div class="hud-badge hud-pos-4">ПАЦИЕНТ // №001 — БЕЗ СТРАХА</div>
-            <div class="hud-badge hud-pos-5">БОЛЬ: ОТМЕНЕНА</div>
-            <div class="hud-badge hud-pos-6">МИКРОСКОП ×25 / 001°</div>
+            <div class="hud-badge hud-pos-1">СТОМАТОЛОГИЯ «ЭМАЛЬ»</div>
+            <div class="hud-badge hud-pos-4">ЗДОРОВЬЕ ЗУБОВ</div>
+            <div class="hud-badge hud-pos-5">ЭСТЕТИКА УЛЫБКИ</div>
           </div>
         </div>
 
@@ -93,7 +145,7 @@
           <!-- Static circular booking control -->
           <div class="hero-cta-wrap">
             <a href="#booking" class="hero-circular-btn" aria-label="Записаться на приём в клинику ЭМАЛЬ">
-              <svg class="hero-circular-svg" viewBox="0 0 160 160">
+              <svg aria-hidden="true" class="hero-circular-svg" viewBox="0 0 160 160">
                 <path id="circlePath" d="M 80, 80 m -58, 0 a 58,58 0 1,1 116,0 a 58,58 0 1,1 -116,0" fill="none" />
                 <text>
                   <textPath href="#circlePath" startOffset="0%">
@@ -101,7 +153,7 @@
                   </textPath>
                 </text>
               </svg>
-              <span class="hero-circular-icon">↘</span>
+              <span class="hero-circular-icon" aria-hidden="true">↗</span>
             </a>
           </div>
 
@@ -117,23 +169,7 @@
 
     <!-- Static service strip -->
     <div class="marquee-bar" aria-hidden="true">
-      <div class="marquee-track">
-        <div class="marquee-content">
-          <span>ХИРУРГИЯ</span><span class="marquee-star">✱</span>
-          <span>ПРОТЕЗИРОВАНИЕ</span><span class="marquee-star">✱</span>
-          <span>ТЕРАПИЯ</span><span class="marquee-star">✱</span>
-          <span>ГИГИЕНА</span><span class="marquee-star">✱</span>
-          <span>ОРТОДОНТИЯ</span><span class="marquee-star">✱</span>
-        </div>
-        <div class="marquee-content">
-          <span>ХИРУРГИЯ</span><span class="marquee-star">✱</span>
-          <span>ПРОТЕЗИРОВАНИЕ</span><span class="marquee-star">✱</span>
-          <span>ТЕРАПИЯ</span><span class="marquee-star">✱</span>
-          <span>ГИГИЕНА</span><span class="marquee-star">✱</span>
-          <span>ОРТОДОНТИЯ</span><span class="marquee-star">✱</span>
-        </div>
-      </div>
-    </div>
+      <div class="marquee-track"><div class="marquee-content"><span>ОРТОДОНТИЯ</span><span class="marquee-star">✳</span><span>ХИРУРГИЯ</span><span class="marquee-star">✳</span><span>ПРОТЕЗИРОВАНИЕ</span><span class="marquee-star">✳</span><span>ТЕРАПИЯ</span><span class="marquee-star">✳</span><span>ГИГИЕНА</span><span class="marquee-star">✳</span><span>ОТБЕЛИВАНИЕ</span><span class="marquee-star">✳</span></div><div class="marquee-content" aria-hidden="true"><span>ОРТОДОНТИЯ</span><span class="marquee-star">✳</span><span>ХИРУРГИЯ</span><span class="marquee-star">✳</span><span>ПРОТЕЗИРОВАНИЕ</span><span class="marquee-star">✳</span><span>ТЕРАПИЯ</span><span class="marquee-star">✳</span><span>ГИГИЕНА</span><span class="marquee-star">✳</span><span>ОТБЕЛИВАНИЕ</span><span class="marquee-star">✳</span></div></div></div>
 
     <!-- 01 КТО МЫ -->
     <section id="about" class="section about-section">
@@ -141,7 +177,6 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">01 КТО МЫ</span>
-          <span class="tech-tag">REF—3M/2014.03</span>
         </div>
 
         <div class="manifesto-block">
@@ -154,12 +189,12 @@
           </h2>
         </div>
 
-        <div class="about-braces"><img src="/assets/images/generated/braces-satin.png" alt="Иллюстрация зубного ряда с брекетами на серебристом сатине" loading="lazy"><span class="photo-caption">№ XII — 2026</span></div>
+        <div class="about-braces"><img src="/assets/images/optimized/braces-satin.webp" width="1200" height="900" alt="Иллюстрация зубного ряда с брекетами на серебристом сатине" loading="lazy" decoding="async"><span class="photo-caption">ОРТОДОНТИЯ / ИЛЛЮСТРАЦИЯ</span></div>
         <div class="about-story-grid">
           <div class="about-photo-card">
             <picture>
               
-              <img src="/assets/images/generated/mirror-satin.png" alt="Стоматологический зонд и зеркало на серебристом сатине">
+              <img src="/assets/images/optimized/mirror-satin.webp" width="1200" height="900" alt="Стоматологический зонд и зеркало на серебристом сатине" loading="lazy" decoding="async">
             </picture>
             <span class="photo-caption">КАБИНЕТ 03 · ТЕРАПИЯ</span>
           </div>
@@ -210,7 +245,7 @@
           <div class="services-list" role="tablist" aria-label="Направления лечения">
             <button type="button" id="service-tab-therapy" class="service-item-row is-active" data-service-id="therapy" role="tab" aria-selected="true" aria-controls="service-preview" tabindex="0">
               <div class="service-item-left">
-                <span class="service-item-index">01</span>
+                <span class="service-item-index" aria-hidden="true">01</span>
                 <span class="service-item-title">ТЕРАПИЯ</span>
               </div>
               <span class="service-item-badge">TH-01</span>
@@ -218,7 +253,7 @@
 
             <button type="button" id="service-tab-hygiene" class="service-item-row" data-service-id="hygiene" role="tab" aria-selected="false" aria-controls="service-preview" tabindex="-1">
               <div class="service-item-left">
-                <span class="service-item-index">02</span>
+                <span class="service-item-index" aria-hidden="true">02</span>
                 <span class="service-item-title">ГИГИЕНА</span>
               </div>
               <span class="service-item-badge">HG-02</span>
@@ -226,7 +261,7 @@
 
             <button type="button" id="service-tab-whitening" class="service-item-row" data-service-id="whitening" role="tab" aria-selected="false" aria-controls="service-preview" tabindex="-1">
               <div class="service-item-left">
-                <span class="service-item-index">03</span>
+                <span class="service-item-index" aria-hidden="true">03</span>
                 <span class="service-item-title">ОТБЕЛИВАНИЕ</span>
               </div>
               <span class="service-item-badge">WH-03</span>
@@ -234,7 +269,7 @@
 
             <button type="button" id="service-tab-orthodontics" class="service-item-row" data-service-id="orthodontics" role="tab" aria-selected="false" aria-controls="service-preview" tabindex="-1">
               <div class="service-item-left">
-                <span class="service-item-index">04</span>
+                <span class="service-item-index" aria-hidden="true">04</span>
                 <span class="service-item-title">ОРТОДОНТИЯ</span>
               </div>
               <span class="service-item-badge">OR-04</span>
@@ -242,7 +277,7 @@
 
             <button type="button" id="service-tab-surgery" class="service-item-row" data-service-id="surgery" role="tab" aria-selected="false" aria-controls="service-preview" tabindex="-1">
               <div class="service-item-left">
-                <span class="service-item-index">05</span>
+                <span class="service-item-index" aria-hidden="true">05</span>
                 <span class="service-item-title">ХИРУРГИЯ</span>
               </div>
               <span class="service-item-badge">SG-05</span>
@@ -250,7 +285,7 @@
 
             <button type="button" id="service-tab-prosthetics" class="service-item-row" data-service-id="prosthetics" role="tab" aria-selected="false" aria-controls="service-preview" tabindex="-1">
               <div class="service-item-left">
-                <span class="service-item-index">06</span>
+                <span class="service-item-index" aria-hidden="true">06</span>
                 <span class="service-item-title">ПРОТЕЗИРОВАНИЕ</span>
               </div>
               <span class="service-item-badge">PR-06</span>
@@ -260,7 +295,7 @@
           <!-- Right Dynamic Preview Card -->
           <div id="service-preview" class="service-preview-card" role="tabpanel" aria-live="polite" aria-labelledby="service-tab-therapy">
             <div class="preview-image-wrap">
-              <img src="/assets/images/generated/mirror-satin.png" alt="Терапия" class="preview-image">
+              <img src="/assets/images/optimized/mirror-satin.webp" width="1200" height="900" alt="Терапия" class="preview-image" loading="lazy" decoding="async">
               <div class="preview-badge-overlay">TH-01</div>
             </div>
 
@@ -296,7 +331,7 @@
       </div>
 
       <div class="drawer-image-wrap">
-        <img src="/assets/images/generated/mirror-satin.png" alt="Процедура лечения" class="drawer-image">
+        <img width="1200" height="900" alt="Иллюстрация выбранной услуги" class="drawer-image" decoding="async">
       </div>
 
       <div class="drawer-body">
@@ -395,19 +430,19 @@
             <div class="price-rows-list">
               <div class="price-row-item">
                 <span class="price-row-name">Консультация и план лечения</span>
-                <span class="price-row-value">Бесплатно</span>
+                <span class="price-row-value">Бесплатно</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Терапия" aria-label="Записаться: Консультация и план лечения">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Лечение поверхностного кариеса</span>
-                <span class="price-row-value">от 4 500 ₽</span>
+                <span class="price-row-value">от 4 500 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Терапия" aria-label="Записаться: Лечение поверхностного кариеса">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Художественная реставрация</span>
-                <span class="price-row-value">от 7 500 ₽</span>
+                <span class="price-row-value">от 7 500 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Терапия" aria-label="Записаться: Художественная реставрация">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Лечение каналов под микроскопом</span>
-                <span class="price-row-value">от 9 000 ₽</span>
+                <span class="price-row-value">от 9 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Терапия" aria-label="Записаться: Лечение каналов под микроскопом">ЗАПИСАТЬСЯ</a>
               </div>
             </div>
             <div class="price-category-footer">
@@ -424,15 +459,15 @@
             <div class="price-rows-list">
               <div class="price-row-item">
                 <span class="price-row-name">Комплексная гигиена полости рта</span>
-                <span class="price-row-value">6 500 ₽</span>
+                <span class="price-row-value">6 500 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Гигиена" aria-label="Записаться: Комплексная гигиена полости рта">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Гигиена при брекетах и элайнерах</span>
-                <span class="price-row-value">7 500 ₽</span>
+                <span class="price-row-value">7 500 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Гигиена" aria-label="Записаться: Гигиена при брекетах и элайнерах">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Глубокое фторирование</span>
-                <span class="price-row-value">1 500 ₽</span>
+                <span class="price-row-value">1 500 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Гигиена" aria-label="Записаться: Глубокое фторирование">ЗАПИСАТЬСЯ</a>
               </div>
             </div>
             <div class="price-category-footer">
@@ -449,15 +484,15 @@
             <div class="price-rows-list">
               <div class="price-row-item">
                 <span class="price-row-name">Клиническое отбеливание</span>
-                <span class="price-row-value">25 000 ₽</span>
+                <span class="price-row-value">25 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Отбеливание" aria-label="Записаться: Клиническое отбеливание">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Домашнее отбеливание в каппах</span>
-                <span class="price-row-value">15 000 ₽</span>
+                <span class="price-row-value">15 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Отбеливание" aria-label="Записаться: Домашнее отбеливание в каппах">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Внутриканальное отбеливание зуба</span>
-                <span class="price-row-value">4 000 ₽</span>
+                <span class="price-row-value">4 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Отбеливание" aria-label="Записаться: Внутриканальное отбеливание зуба">ЗАПИСАТЬСЯ</a>
               </div>
             </div>
             <div class="price-category-footer">
@@ -474,19 +509,19 @@
             <div class="price-rows-list">
               <div class="price-row-item">
                 <span class="price-row-name">Консультация ортодонта + 3D-скан</span>
-                <span class="price-row-value">2 000 ₽</span>
+                <span class="price-row-value">2 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Ортодонтия" aria-label="Записаться: Консультация ортодонта + 3D-скан">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Металлические брекеты</span>
-                <span class="price-row-value">от 45 000 ₽</span>
+                <span class="price-row-value">от 45 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Ортодонтия" aria-label="Записаться: Металлические брекеты">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Керамические брекеты</span>
-                <span class="price-row-value">от 75 000 ₽</span>
+                <span class="price-row-value">от 75 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Ортодонтия" aria-label="Записаться: Керамические брекеты">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Элайнеры</span>
-                <span class="price-row-value">от 180 000 ₽</span>
+                <span class="price-row-value">от 180 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Ортодонтия" aria-label="Записаться: Элайнеры">ЗАПИСАТЬСЯ</a>
               </div>
             </div>
             <div class="price-category-footer">
@@ -503,19 +538,19 @@
             <div class="price-rows-list">
               <div class="price-row-item">
                 <span class="price-row-name">Удаление зуба</span>
-                <span class="price-row-value">от 3 500 ₽</span>
+                <span class="price-row-value">от 3 500 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Хирургия" aria-label="Записаться: Удаление зуба">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Удаление зуба мудрости</span>
-                <span class="price-row-value">от 7 000 ₽</span>
+                <span class="price-row-value">от 7 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Хирургия" aria-label="Записаться: Удаление зуба мудрости">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Имплантация под ключ</span>
-                <span class="price-row-value">от 55 000 ₽</span>
+                <span class="price-row-value">от 55 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Хирургия" aria-label="Записаться: Имплантация под ключ">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Синус-лифтинг</span>
-                <span class="price-row-value">от 30 000 ₽</span>
+                <span class="price-row-value">от 30 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Хирургия" aria-label="Записаться: Синус-лифтинг">ЗАПИСАТЬСЯ</a>
               </div>
             </div>
             <div class="price-category-footer">
@@ -532,15 +567,15 @@
             <div class="price-rows-list">
               <div class="price-row-item">
                 <span class="price-row-name">Коронка из диоксида циркония</span>
-                <span class="price-row-value">28 000 ₽</span>
+                <span class="price-row-value">28 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Протезирование" aria-label="Записаться: Коронка из диоксида циркония">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Керамический винир E.max</span>
-                <span class="price-row-value">35 000 ₽</span>
+                <span class="price-row-value">35 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Протезирование" aria-label="Записаться: Керамический винир E.max">ЗАПИСАТЬСЯ</a>
               </div>
               <div class="price-row-item">
                 <span class="price-row-name">Коронка на имплант</span>
-                <span class="price-row-value">от 32 000 ₽</span>
+                <span class="price-row-value">от 32 000 ₽</span><a href="#booking" class="btn-price-book price-row-action" data-service-name="Протезирование" aria-label="Записаться: Коронка на имплант">ЗАПИСАТЬСЯ</a>
               </div>
             </div>
             <div class="price-category-footer">

@@ -1,0 +1,242 @@
+{
+  "checkedAt": "2026-11-22",
+  "url": "http://127.0.0.1:5173/",
+  "build": {
+    "css": "index-CF10hglF.css",
+    "js": "index-DfN0VGnF.js"
+  },
+  "geometry": {
+    "desktopMatchesBaseline": true,
+    "mobileMatchesBaseline": true,
+    "desktop": {
+      "headings": [
+        {
+          "height": 161.15625,
+          "text": "ЗДЕСЬ НЕ БОЯТСЯ\nСТОМАТОЛОГА",
+          "width": 601.4375
+        },
+        {
+          "height": 161.15625,
+          "text": "ЛЕЧИМ БЕЗ БОЛИ\nИ ЛИШНИХ СЛОВ",
+          "width": 1338.625
+        },
+        {
+          "height": 224.453125,
+          "text": "ВЫРОСЛИ ИЗ ПРОСТОЙ ИДЕИ:\nК СТОМАТОЛОГУ МОЖНО ХОДИТЬ\nСПОКОЙНО, А ЛЕЧЕНИЕ МОЖЕТ БЫТЬ\nТОЧНЫМ, ЧЕСТНЫМ И\nПО-НАСТОЯЩЕМУ КРАСИВЫМ.",
+          "width": 977.1875
+        },
+        {
+          "height": 67.03125,
+          "text": "СНАЧАЛА ПОНИМАЕМ, ПОТОМ ЛЕЧИМ",
+          "width": 1338.625
+        },
+        {
+          "height": 211.3125,
+          "text": "ЗАПИШИТЕСЬ —\nПЕРЕЗВОНИМ\nЗА 15 МИНУТ",
+          "width": 535.4375
+        }
+      ],
+      "scrollWidth": 1425,
+      "sections": [
+        {
+          "height": 737.265625,
+          "id": "hero",
+          "width": 1425
+        },
+        {
+          "height": 831.046875,
+          "id": "about",
+          "width": 1425
+        },
+        {
+          "height": 602.890625,
+          "id": "services",
+          "width": 1425
+        },
+        {
+          "height": 369.875,
+          "id": "first-visit",
+          "width": 1425
+        },
+        {
+          "height": 860.171875,
+          "id": "prices",
+          "width": 1425
+        },
+        {
+          "height": 787.4375,
+          "id": "booking",
+          "width": 1425
+        },
+        {
+          "height": 486.3125,
+          "id": "faq",
+          "width": 1425
+        }
+      ],
+      "width": 1425
+    },
+    "mobile": {
+      "headings": [
+        {
+          "height": 74.46875,
+          "mode": "words",
+          "state": "complete",
+          "text": "ЗДЕСЬ НЕ БОЯТСЯ\nСТОМАТОЛОГА",
+          "width": 260.921875
+        },
+        {
+          "height": 74.46875,
+          "mode": "words",
+          "state": "complete",
+          "text": "ЛЕЧИМ БЕЗ БОЛИ\nИ ЛИШНИХ СЛОВ",
+          "width": 320
+        },
+        {
+          "height": 258.328125,
+          "mode": "words",
+          "state": "complete",
+          "text": "ВЫРОСЛИ ИЗ ПРОСТОЙ ИДЕИ:\nК СТОМАТОЛОГУ МОЖНО ХОДИТЬ\nСПОКОЙНО, А ЛЕЧЕНИЕ МОЖЕТ БЫТЬ\nТОЧНЫМ, ЧЕСТНЫМ И\nПО-НАСТОЯЩЕМУ КРАСИВЫМ.",
+          "width": 320
+        },
+        {
+          "height": 114,
+          "text": "СНАЧАЛА ПОНИМАЕМ, ПОТОМ ЛЕЧИМ",
+          "width": 320
+        },
+        {
+          "height": 131.0625,
+          "text": "ЗАПИШИТЕСЬ —\nПЕРЕЗВОНИМ\nЗА 15 МИНУТ",
+          "width": 320
+        }
+      ],
+      "scrollWidth": 360,
+      "sections": [
+        {
+          "height": 640,
+          "id": "hero",
+          "width": 360
+        },
+        {
+          "height": 1259.625,
+          "id": "about",
+          "width": 360
+        },
+        {
+          "height": 787.828125,
+          "id": "services",
+          "width": 360
+        },
+        {
+          "height": 723.1875,
+          "id": "first-visit",
+          "width": 360
+        },
+        {
+          "height": 1445.203125,
+          "id": "prices",
+          "width": 360
+        },
+        {
+          "height": 1490.0625,
+          "id": "booking",
+          "width": 360
+        },
+        {
+          "height": 560.796875,
+          "id": "faq",
+          "width": 360
+        }
+      ],
+      "width": 360
+    }
+  },
+  "responsive": [
+    {
+      "viewport": 375,
+      "client": 360,
+      "scroll": 360,
+      "brokenImages": 0
+    },
+    {
+      "viewport": 768,
+      "client": 753,
+      "scroll": 753,
+      "brokenImages": 0
+    },
+    {
+      "broken": 0,
+      "client": 1009,
+      "scroll": 1009,
+      "width": 1024
+    },
+    {
+      "viewport": 1440,
+      "client": 1425,
+      "scroll": 1425,
+      "brokenImages": 0
+    }
+  ],
+  "previewStart": {
+    "code": "PR-06",
+    "layers": [
+      {
+        "controls": 0,
+        "hidden": "true",
+        "inert": "",
+        "opacity": "0.709838"
+      },
+      {
+        "controls": 0,
+        "hidden": "true",
+        "inert": "",
+        "opacity": "0.709838"
+      }
+    ],
+    "opacity": "0.199313",
+    "state": "next"
+  },
+  "rapidResult": {
+    "code": "PR-06",
+    "focus": "service-tab-prosthetics",
+    "layers": 0,
+    "sectionHeight": 602.890625,
+    "selected": "service-tab-prosthetics",
+    "state": "idle"
+  },
+  "keyboardLowViewport": {
+    "code": "PR-06",
+    "focus": "service-tab-prosthetics",
+    "focusBottom": 479.84375,
+    "focusTop": 441.203125,
+    "layers": 0,
+    "selected": "service-tab-prosthetics",
+    "state": "idle"
+  },
+  "faq": {
+    "animating": false,
+    "answerHeight": 157,
+    "answerHidden": false,
+    "expanded": "true",
+    "height": 844,
+    "width": 375
+  },
+  "pause": {
+    "circle": "paused",
+    "layers": 0,
+    "motion": "paused",
+    "scrollBehavior": "auto",
+    "toggle": "true",
+    "wordMasks": 0
+  },
+  "draft": {
+    "unsent": true,
+    "nameRetained": true
+  },
+  "console": [],
+  "limits": [
+    "OS reduced-motion checked in source/VM; no live OS emulation",
+    "No FPS profiling or broad cross-browser run",
+    "Static screenshots show settled states; animation frames also inspected via computed DOM styles"
+  ]
+}

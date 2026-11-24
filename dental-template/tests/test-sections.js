@@ -24,7 +24,9 @@ async function testSections() {
       throw new Error(`Hero bottom headline mismatch: ${heroBottomHeadline}`);
     }
     const heroArt = await page.$eval('#hero', el => getComputedStyle(el).backgroundImage);
-    if (!heroArt.includes('hero-backdrop-v2.png')) throw new Error('Hero background artwork missing');
+    if (!heroArt.includes('hero-gradient-layer-v1.png')) throw new Error('Clean hero gradient missing');
+    const implantLayer = await page.$('#hero .hero-implant-layer');
+    if (!implantLayer) throw new Error('Independent transparent implant layer missing');
     const heroCta = await page.$('#hero .hero-circular-btn');
     if (!heroCta) throw new Error('Hero circular CTA button missing');
     console.log('✓ Section Hero: Top/bottom headlines, 3D implant visual, circular button verified.');

@@ -8,13 +8,13 @@ export function containFocus(container) {
     if (!list.length) { event.preventDefault(); return; }
     const first = list[0], last = list.at(-1);
     if (event.shiftKey && (document.activeElement === first || !container.contains(document.activeElement))) {
-      event.preventDefault(); last.focus();
+      event.preventDefault(); last.focus({ preventScroll: true });
     } else if (!event.shiftKey && (document.activeElement === last || !container.contains(document.activeElement))) {
-      event.preventDefault(); first.focus();
+      event.preventDefault(); first.focus({ preventScroll: true });
     }
   };
   document.addEventListener('keydown', onKey);
-  controls()[0]?.focus();
+  controls()[0]?.focus({ preventScroll: true });
   return (restore = true) => {
     document.removeEventListener('keydown', onKey);
     if (restore && trigger?.isConnected) trigger.focus({ preventScroll: true });

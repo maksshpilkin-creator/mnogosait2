@@ -9,6 +9,7 @@
     "preview": "vite preview --port 4173",
     "extract:assets": "python scripts/extract_assets.py",
     "test:sections": "node tests/test-sections.js",
+    "test:triamoto": "node tests/test-triamoto.js",
     "test:responsive": "node tests/test-responsive.js",
     "test:interactive": "node tests/test-interactive.js",
     "verify:isolation": "node tests/verify-isolation.js",

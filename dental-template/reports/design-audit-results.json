@@ -1,0 +1,612 @@
+{
+  "timestamp": "2026-11-23T20:29:03.845Z",
+  "url": "http://127.0.0.1:4173/triamoto.html",
+  "viewports": {},
+  "heroAboveFold": {
+    "mobile": {
+      "headerHeight": 56,
+      "heroBottom": 812,
+      "isTitleVisibleAboveFold": true,
+      "isPhoneVisibleAboveFold": true,
+      "isCtaVisibleAboveFold": true,
+      "isBikeVisibleAboveFold": true,
+      "isDockVisible": true,
+      "dockHeight": 68.875
+    }
+  },
+  "tapTargetsMobile": [],
+  "contrastAndReadability": [
+    {
+      "selector": "title-hero",
+      "textSample": "СПЕЦИАЛИЗИРОВАННЫЙ\nЭНДУРО САЛО",
+      "color": "rgb(236, 231, 222)",
+      "fontSize": "83.52px",
+      "fontWeight": "900",
+      "lineHeight": "78.5088px",
+      "letterSpacing": "-2.5056px"
+    },
+    {
+      "selector": "hero-metadata-bar",
+      "textSample": "ЛОКАЦИЯ: Г. ДЗЕРЖИНСК, УЛ. МАЯ",
+      "color": "rgb(160, 170, 181)",
+      "fontSize": "11px",
+      "fontWeight": "700",
+      "lineHeight": "14.3px",
+      "letterSpacing": "0.275px"
+    },
+    {
+      "selector": "section-tag",
+      "textSample": "01 / КТО МЫ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-subtitle",
+      "textSample": "ПОДХОД К ТЕХНИКЕ И СБОРКЕ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "manifesto-heading",
+      "textSample": "НЕ ПРОСТО ПРОДАЁМ ТЕХНИКУ, А Г",
+      "color": "rgb(18, 20, 23)",
+      "fontSize": "52.56px",
+      "fontWeight": "900",
+      "lineHeight": "53.874px",
+      "letterSpacing": "-2.3652px"
+    },
+    {
+      "selector": "section-tag",
+      "textSample": "02 / КАТАЛОГ ТЕХНИКИ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-subtitle",
+      "textSample": "ОСНОВНЫЕ КАТЕГОРИИ И НАЛИЧИЕ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "preview-summary",
+      "textSample": "Полноразмерные эндуро BSE, Reg",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "section-tag",
+      "textSample": "03 / РЕГЛАМЕНТ СБОРКИ",
+      "color": "rgb(18, 20, 23)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-subtitle",
+      "textSample": "КАК МЫ ГОТОВИМ БАЙК К ВЫДАЧЕ",
+      "color": "rgb(18, 20, 23)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-tag",
+      "textSample": "04 / ПОДБОР ПО ПАРАМЕТРАМ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-subtitle",
+      "textSample": "ОПРЕДЕЛИТЕ ВЫСОТУ ПО СЕДЛУ И М",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-tag",
+      "textSample": "05 / СКЛАД И ЦЕНЫ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-subtitle",
+      "textSample": "ОРИЕНТИРОВОЧНЫЕ СТОИМОСТИ «ОТ»",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Эндуро BSE Z3 250 (ZS172FMM, 2",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 147 000 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Regulmoto Sport 003 Pro (NB300",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 189 000 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "FXmoto X8 300 (водяное охлажде",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 245 000 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Zuumav K7 CB250 (воздушное охл",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 165 000 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Питбайк BSE MX 125 (колеса 17/",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 85 000 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Питбайк Kayo Basic YX125 (элек",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 94 900 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Питбайк Regulmoto Seven 140 (м",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 112 000 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Питбайк BSE PH 150e (спортивна",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 129 000 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Квадроцикл Regulmoto Athlete 2",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 230 000 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Квадроцикл Linhai-Yamaha 300 4",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 440 000 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Квадроцикл подростковый 125 см",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 105 000 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Двигатель в сборе Zongshen 172",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 48 500 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Двигатель в сборе YX 125 (для ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 29 000 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Спортивный карбюратор Nibbi Ra",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 5 400 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Усиленная сальниковая цепь 520",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 4 800 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Полная сборка и протяжка новог",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "4 500 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Регулировка тепловых зазоров к",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 1 500 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Настройка и чистка карбюратора",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 1 200 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-name",
+      "textSample": "Сезонная консервация и тёплое ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "price-row-val",
+      "textSample": "от 2 000 ₽",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "section-tag",
+      "textSample": "06 / КАЛЬКУЛЯТОР РАССРОЧКИ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-subtitle",
+      "textSample": "РАССЧИТАЙТЕ КОМФОРТНЫЙ ПЛАТЕЖ ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "calc-monthly-val",
+      "textSample": "от 10 437 ₽ / мес",
+      "color": "rgb(235, 102, 40)",
+      "fontSize": "42px",
+      "fontWeight": "700",
+      "lineHeight": "60.9px",
+      "letterSpacing": "normal"
+    },
+    {
+      "selector": "section-tag",
+      "textSample": "07 / ОТЗЫВЫ КЛИЕНТОВ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-subtitle",
+      "textSample": "ОЦЕНКА 4.5 ИЗ 5 В КАРТАХ 2ГИС ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-tag",
+      "textSample": "08 / ПОДБОР И БРОНЬ",
+      "color": "rgb(235, 102, 40)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-subtitle",
+      "textSample": "УТОЧНИТЬ НАЛИЧИЕ ИЛИ ЗАПИСАТЬС",
+      "color": "rgb(236, 231, 222)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-tag",
+      "textSample": "09 / ЧАСТЫЕ ВОПРОСЫ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-subtitle",
+      "textSample": "ОТВЕТЫ ДЛЯ РАЙДЕРОВ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-tag",
+      "textSample": "КОНТАКТЫ И МАРШРУТ",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "section-subtitle",
+      "textSample": "КАК ДОБРАТЬСЯ В САЛОН",
+      "color": "rgb(8, 8, 8)",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "17.4px",
+      "letterSpacing": "0.3px"
+    },
+    {
+      "selector": "footer-disclaimer",
+      "textSample": "«Триамото» (г. Дзержинск, Цент",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal"
+    }
+  ],
+  "sectionsAudited": [
+    "hero",
+    "about",
+    "services",
+    "first-visit",
+    "matcher",
+    "prices",
+    "calculator",
+    "reviews",
+    "booking",
+    "faq",
+    "contacts",
+    "footer"
+  ],
+  "uxFlowObservations": [],
+  "recommendations": []
+}

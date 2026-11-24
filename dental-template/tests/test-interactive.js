@@ -41,7 +41,11 @@ async function testInteractive() {
 
     // Press Escape to close
     await page.keyboard.press('Escape');
-    await new Promise(r => setTimeout(r, 200));
+    await page.waitForFunction(() => {
+      const drawer = document.querySelector('.price-drawer');
+      return !document.body.classList.contains('modal-open')
+        && getComputedStyle(drawer).display === 'none';
+    });
 
     isDrawerOpen = await page.$eval('.price-drawer', el => el.classList.contains('is-open'));
     isBodyLocked = await page.evaluate(() => document.body.classList.contains('modal-open'));
@@ -141,9 +145,12 @@ async function testInteractive() {
     if (!result.includes('Ничего не отправлено') || !result.includes('Константин')) throw new Error('Draft must explicitly say it was not sent and retain the entered data');
     const retainedName = await page.$eval('input[name="name"]', el => el.value);
     if (retainedName !== 'Константин') throw new Error('Draft preview must not clear user data');
-    const activeMotion = await page.evaluate(() => document.getAnimations().filter(animation => animation.playState === 'running').length);
-    if (activeMotion) throw new Error('Animations are not allowed in this version');
-    console.log('✓ Local draft preserves data, reports no delivery, and has no active animations.');
+    await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }]);
+    await page.waitForFunction(() => document.documentElement.dataset.motion === 'reduced'
+      && document.getAnimations().every(animation => animation.playState !== 'running'));
+    const retainedReducedName = await page.$eval('input[name="name"]', el => el.value);
+    if (retainedReducedName !== 'Константин') throw new Error('Changing the motion preference must preserve the draft');
+    console.log('✓ Local draft preserves data, reports no delivery, and reduced-motion finishes effects.');
 
     console.log('\n=== ALL INTERACTIVE MECHANICS VERIFIED SUCCESSFULLY! ===\n');
   } finally {

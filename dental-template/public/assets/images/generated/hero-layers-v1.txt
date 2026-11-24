@@ -1,0 +1,44 @@
+Hero layers and matching service asset for fictional dental clinic demo «ЭМАЛЬ».
+
+3. Matching service implant still life
+Workspace output: C:/project_sites/скачкаанти2обзор/dental-template/public/assets/images/generated/service-implant-satin-v1.png
+Original tool output: C:/Users/makss/.codex/generated_images/01a20201-d878-7282-9551-b28f7a3dcbc1/exec-c7122581-7019-4b6e-87b7-326b720eedf3.png
+Tool: built-in image_gen, separate call, transparent_background=false.
+Reference images (both viewed before generation): hero-implant-layer-v1.png for implant identity and mirror-satin.png for satin art direction.
+Dimensions: 1448x1086 (4:3).
+Metadata: System.Drawing.Bitmap, Format24bppRgb, corner alpha=255 (opaque).
+Visual inspection via view_image: one complete central upright blue-chrome implant on silver satin, subtle contact shadow, no text/labels/UI or other tools. No source code changed.
+Full prompt:
+Use case: compositing / product-mockup. Asset type: standalone service illustration photograph for fictional dental clinic website.
+Input image 1 is the exact dental implant identity and material reference; its surrounding area is transparent. Input image 2 is the silver satin background, studio photography lighting and composition style reference.
+Create one clean landscape 4:3 product photograph, approximately 1440x1080. Show ONLY one complete upright dental implant with the same mechanical connector/round hole, cylindrical collar, helical screw threads and pointed end as image 1. Preserve its dark blue-chrome metal, black left-face reflections and elegant cyan highlights along the right. Place the implant centrally, entirely inside the frame with at least 10% empty margin at top and bottom, about 65-70% of frame height. Set it against draped smooth silver-white satin with broad flowing folds, similar to image 2, with soft neutral studio light and a subtle realistic short contact shadow. Calm precision dental still life, photorealistic, polished editorial quality, cool silver/white background contrasting with a vivid blue metallic object.
+No dental mirror or other tools from image 2. No text, numbers, labels, logos, nameplates, codes, overlays, UI, website content, gradient-blue hero background, outlined letters, watermark, hands or face. Full opaque photograph, no transparent background.
+Created: 2026-11-22.
+Tool for both assets: built-in image_gen (not CLI). Each asset generated in a separate sequential call.
+Edit target for both: C:/project_sites/скачкаанти2обзор/dental-template/public/assets/images/generated/hero-backdrop-v2.png (1774x887), inspected before editing. Original retained unchanged.
+These are generated design illustrations, not photos of an actual clinic.
+
+1. Transparent implant layer
+Workspace output: C:/project_sites/скачкаанти2обзор/dental-template/public/assets/images/generated/hero-implant-layer-v1.png
+Original tool output: C:/Users/makss/.codex/generated_images/01a20201-d878-7282-9551-b28f7a3dcbc1/exec-149da975-609d-4fc5-a205-2c0a3180e0d0.png
+Dimensions: 887x1774 (1:2).
+Visual inspection: full upright blue-chrome implant, clean surrounding area, no text, background, labels or baked-in rectangle.
+Read-only metadata/alpha verification: System.Drawing.Bitmap, Format32bppArgb; corner alpha=0; exterior left-middle alpha=0; bottom-center alpha=0; center-object alpha=251. Actual transparent alpha is present. Original edge antialiasing and internal slight translucency retained; no pixel editing/post-processing performed.
+Full prompt:
+Use case: background-extraction. Input image 1 is the edit target. Extract ONLY the single central upright dark titanium dental implant from the supplied blue background image and deliver it on a genuinely TRANSPARENT background with a clean alpha channel.
+Preserve the same implant identity, exact upright shape, mechanical screw threads, upper connector geometry and small round hole, photorealistic blue-chrome material, black left side and bright cyan highlights along the right side. The complete implant from top to pointed bottom must be visible and uncut, centered on a tall portrait 1:2 canvas, target 512x1024 or similar, with approximately 10% clear transparent margin around the object. It may be enlarged to fill this portrait frame but do not change its proportions.
+Remove ALL of the background gradient, every letter of «улыбка», ambient background, cast shadow and any halo. Surrounding pixels must have alpha=0, not white, not black, not a checkerboard pattern baked into the image. Keep crisp realistic antialiased edges without matte fringe.
+No text, labels, extra objects, logo, watermark, interface, floor, rectangle or backdrop. This is a transparent product cutout asset, not an illustration of a whole webpage.
+
+2. Opaque gradient layer
+Workspace output: C:/project_sites/скачкаанти2обзор/dental-template/public/assets/images/generated/hero-gradient-layer-v1.png
+Original tool output: C:/Users/makss/.codex/generated_images/01a20201-d878-7282-9551-b28f7a3dcbc1/exec-f5686d8c-f7dc-4589-845c-a1e68c0e76ae.png
+Dimensions: 1774x887 (2:1).
+Visual inspection: clean midnight-navy to royal-blue to cyan gradient, subtle texture, no implant/shadow/outlined word or other objects.
+Read-only metadata/alpha verification: System.Drawing.Bitmap; corner and center alpha=255 (opaque). No source editing/post-processing performed.
+Generative editing preserves appearance, not guaranteed exact pixel identity outside edited regions.
+Full prompt:
+Use case: precise-object-edit. Input image 1 is the edit target, an existing 1774x887 blue hero background with a central dental implant and a thin outlined word.
+Remove ONLY the central dental implant, its entire cast shadow, and EVERY stroke of the outlined Russian word «улыбка». Inpaint all their locations seamlessly so the output is a completely clean empty blue background.
+Preserve the original wide 2:1 canvas, original dimensions 1774x887 if possible, and exact full-width vertical color progression: very dark midnight navy across the top, vivid royal/cobalt blue in the middle, bright cyan/sky-blue across the bottom. Preserve the original very subtle smooth texture. The gradient should remain even from left to right without any new concentrated spotlight, halo, glow, cloud, shadow, radial light or contrast feature.
+The output must contain absolutely nothing but the smooth blue color field. No implant, no shadow, no residual outlines, no letters, words or numbers, no text, no logo, no border, no UI, no particles or objects. Fill removed elements using their surrounding preexisting blue tones. Opaque background, no transparency.
